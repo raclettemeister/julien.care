@@ -50,13 +50,18 @@ const Home = () => {
         <div className="font-body text-base text-foreground leading-[1.8] space-y-4">
           <p>
             {lang === "fr"
-              ? "Je lance un jeu vidéo et un site web en même temps. Parce que pourquoi pas. Le jeu s'appelle Chez Julien Simulator — c'est littéralement ma boutique transformée en jeu."
-              : "I'm launching a video game and a website at the same time. Because why not. The game is called Chez Julien Simulator — it's literally my shop turned into a game."}
+              ? "En train de construire un blog, tu es ici. (Surpriiise.) Je vibe-code plusieurs logiciels en même temps."
+              : "Currently building a blog, you are here. (Surpriiise.) Vibe coding multiple software at once."}
           </p>
           <p>
             {lang === "fr"
-              ? "En parallèle, je gère toujours ma boutique, j'apprends à construire des logiciels avec l'IA, et j'écris chaque jour depuis 7 ans."
-              : "Meanwhile, I'm still running my shop, learning to build software with AI, and writing every day for the past 7 years."}
+              ? "Je lance un jeu vidéo et un blog en même temps. Le jeu s'appelle Chez Julien Simulator — c'est littéralement ma boutique transformée en jeu."
+              : "I'm launching a video game and a blog at the same time. The game is called Chez Julien Simulator — it's literally my shop turned into a game."}
+          </p>
+          <p>
+            {lang === "fr"
+              ? "En parallèle, je gère toujours ma boutique, j'apprends à construire des logiciels, et j'écris chaque jour depuis 7 ans."
+              : "Meanwhile, I'm still running my shop, learning to build software, and writing every day for the past 7 years."}
           </p>
           <p className="text-sm text-muted-foreground">
             <a href="/now" className="text-accent hover:text-foreground transition-colors">
@@ -74,13 +79,13 @@ const Home = () => {
         <div className="font-body text-base text-foreground leading-[1.8] space-y-4">
           <p>
             {lang === "fr"
-              ? "J'adorerais discuter et partager. J'essaie de lancer des conversations et de construire une communauté — horizontalement, pas du haut vers le bas."
-              : "I'd love to talk and share. I'm trying to stir conversations and build a community — horizontally, not top-down."}
+              ? "J'adorerais discuter et partager ! J'essaie de lancer des conversations et de construire une communauté — horizontalement, pas du haut vers le bas."
+              : "I'd love to talk and share! I'm trying to stir conversations and build a community — horizontally, not top-down."}
           </p>
           <p>
             {lang === "fr"
-              ? "Écris-moi un email, réponds à une newsletter, ou envoie-moi un message. Je lis tout."
-              : "Send me an email, reply to a newsletter, or drop me a message. I read everything."}
+              ? "Écris-moi un email, réponds à une newsletter, ou envoie-moi un message. Je lis tout comme un gamin qui ouvre ses cadeaux !"
+              : "Send me an email, reply to a newsletter, or drop me a message. I read everything like a kid opening presents!"}
           </p>
         </div>
       </section>
