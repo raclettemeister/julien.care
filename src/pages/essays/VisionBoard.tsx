@@ -217,8 +217,6 @@ const VisionBoard = () => {
           cut the word: <em>WHO?</em>
         </P>
 
-        <Piece src={piece1} alt="Temple of Ta Prohm with WHO? annotation" rotate={-1.5} />
-
         <P>And the questions start flowing.</P>
         <P>
           Who am I to start a blog? Who do I think I am? And if not me — then who?
@@ -279,6 +277,8 @@ const VisionBoard = () => {
           (Brené Brown, <em>The Gifts of Imperfection</em>, 2010)
         </p>
         <P>Today I'm entering the temple. Are you coming with me?</P>
+
+        <Piece src={piece1} alt="Temple of Ta Prohm with WHO? annotation" rotate={-1.5} />
       </Section>
 
       {/* ── The climb ── */}
