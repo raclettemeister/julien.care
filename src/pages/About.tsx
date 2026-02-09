@@ -39,8 +39,8 @@ const About = () => {
       <div className="font-body text-base text-foreground leading-[1.85] space-y-5">
         <p>
           {lang === "fr"
-            ? "Bonne histoire : j'ai 31 ans, j'écris depuis mon appartement décoré de façon créative. Je gère la boutique en bas qui fait ~500K€ par an. Je suis propriétaire de 48% de l'immeuble dans lequel je dors. Je vis avec l'amour de ma vie, et "
-            : "Good story: I'm 31, writing from my creative decorated apartment. I run the shop downstairs that does ~€500K a year. I own 48% of the building I'm sleeping in. I live with the love of my life, and "}
+            ? "J'ai 31 ans, j'écris depuis mon appartement décoré de façon créative. Je gère la boutique en bas qui fait ~500K€ par an. Je suis propriétaire de 48% de l'immeuble dans lequel je dors. Je vis avec l'amour de ma vie, et "
+            : "I'm 31, writing from my creative decorated apartment. I run the shop downstairs that does ~€500K a year. I own 48% of the building I'm sleeping in. I live with the love of my life, and "}
           <OurPopover>{lang === "fr" ? "notre" : "our"}</OurPopover>
           {lang === "fr" ? " chien Poncho." : " dog Poncho."}
         </p>
