@@ -2,7 +2,7 @@ import { useLanguage } from "@/contexts/LanguageContext";
 import { essays } from "@/data/content";
 import { Link } from "react-router-dom";
 import SubscribeBox from "@/components/SubscribeBox";
-import visionBoardCollage from "@/assets/essays/collage-full.jpg";
+import essayThumbnail from "@/assets/essays/thumbnail-essay-1.jpg";
 
 const Essays = () => {
   const { lang } = useLanguage();
@@ -30,7 +30,7 @@ const Essays = () => {
             {essay.slug === "/essays/vision-board-creative-thinking-through-collage" && (
               <div className="mb-3 rounded-lg overflow-hidden border border-border/40">
                 <img
-                  src={visionBoardCollage}
+                  src={essayThumbnail}
                   alt={lang === "fr" ? essay.titleFr : essay.titleEn}
                   className="w-full h-40 object-cover object-center"
                   loading="lazy"
