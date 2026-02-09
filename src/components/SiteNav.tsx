@@ -7,6 +7,7 @@ const navItems = [
   { path: "/projects", labelEn: "Projects", labelFr: "Projets" },
   { path: "/analog", labelEn: "Analog", labelFr: "Analog" },
   { path: "/about", labelEn: "About", labelFr: "À propos" },
+  { path: "/money", labelEn: "Money?", labelFr: "Argent ?" },
 ];
 
 const SiteNav = () => {

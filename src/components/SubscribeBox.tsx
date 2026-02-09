@@ -24,12 +24,12 @@ const SubscribeBox = () => {
   return (
     <div className="border-t border-border/40 pt-8 mt-12 max-w-[640px] mx-auto">
       <p className="font-heading text-base font-semibold text-foreground mb-1">
-        {lang === "fr" ? "Un essai par semaine." : "One essay a week."}
+        {lang === "fr" ? "La newsletter, c'est le nouveau cool." : "Newsletter is the new cool."}
       </p>
       <p className="font-body text-sm text-muted-foreground mb-4">
         {lang === "fr"
-          ? "Pas de pubs. Pas d'IA slop. Juste la vérité."
-          : "No ads. No AI slop. Just the truth."}
+          ? "Pas de pubs. Pas de big tech. Non addictif. C'est gratuit et tu n'es pas mon produit. Je n'essaierai jamais de te vendre quoi que ce soit."
+          : "No ads. No big tech. Non-addictive. It's free and you're not my product. I will never try to sell you anything."}
       </p>
       <div className="flex gap-2">
         <input
