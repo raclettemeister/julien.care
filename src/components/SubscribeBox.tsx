@@ -43,7 +43,7 @@ const SubscribeBox = () => {
           onClick={() => email && setSubmitted(true)}
           className="font-body px-4 py-2 bg-foreground text-background text-sm font-medium cursor-pointer hover:opacity-80 transition-opacity"
         >
-          {lang === "fr" ? "J'embarque" : "I'm in"}
+          {lang === "fr" ? "Oh que oui !" : "Hell yeah!"}
         </button>
       </div>
     </div>
