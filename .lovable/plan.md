@@ -1,44 +1,33 @@
 
+# Fix Profile Photo Centering
 
-# Julien's Personal Website
+## Problem
+The circular avatar crop keeps showing the top of the photo (guitar headstock area) instead of the face. The `object-position` Y value has been incrementally adjusted but is still too low -- the face is in the lower portion of the original photo.
 
-A bilingual (English/French) personal website with a clean, minimal aesthetic featuring a warm gold accent color scheme.
+## Solution
+Change `object-[28%_45%]` to approximately `object-[28%_75%]` (or even higher). The face appears to be roughly 70-80% down in the original photo, so the Y value needs a big jump, not small increments.
 
-## Pages
+If `object-position` with `scale` continues to fight each other, an alternative approach is to wrap the image in an extra container and use `translate-y` to shift the image up, which gives more predictable control.
 
-### 1. Essays (Home)
-- Hero section with bold headline and subtitle
-- Email subscribe box with confirmation state
-- List of essay previews with tags, dates, titles, and excerpts
-- All content toggleable between English and French
+## Technical Details
 
-### 2. Now
-- Current life update page (inspired by Derek Sivers' /now concept)
-- Learning list in a highlighted box
-- Subscribe box at the bottom
+**File:** `src/components/PostalCardModal.tsx` (line 17)
 
-### 3. Projects
-- Project cards with emoji icons, status badges (Live / Coming Soon), and descriptions
-- "Play now" CTA button for live projects
+**Primary fix:** Change the image className to:
+```
+className="w-full h-full object-cover object-[28%_75%] scale-[2.2]"
+```
 
-### 4. Analog
-- Three sections: Writing, Lindy Hop, The Shop
-- Long-form descriptive content about offline creative pursuits
+**Fallback if still not working:** Replace `object-position` + `scale` with a wrapper approach:
+```jsx
+<div className="w-24 h-24 rounded-full bg-muted border border-border shrink-0 overflow-hidden cursor-pointer hover:ring-2 hover:ring-accent transition-all"
+  onClick={() => setOpen(true)}>
+  <img
+    src={julienPhoto}
+    alt="Julien Thibaut"
+    className="w-[200%] h-[200%] object-cover -translate-x-[22%] -translate-y-[30%]"
+  />
+</div>
+```
 
-### 5. About
-- Personal story narrative with a styled blockquote
-- Subscribe box at the bottom
-
-## Global Features
-
-- **Sticky navigation** with blur backdrop, page links, and FR/EN language toggle button
-- **Language switcher** — all content, navigation labels, and UI text switch between English and French
-- **Email subscribe component** reused across pages with a simple confirmation state
-- **Footer** with a tongue-in-cheek tagline
-- **Design**: Warm off-white background, dark text, gold (#B8860B) accent, clean typography with tight letter-spacing, generous whitespace
-
-## Notes
-- Frontend-only for now (subscribe box is UI-only, no backend)
-- Content is hardcoded as provided
-- Responsive layout with clamped font sizes
-
+This wrapper approach uses percentage-based `translate` on an oversized image, giving direct pixel-level control over which part of the photo is visible -- no ambiguity from `object-position` + `scale` interactions.
