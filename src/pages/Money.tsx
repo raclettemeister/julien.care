@@ -13,8 +13,8 @@ const Money = () => {
       <div className="font-body text-base text-foreground leading-[1.8] space-y-6">
         <p>
           {lang === "fr"
-            ? "Ce site sera toujours gratuit. Pas de paywall. Pas d'abonnement premium. Pas de produit digital à 97€. Rien."
-            : "This website will always be free. No paywall. No premium subscription. No $97 digital product. Nothing."}
+            ? "Ce site et la newsletter seront toujours gratuits. Pas de paywall. Pas d'abonnement premium. Pas de produit digital à 97€. Rien."
+            : "This website and the newsletter will always be free. No paywall. No premium subscription. No $97 digital product. Nothing."}
         </p>
 
         <p>
@@ -40,15 +40,11 @@ const Money = () => {
         </h2>
 
         <p>
-          {lang === "fr"
-            ? "J'écris parce que ça me rend meilleur. Je partage parce que les meilleures choses qui me sont arrivées dans la vie sont venues de gens qui ont partagé."
-            : "I write because it makes me better. I share because the best things that happened to me in life came from people who shared."}
-        </p>
-
-        <p>
-          {lang === "fr"
-            ? "Les seules choses que j'ai achetées qui m'ont vraiment aidé ? Des livres, un thérapeute, et des programmes de développement personnel pas chers."
-            : "The only things I ever bought that truly helped me? Books, a therapist, and cheap self-discovery programs."}
+          {lang === "fr" ? (
+            <>J'écris depuis <a href="/about" className="text-accent hover:text-foreground transition-colors underline">sept ans</a>, et c'est la meilleure chose que j'aie jamais faite pour avancer. J'ai décidé de commencer à partager ces notes parce que la deuxième meilleure chose qui me soit arrivée est venue de gens réels qui partageaient leurs histoires et leurs idées.</>
+          ) : (
+            <>I've been writing for <a href="/about" className="text-accent hover:text-foreground transition-colors underline">seven years</a>, and it was the single best thing I ever did to move forward. I decided to start sharing these notes because the second best thing that happened to me came from reading real people who shared their stories and insights.</>
+          )}
         </p>
 
         <h2 className="font-heading text-xl font-bold text-foreground pt-4">
