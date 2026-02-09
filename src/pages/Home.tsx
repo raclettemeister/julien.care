@@ -31,8 +31,8 @@ const Home = () => {
         <div className="font-body text-base text-foreground leading-[1.8] space-y-4">
           <p>
             {lang === "fr"
-              ? "Entrepreneur, écrivain, meilleur ami de Poncho, possibiliste dans l'âme et taré créatif. J'apprends la guitare country et l'écriture de chansons. Danseur de Lindy Hop et coureur d'endurance. Fraîchement libéré de mes addictions et le plus heureux que j'aie jamais été."
-              : "Successful business owner, writer, Poncho's best friend, possibilist at heart and creative freak. Currently learning to become a country guitar player and songwriter. Lindy Hop dancer and endurance runner. Newly addiction-free and the happiest I've ever been."}
+              ? "Entrepreneur, écrivain, meilleur ami de Poncho, possibiliste dans l'âme et taré créatif. Fraîchement-ish libéré de mes addictions/anesthésiants et le plus heureux que j'aie jamais été."
+              : "Successful business owner, writer, Poncho's best friend, possibilist at heart and creative freak. Freshly-ish addiction/numbing free and the happiest I've ever been."}
           </p>
           <p className="text-sm text-muted-foreground">
             <a href="/about" className="text-accent hover:text-foreground transition-colors">
