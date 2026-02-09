@@ -36,8 +36,8 @@ const Now = () => {
         <div className="font-body text-base text-foreground leading-[1.8] space-y-4">
           <p>
             {lang === "fr"
-              ? "J'ai transformé ma vraie boutique en jeu vidéo. Construit entièrement avec des workflows agentic no-code. Zéro ligne de code écrite par moi. C'est la chose la plus cool que j'ai jamais faite. C'est un rêve d'enfance devenu réalité."
-              : "I turned my real shop into a video game. Built entirely with agentic no-code workflows. Zero lines of code written by me. It's the coolest thing I've ever made. It's a childhood dream come true."}
+              ? "J'ai transformé ma vraie boutique en jeu vidéo. Construit entièrement avec des workflows agentic no-code. C'est la chose la plus cool que j'ai jamais faite — jusqu'ici. C'est un rêve d'enfance devenu réalité."
+              : "I turned my real shop into a video game. Built entirely with agentic no-code workflows. It's the coolest thing I've ever made — yet. It's a childhood dream come true."}
           </p>
           <p>
             {lang === "fr"
@@ -63,8 +63,8 @@ const Now = () => {
         <div className="font-body text-base text-foreground leading-[1.8] space-y-4">
           <p>
             {lang === "fr"
-              ? "Ce site web en est un exemple. J'apprends Lovable, Vercel, les automatisations Zapier, et l'API Buttondown. Je ne sais pas coder — j'apprends à dire aux machines quoi construire."
-              : "This website is one example. I'm learning Lovable, Vercel, Zapier automations, and the Buttondown API. I don't know how to code — I'm learning to tell machines what to build."}
+              ? "Ce site web en est un exemple. Ça a l'air effrayant, mais écoutez-moi. En construisant mon propre site avec du code que je ne code pas moi-même, je me rends indépendant de tout hébergeur et de toute source de big tech et de tracking par cookies. Ce site m'appartient entièrement. Je peux donc vous assurer qu'il n'y a aucun tracking ni vol de données. Je n'aurais jamais pu le faire sans les workflows de génération no-code. C'est révolutionnaire et extraordinaire."
+              : "This website is one example. Sounds scary, but hear me out. By building my own site with code that I don't actually code myself, I'm making myself independent of any website hoster and any source of big tech and cookie tracking. So this site is fully owned by me. I can assure there is no tracking or data stealing. I would never be able to do it if not with no-code gen workflows. This is revolutionary and amazing."}
           </p>
         </div>
       </div>
@@ -77,8 +77,8 @@ const Now = () => {
         <div className="font-body text-base text-foreground leading-[1.8] space-y-4">
           <p>
             {lang === "fr"
-              ? "Chez Julien tourne autour de ~500K€/an de ventes. C'est mon labo. C'est là que je teste des idées, que j'observe les gens, et que je gagne ma vie. Huit ans et ça continue."
-              : "Chez Julien does ~€500K/year in sales. It's my lab. It's where I test ideas, observe people, and make a living. Eight years and counting."}
+              ? "D'habitude, je cours encore à fond. J'apprends à mon équipe à pouvoir marcher sans moi pour qu'on puisse tous grandir et évoluer. J'ai hâte de voir leur propre développement personnel, et j'espère pouvoir jouer un rôle positif dans leur propre épanouissement."
+              : "Usually I'm still running hard. I'm teaching my team to be able to walk without me so we can all grow and evolve. Can't wait to witness their own personal growth, and I hope I can be a positive part in their own personal blooming."}
           </p>
         </div>
       </div>
@@ -91,8 +91,8 @@ const Now = () => {
         <div className="font-body text-base text-foreground leading-[1.8] space-y-4">
           <p>
             {lang === "fr"
-              ? "Lucia et moi, on danse autant que possible. Elle quitte son poste à la Fondation Menuhin en mai. De grandes choses arrivent."
-              : "Lucia and I are dancing as much as we can. She's leaving her position at the Menuhin Foundation in May. Big things coming."}
+              ? "J'ai commencé à danser le Lindy Hop en septembre. Je suis accro, et j'ai hâte de progresser."
+              : "I started dancing Lindy Hop in September. I'm hooked to it, and I can't wait to become better."}
           </p>
         </div>
       </div>
@@ -105,8 +105,8 @@ const Now = () => {
         <div className="font-body text-base text-foreground leading-[1.8] space-y-4">
           <p>
             {lang === "fr"
-              ? "Sept ans sans manquer un seul jour. C'est comme ça que je pense. C'est comme ça que je reste sain d'esprit."
-              : "Seven years without missing a single day. It's how I think. It's how I stay sane."}
+              ? "Sept ans sans manquer un seul jour (j'aimerais bien). C'est comme ça que je pense. C'est comme ça que je reste sain d'esprit et que je génère des idées cool."
+              : "Seven years without missing a single day (I wish). It's how I think. It's how I stay sane and generate cool ideas."}
           </p>
         </div>
       </div>
