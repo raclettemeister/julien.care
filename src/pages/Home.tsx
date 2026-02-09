@@ -50,13 +50,13 @@ const Home = () => {
         <div className="font-body text-base text-foreground leading-[1.8] space-y-4">
           <p>
             {lang === "fr"
-              ? "En train de construire un blog, tu es ici. (Surpriiise.) Je vibe-code plusieurs logiciels en même temps."
-              : "Currently building a blog, you are here. (Surpriiise.) Vibe coding multiple software at once."}
+              ? "En train de construire un blog, tu es ici. (Surpriiise.)"
+              : "Currently building a blog, you are here. (Surpriiise.)"}
           </p>
           <p>
             {lang === "fr"
-              ? "Je lance un jeu vidéo et un blog en même temps. Le jeu s'appelle Chez Julien Simulator — c'est littéralement ma boutique transformée en jeu."
-              : "I'm launching a video game and a blog at the same time. The game is called Chez Julien Simulator — it's literally my shop turned into a game."}
+              ? "Je lance un jeu vidéo. Le jeu s'appelle Chez Julien Simulator — c'est littéralement ma boutique transformée en jeu."
+              : "I'm launching a video game. The game is called Chez Julien Simulator — it's literally my shop turned into a game."}
           </p>
           <p>
             {lang === "fr"
