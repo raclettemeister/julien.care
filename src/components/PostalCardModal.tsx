@@ -15,7 +15,7 @@ const PostalCardModal = () => {
         <img
           src={julienPhoto}
           alt="Julien Thibaut"
-          className="w-full h-full object-cover"
+          className="w-full h-full object-cover scale-[1.3]"
         />
       </div>
 
