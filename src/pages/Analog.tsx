@@ -13,8 +13,8 @@ const sections = [
   {
     titleEn: "Lindy Hop 💃",
     titleFr: "Lindy Hop 💃",
-    textEn: "Lucia introduced me to Lindy Hop. It's 1930s swing. It's physical, musical, social, and it requires losing yourself in the music with another human being. No phone. No screen. Just rhythm, connection, and sweat. It's the most anti-digital thing in my life and I need it.",
-    textFr: "Lucia m'a fait découvrir le Lindy Hop. C'est du swing des années 1930. C'est physique, musical, social, et ça demande de se perdre dans la musique avec un autre être humain. Pas de téléphone. Pas d'écran. Juste le rythme, la connexion, et la sueur. C'est la chose la plus anti-numérique dans ma vie et j'en ai besoin.",
+    textEn: "Lucia introduced me to Lindy Hop. It's 1930s swing. Contrary to other dances I tried, it's so free without too many rules to overwhelm you and full of improvisation. I'm already dancing with live bands after a few months, and I can't wait to see myself becoming an expressive dancer.",
+    textFr: "Lucia m'a fait découvrir le Lindy Hop. C'est du swing des années 1930. Contrairement aux autres danses que j'ai essayées, c'est tellement libre, sans trop de règles pour te submerger et plein d'improvisation. Je danse déjà avec des groupes live après quelques mois, et j'ai hâte de me voir devenir un danseur expressif.",
   },
   {
     titleEn: "The Shop 🏪",
