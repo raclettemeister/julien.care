@@ -9,11 +9,11 @@ const Now = () => {
       <h1 className="text-[2.5rem] font-bold text-foreground tracking-tight mb-2">
         {lang === "fr" ? "Maintenant" : "Now"}
       </h1>
-      <p className="text-sm text-muted-foreground mb-12">
+      <p className="font-hand text-base text-muted-foreground mb-12">
         {lang === "fr" ? "Dernière mise à jour : 9 fév. 2026 · Bruxelles" : "Last updated: Feb 9, 2026 · Brussels"}
       </p>
 
-      <div className="text-lg text-foreground leading-[1.8] space-y-7">
+      <div className="font-body text-lg text-foreground leading-[1.8] space-y-7">
         <p>
           {lang === "fr"
             ? "Je lance un jeu vidéo et un site web en même temps. Parce que pourquoi pas."
@@ -35,18 +35,18 @@ const Now = () => {
             : "Lucia and I are dancing Lindy Hop as much as we can. She's leaving her position at the Menuhin Foundation in May. Big things coming."}
         </p>
 
-        <div className="bg-accent-light rounded-xl p-7 mt-10 mb-10">
-          <p className="font-semibold mb-3">
+        <div className="sketch-border bg-accent-light p-7 mt-10 mb-10">
+          <p className="font-hand text-lg font-bold mb-3">
             {lang === "fr" ? "Ce que j'apprends en ce moment :" : "What I'm learning right now:"}
           </p>
-          <ul className="list-disc pl-5 leading-[2]">
+          <ul className="font-body list-disc pl-5 leading-[2]">
             <li>{lang === "fr" ? "Lovable & Vercel — construire des sites web avec l'IA" : "Lovable & Vercel — building websites with AI"}</li>
             <li>{lang === "fr" ? "Zapier & automatisations — connecter mes outils" : "Zapier & automations — connecting my tools"}</li>
             <li>{lang === "fr" ? "Buttondown API — newsletters programmables" : "Buttondown API — programmable newsletters"}</li>
           </ul>
         </div>
 
-        <p className="text-muted-foreground text-sm italic">
+        <p className="font-hand text-base text-muted-foreground italic">
           {lang === "fr"
             ? "Inspiré par la page /now de Derek Sivers. Si tu ne le connais pas, cherche-le. Tu me remercieras."
             : "Inspired by Derek Sivers' /now page. If you don't know him, look him up. You'll thank me."}

@@ -30,7 +30,7 @@ const Analog = () => {
       <h1 className="text-[2.5rem] font-bold text-foreground tracking-tight mb-3">
         {lang === "fr" ? "Créativité Analogique" : "Analog Creativity"}
       </h1>
-      <p className="text-lg text-muted-foreground mb-14 leading-relaxed">
+      <p className="font-body text-lg text-muted-foreground mb-14 leading-relaxed">
         {lang === "fr"
           ? "Tout ce que je fais ne se passe pas sur un écran. Dieu merci."
           : "Not everything I do happens on a screen. Thank God."}
@@ -41,9 +41,12 @@ const Analog = () => {
           <h2 className="text-2xl font-bold text-foreground mb-3">
             {lang === "fr" ? s.titleFr : s.titleEn}
           </h2>
-          <p className="text-[1.05rem] text-foreground leading-[1.8]">
+          <p className="font-body text-[1.05rem] text-foreground leading-[1.8]">
             {lang === "fr" ? s.textFr : s.textEn}
           </p>
+          {i < sections.length - 1 && (
+            <div className="doodle-divider mt-10 mx-auto w-20" />
+          )}
         </div>
       ))}
 
