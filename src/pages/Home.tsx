@@ -31,18 +31,8 @@ const Home = () => {
         <div className="font-body text-base text-foreground leading-[1.8] space-y-4">
           <p>
             {lang === "fr"
-              ? "J'ai 31 ans. Je vis en Belgique. Je gère une boutique qui fait ~500K€ par an. Je vis avec Lucia, l'amour de ma vie, et notre chien Poncho."
-              : "I'm 31. I live in Belgium. I run a shop that does ~€500K a year. I live with Lucia, the love of my life, and our dog Poncho."}
-          </p>
-          <p>
-            {lang === "fr"
-              ? "J'avais des addictions. J'avais de la complaisance. Puis j'ai découvert Carl Jung, la thérapie, et l'idée que si tu n'examines pas ta vie, tu ne vis pas — tu réagis. Ça a tout changé."
-              : "I had addictions. I had complacency. Then I found Carl Jung, and therapy, and the idea that if you don't examine your life, you're not living — you're reacting. It changed everything."}
-          </p>
-          <p>
-            {lang === "fr"
-              ? "Maintenant je construis des logiciels sans savoir coder. Je dis à l'IA ce que je veux et on se bat jusqu'à ce que ça existe."
-              : "Now I build software without knowing how to code. I tell AI what I want and we fight until it exists."}
+              ? "Entrepreneur, écrivain, meilleur ami de Poncho, possibiliste dans l'âme et taré créatif. J'apprends la guitare country et l'écriture de chansons. Danseur de Lindy Hop et coureur d'endurance. Fraîchement libéré de mes addictions et le plus heureux que j'aie jamais été."
+              : "Successful business owner, writer, Poncho's best friend, possibilist at heart and creative freak. Currently learning to become a country guitar player and songwriter. Lindy Hop dancer and endurance runner. Newly addiction-free and the happiest I've ever been."}
           </p>
           <p className="text-sm text-muted-foreground">
             <a href="/about" className="text-accent hover:text-foreground transition-colors">
