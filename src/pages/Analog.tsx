@@ -19,8 +19,8 @@ const sections = [
   {
     titleEn: "The Shop 🏪",
     titleFr: "La boutique 🏪",
-    textEn: "Chez Julien is a physical shop in Belgium. Real products, real customers, real problems. No SaaS. No VC money. Just honest commerce, dirty hands, and decisions that matter. This is where I learned everything I know about running a business.",
-    textFr: "Chez Julien est une boutique physique en Belgique. Des vrais produits, des vrais clients, des vrais problèmes. Pas de SaaS. Pas de VC. Juste du commerce honnête, des mains sales, et des décisions qui comptent. C'est là que j'ai appris tout ce que je sais sur la gestion d'une entreprise.",
+    textEn: "Chez Julien is a physical shop in Belgium. Real products, real customers, real problems. No SaaS. No VC money. Just honest commerce, dirty hands, and decisions that matter. This is where I learned everything I know about running a business. Rumors say the raclette there is the best on the planet.",
+    textFr: "Chez Julien est une boutique physique en Belgique. Des vrais produits, des vrais clients, des vrais problèmes. Pas de SaaS. Pas de VC. Juste du commerce honnête, des mains sales, et des décisions qui comptent. C'est là que j'ai appris tout ce que je sais sur la gestion d'une entreprise. La rumeur dit que la raclette y est la meilleure de la planète.",
   },
 ];
 
