@@ -26,27 +26,24 @@ const Analog = () => {
   const { lang } = useLanguage();
 
   return (
-    <div className="max-w-[680px] mx-auto px-6 py-20">
-      <h1 className="text-[2.5rem] font-bold text-foreground tracking-tight mb-3">
+    <div className="max-w-[640px] mx-auto px-6 pb-20">
+      <h1 className="text-[2rem] font-bold text-foreground tracking-tight mb-2">
         {lang === "fr" ? "Créativité Analogique" : "Analog Creativity"}
       </h1>
-      <p className="font-body text-lg text-muted-foreground mb-14 leading-relaxed">
+      <p className="font-body text-base text-muted-foreground mb-10 leading-relaxed">
         {lang === "fr"
           ? "Tout ce que je fais ne se passe pas sur un écran. Dieu merci."
           : "Not everything I do happens on a screen. Thank God."}
       </p>
 
       {sections.map((s, i) => (
-        <div key={i} className="mb-12">
-          <h2 className="text-2xl font-bold text-foreground mb-3">
+        <div key={i} className={`pb-8 mb-8 ${i < sections.length - 1 ? "border-b border-border/40" : ""}`}>
+          <h2 className="text-lg font-bold text-foreground mb-2">
             {lang === "fr" ? s.titleFr : s.titleEn}
           </h2>
-          <p className="font-body text-[1.05rem] text-foreground leading-[1.8]">
+          <p className="font-body text-base text-foreground leading-[1.8]">
             {lang === "fr" ? s.textFr : s.textEn}
           </p>
-          {i < sections.length - 1 && (
-            <div className="doodle-divider mt-10 mx-auto w-20" />
-          )}
         </div>
       ))}
 

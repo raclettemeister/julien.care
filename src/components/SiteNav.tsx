@@ -14,24 +14,24 @@ const SiteNav = () => {
   const location = useLocation();
 
   return (
-    <nav className="sticky top-0 z-50 backdrop-blur-xl bg-background/80 border-b border-border/60">
-      <div className="max-w-[1100px] mx-auto px-6 py-4 flex justify-between items-center">
+    <nav className="border-b border-border/40 mb-8">
+      <div className="max-w-[640px] mx-auto px-6 py-5 flex justify-between items-center">
         <Link
           to="/"
-          className="font-hand text-2xl font-bold text-foreground no-underline hover:text-accent transition-colors"
+          className="font-heading text-xl font-bold text-foreground no-underline"
         >
           Julien
         </Link>
-        <div className="flex items-center gap-1 flex-wrap justify-end">
+        <div className="flex items-center gap-4 flex-wrap justify-end">
           {navItems.map(({ path, labelEn, labelFr }) => {
             const isActive = location.pathname === path;
             return (
               <Link
                 key={path}
                 to={path}
-                className={`font-body text-sm px-3 py-1.5 no-underline transition-all ${
+                className={`font-body text-sm no-underline transition-colors ${
                   isActive
-                    ? "font-semibold text-foreground squiggle-underline"
+                    ? "font-semibold text-foreground"
                     : "font-normal text-muted-foreground hover:text-foreground"
                 }`}
               >
@@ -41,7 +41,7 @@ const SiteNav = () => {
           })}
           <button
             onClick={toggleLang}
-            className="ml-2 font-hand text-sm font-bold border-[1.5px] border-accent text-accent px-3 py-1 rounded-full bg-transparent cursor-pointer hover:bg-accent hover:text-accent-foreground transition-all"
+            className="font-body text-xs font-semibold text-muted-foreground hover:text-foreground border-none bg-transparent cursor-pointer px-0"
           >
             {lang === "en" ? "FR" : "EN"}
           </button>
