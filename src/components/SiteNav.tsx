@@ -2,7 +2,7 @@ import { useLanguage } from "@/contexts/LanguageContext";
 import { Link, useLocation } from "react-router-dom";
 
 const navItems = [
-  { path: "/", labelEn: "Essays", labelFr: "Essais" },
+  { path: "/essays", labelEn: "Essays", labelFr: "Essais" },
   { path: "/now", labelEn: "Now", labelFr: "Maintenant" },
   { path: "/projects", labelEn: "Projects", labelFr: "Projets" },
   { path: "/analog", labelEn: "Analog", labelFr: "Analog" },
