@@ -53,14 +53,16 @@ const Money = () => {
 
         <p>
           {lang === "fr"
-            ? "Si un jour je vends quelque chose, c'est parce que ça demande trop de temps et que je dois récupérer mon investissement. De la même manière que ces gens l'ont fait avec les livres, les thérapeutes et les programmes de développement personnel."
-            : "If I ever have to sell something, it's because it takes too much time and I need to recoup my investment. The same way those people did with the books, therapists, and cheap self-discovery programs."}
+            ? "Je suis un résolveur de problèmes et un fondateur. Je vais probablement vendre plein de choses. Il m'arrivera peut-être d'en parler dans un article ou dans la newsletter — pas pour te faire acheter, mais parce que le processus créatif derrière mérite d'être raconté pour tes propres projets."
+            : "I'm a problem solver and a founder. I will probably sell a lot of things. I might talk about some of them in an article or the newsletter — not to make you buy it, but because I feel like the creative process behind it is worth sharing for your own projects."}
         </p>
 
         <p>
-          {lang === "fr"
-            ? "Si je crée un jour quelque chose de payant, tu n'en entendras jamais parler dans la newsletter ni sur ce site. Ce sera uniquement référencé dans mon onglet Projets, qui liste tout ce sur quoi je travaille — sans jamais essayer de te pousser à payer."
-            : "If I ever make anything that sells, it will never be pushed in the newsletter or on this website. It will only be referenced in my Projects tab, which lists everything I work on — without ever trying to push you to pay for any of it."}
+          {lang === "fr" ? (
+            <>Ce blog est aussi un moyen de référencer et cataloguer tout ce que je construis, sous l'onglet <a href="/projects" className="text-accent hover:text-foreground transition-colors underline">Projets</a>. Tu y verras peut-être des projets payants à l'avenir, mais je t'assure que je n'utiliserai jamais la newsletter ni ton attention pour essayer de te convertir en vente.</>
+          ) : (
+            <>This blog is also a way to reference and catalog everything I'm building, under the <a href="/projects" className="text-accent hover:text-foreground transition-colors underline">Projects</a> tab. You might see projects that cost money in the future, but I assure you I will never use the newsletter or your attention to try to convert you into sales.</>
+          )}
         </p>
       </div>
 
