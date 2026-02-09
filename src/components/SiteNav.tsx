@@ -14,11 +14,11 @@ const SiteNav = () => {
   const location = useLocation();
 
   return (
-    <nav className="sticky top-0 z-50 backdrop-blur-xl bg-background/85 border-b border-border">
+    <nav className="sticky top-0 z-50 backdrop-blur-xl bg-background/80 border-b border-border/60">
       <div className="max-w-[1100px] mx-auto px-6 py-4 flex justify-between items-center">
         <Link
           to="/"
-          className="text-xl font-bold text-foreground tracking-tight no-underline hover:opacity-80 transition-opacity"
+          className="font-hand text-2xl font-bold text-foreground no-underline hover:text-accent transition-colors"
         >
           Julien
         </Link>
@@ -29,9 +29,9 @@ const SiteNav = () => {
               <Link
                 key={path}
                 to={path}
-                className={`text-sm px-3 py-1.5 rounded-md no-underline transition-all ${
+                className={`font-body text-sm px-3 py-1.5 no-underline transition-all ${
                   isActive
-                    ? "font-semibold text-foreground bg-accent-light"
+                    ? "font-semibold text-foreground squiggle-underline"
                     : "font-normal text-muted-foreground hover:text-foreground"
                 }`}
               >
@@ -41,7 +41,7 @@ const SiteNav = () => {
           })}
           <button
             onClick={toggleLang}
-            className="ml-2 border-[1.5px] border-accent text-accent text-xs font-semibold px-2.5 py-1 rounded-full bg-transparent cursor-pointer hover:bg-accent hover:text-accent-foreground transition-all"
+            className="ml-2 font-hand text-sm font-bold border-[1.5px] border-accent text-accent px-3 py-1 rounded-full bg-transparent cursor-pointer hover:bg-accent hover:text-accent-foreground transition-all"
           >
             {lang === "en" ? "FR" : "EN"}
           </button>

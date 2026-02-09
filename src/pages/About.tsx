@@ -10,7 +10,7 @@ const About = () => {
         {lang === "fr" ? "L'histoire" : "The Story"}
       </h1>
 
-      <div className="text-lg text-foreground leading-[1.85] space-y-6">
+      <div className="font-body text-lg text-foreground leading-[1.85] space-y-6">
         <p>
           {lang === "fr"
             ? "J'ai 31 ans. Je vis en Belgique. Je gère une boutique qui fait ~500K€ par an. Je suis propriétaire de 48% de l'immeuble. Je vis avec Lucia, l'amour de ma vie, et notre chien Poncho."
@@ -32,7 +32,7 @@ const About = () => {
             : "I started writing every day. I built systems. I confronted my shadow. I stopped lying to myself. It changed everything."}
         </p>
 
-        <blockquote className="border-l-4 border-accent pl-6 my-10 italic text-xl leading-relaxed">
+        <blockquote className="sketch-border border-l-4 !border-l-accent pl-6 py-4 my-10 italic font-heading text-xl leading-relaxed bg-accent-light/30">
           {lang === "fr"
             ? "Je ne suis pas un gourou. Je suis un mec qui a fait le travail et qui te dit exactement comment ça s'est passé. Si tu veux du soft, tu es au mauvais endroit."
             : "I'm not a guru. I'm a guy who did the work and is telling you exactly how it went. If you want soft, you're in the wrong place."}
