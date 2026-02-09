@@ -8,12 +8,12 @@ const Projects = () => {
   return (
     <div className="max-w-[640px] mx-auto px-6 pb-20">
       <h1 className="text-[2rem] font-bold text-foreground tracking-tight mb-2">
-        {lang === "fr" ? "Ce que je construis" : "Things I've Built"}
+        {lang === "fr" ? "Ce que je construis" : "Things I'm Building"}
       </h1>
       <p className="font-body text-base text-muted-foreground mb-10 leading-relaxed">
-        {lang === "fr"
-          ? "Je suis un développeur de logiciels qui n'écrit pas de code. Je dis à l'IA ce que je veux, on se bat un peu, et quelque chose de réel en sort."
-          : "I'm a software developer who doesn't write code. I tell AI what I want, we argue a bit, and something real comes out."}
+        🏴‍☠️ {lang === "fr"
+          ? "Regardez-moi, c'est moi le développeur maintenant."
+          : "Look at me, I'm the software developer now."}
       </p>
 
       {projects.map((p, i) => (
