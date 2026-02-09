@@ -26,10 +26,15 @@ const SubscribeBox = () => {
       <p className="font-heading text-base font-semibold text-foreground mb-1">
         {lang === "fr" ? "La newsletter, c'est le nouveau cool." : "Newsletter is the new cool."}
       </p>
-      <p className="font-body text-sm text-muted-foreground mb-4">
+      <p className="font-body text-sm text-muted-foreground mb-2">
         {lang === "fr"
           ? "Pas de pubs. Pas de big tech. Non addictif. C'est gratuit et tu n'es pas mon produit. Je n'essaierai jamais de te vendre quoi que ce soit."
           : "No ads. No big tech. Non-addictive. It's free and you're not my product. I will never try to sell you anything."}
+      </p>
+      <p className="font-body text-sm text-muted-foreground mb-4">
+        {lang === "fr"
+          ? "Juste du contenu de qualité, facile à lire, pour ta propre créativité et ton parcours personnel vers la liberté et le succès."
+          : "Just high quality, easily readable, insight for your own creativity and personal journey to freedom and success."}
       </p>
       <div className="flex gap-2">
         <input
