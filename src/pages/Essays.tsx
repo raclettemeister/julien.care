@@ -2,7 +2,7 @@ import { useLanguage } from "@/contexts/LanguageContext";
 import { essays } from "@/data/content";
 import { Link } from "react-router-dom";
 import SubscribeBox from "@/components/SubscribeBox";
-import visionBoardCollage from "@/assets/vision-board-collage.jpg";
+import visionBoardCollage from "@/assets/essays/collage-full.jpg";
 
 const Essays = () => {
   const { lang } = useLanguage();

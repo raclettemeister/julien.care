@@ -1,5 +1,12 @@
 import { useRef, useEffect, useState, type ReactNode } from "react";
-import collageImg from "@/assets/vision-board-collage.jpg";
+import collageFull from "@/assets/essays/collage-full.jpg";
+import piece1 from "@/assets/essays/piece-1-temple-who.png";
+import piece2 from "@/assets/essays/piece-2-tree-vision.png";
+import piece3 from "@/assets/essays/piece-3-poncho-sauvage.png";
+import piece4 from "@/assets/essays/piece-4-latin-america.png";
+import piece5 from "@/assets/essays/piece-5-river-cobra.png";
+import piece6 from "@/assets/essays/piece-6-cosmos-reinvente.png";
+import piece7 from "@/assets/essays/piece-7-storyteller-soar.png";
 import SubscribeBox from "@/components/SubscribeBox";
 
 /* ─── scroll-reveal hook ─── */
@@ -38,148 +45,28 @@ function EssayLink({ href, children }: { href: string; children: ReactNode }) {
   );
 }
 
-/* ─── collage piece ─── */
-function Piece({
-  bgPos,
-  bgSize = "300%",
-  aspect = "4/3",
-  annotation,
-  notePos = "top-2 right-2",
-  noteRotate = -3,
-}: {
-  bgPos: string;
-  bgSize?: string;
-  aspect?: string;
-  annotation?: string;
-  notePos?: string;
-  noteRotate?: number;
-}) {
+/* ─── collage piece (pre-cropped image) ─── */
+function Piece({ src, alt, rotate = -1.5 }: { src: string; alt: string; rotate?: number }) {
   const { ref, vis } = useReveal(0.2);
   return (
-    <div ref={ref} className="relative my-8">
-      <div
-        className={`w-full overflow-hidden transition-all duration-700 ease-out
+    <div ref={ref} className="my-8">
+      <img
+        src={src}
+        alt={alt}
+        className={`w-full h-auto transition-all duration-700 ease-out
           ${vis ? "opacity-100 translate-y-0" : "opacity-0 translate-y-12"}`}
         style={{
-          aspectRatio: aspect,
-          boxShadow: vis
-            ? "4px 6px 18px rgba(0,0,0,0.18), 0 0 0 1px rgba(0,0,0,0.04)"
-            : "none",
-          borderRadius: "2px",
+          transform: vis ? `rotate(${rotate}deg)` : `rotate(${rotate}deg) translateY(48px)`,
+          boxShadow: vis ? "0 4px 20px rgba(0,0,0,0.12)" : "none",
         }}
-      >
-        <div
-          className="w-full h-full"
-          style={{
-            backgroundImage: `url(${collageImg})`,
-            backgroundPosition: bgPos,
-            backgroundSize: bgSize,
-            backgroundRepeat: "no-repeat",
-          }}
-        />
-      </div>
-      {annotation && (
-        <div
-          className={`absolute font-hand text-foreground text-lg md:text-xl pointer-events-none
-            transition-opacity duration-500 delay-300 ${vis ? "opacity-100" : "opacity-0"} ${notePos}`}
-          style={{ transform: `rotate(${noteRotate}deg)` }}
-        >
-          {annotation}
-        </div>
-      )}
+        loading="lazy"
+      />
     </div>
   );
 }
 
-/* ─── assembly grid ─── */
-function Assembly() {
-  const { ref, vis } = useReveal(0.1);
-  const [lightbox, setLightbox] = useState(false);
-
-  const scatter = [
-    { x: -40, y: -30, r: -5 },
-    { x: 20, y: -50, r: 4 },
-    { x: 50, y: -20, r: -3 },
-    { x: -30, y: 10, r: 5 },
-    { x: 30, y: -15, r: -4 },
-    { x: -45, y: 20, r: 6 },
-    { x: 35, y: 5, r: -5 },
-    { x: -25, y: 25, r: 3 },
-    { x: 55, y: 15, r: -7 },
-    { x: -35, y: 35, r: 4 },
-    { x: 25, y: 20, r: -3 },
-    { x: 45, y: 40, r: 5 },
-  ];
-
-  const colPos = [0, 50, 100];
-  const rowPos = [0, 33.33, 66.67, 100];
-
-  return (
-    <>
-      <div
-        ref={ref}
-        className="my-12 cursor-pointer overflow-visible"
-        onClick={() => vis && setLightbox(true)}
-      >
-        <div className="grid grid-cols-3 gap-[2px]">
-          {scatter.map((o, i) => {
-            const col = i % 3;
-            const row = Math.floor(i / 3);
-            return (
-              <div
-                key={i}
-                className="overflow-hidden transition-all ease-out"
-                style={{
-                  aspectRatio: "3/4",
-                  transitionDuration: `${700 + i * 80}ms`,
-                  transitionDelay: vis ? `${i * 60}ms` : "0ms",
-                  transform: vis
-                    ? "translate(0,0) rotate(0deg)"
-                    : `translate(${o.x}px, ${o.y}px) rotate(${o.r}deg)`,
-                  opacity: vis ? 1 : 0,
-                }}
-              >
-                <div
-                  className="w-full h-full"
-                  style={{
-                    backgroundImage: `url(${collageImg})`,
-                    backgroundSize: "300% 400%",
-                    backgroundPosition: `${colPos[col]}% ${rowPos[row]}%`,
-                  }}
-                />
-              </div>
-            );
-          })}
-        </div>
-        <p className="font-hand text-center text-muted-foreground text-sm mt-3">
-          click to view full size
-        </p>
-      </div>
-
-      {lightbox && (
-        <div
-          className="fixed inset-0 z-50 bg-black/85 flex items-center justify-center p-4 cursor-pointer"
-          onClick={() => setLightbox(false)}
-        >
-          <img
-            src={collageImg}
-            alt="Full vision board collage"
-            className="max-w-full max-h-[90vh] object-contain"
-          />
-        </div>
-      )}
-    </>
-  );
-}
-
 /* ─── text section wrapper ─── */
-function Section({
-  children,
-  extraSpace,
-}: {
-  children: ReactNode;
-  extraSpace?: boolean;
-}) {
+function Section({ children, extraSpace }: { children: ReactNode; extraSpace?: boolean }) {
   const { ref, vis } = useReveal(0.1);
   return (
     <section
@@ -200,14 +87,109 @@ const P = ({ children, className = "" }: { children: ReactNode; className?: stri
   </p>
 );
 
+/* ─── puzzle assembly ─── */
+const pieces = [
+  { src: piece1, label: "Temple & WHO?" },
+  { src: piece2, label: "Tree & Vision" },
+  { src: piece3, label: "Poncho & Sauvage" },
+  { src: piece4, label: "Latin America" },
+  { src: piece5, label: "River & Cobra" },
+  { src: piece6, label: "Cosmos & Réinvente" },
+  { src: piece7, label: "Storyteller & Soar" },
+];
+
+const scatterOffsets = [
+  { x: -60, y: -40, r: -8 },
+  { x: 50, y: -60, r: 6 },
+  { x: -40, y: 20, r: -5 },
+  { x: 60, y: -20, r: 7 },
+  { x: -50, y: 40, r: -6 },
+  { x: 40, y: 30, r: 5 },
+  { x: -30, y: 50, r: -4 },
+];
+
+function PuzzleAssembly() {
+  const { ref, vis } = useReveal(0.1);
+  const [assembled, setAssembled] = useState(false);
+  const [lightbox, setLightbox] = useState(false);
+
+  useEffect(() => {
+    if (vis) {
+      const t = setTimeout(() => setAssembled(true), 2800);
+      return () => clearTimeout(t);
+    }
+  }, [vis]);
+
+  return (
+    <>
+      <div ref={ref} className="my-16">
+        {!assembled ? (
+          <div className="relative w-full" style={{ aspectRatio: "3/4" }}>
+            {pieces.map((p, i) => {
+              const o = scatterOffsets[i];
+              return (
+                <img
+                  key={i}
+                  src={p.src}
+                  alt={p.label}
+                  className="absolute transition-all ease-out"
+                  style={{
+                    width: `${100 / 3 + 10}%`,
+                    top: `${(Math.floor(i / 3)) * 28 + 5}%`,
+                    left: `${(i % 3) * 30 + 5}%`,
+                    transitionDuration: `${800 + i * 120}ms`,
+                    transitionDelay: vis ? `${i * 120}ms` : "0ms",
+                    transform: vis
+                      ? "translate(0,0) rotate(0deg)"
+                      : `translate(${o.x}px, ${o.y}px) rotate(${o.r}deg)`,
+                    opacity: vis ? 1 : 0,
+                    filter: "drop-shadow(0 4px 12px rgba(0,0,0,0.15))",
+                  }}
+                  loading="lazy"
+                />
+              );
+            })}
+          </div>
+        ) : (
+          <img
+            src={collageFull}
+            alt="Complete vision board collage"
+            className="w-full h-auto cursor-pointer animate-fade-in"
+            onClick={() => setLightbox(true)}
+          />
+        )}
+        <p
+          className="font-hand text-center text-muted-foreground text-sm mt-3 cursor-pointer"
+          onClick={() => setLightbox(true)}
+        >
+          click to view full size
+        </p>
+      </div>
+
+      {lightbox && (
+        <div
+          className="fixed inset-0 z-50 bg-black/85 flex items-center justify-center p-4 cursor-pointer"
+          onClick={() => setLightbox(false)}
+        >
+          <img
+            src={collageFull}
+            alt="Full vision board collage"
+            className="max-w-full max-h-[90vh] object-contain"
+          />
+        </div>
+      )}
+    </>
+  );
+}
+
 /* ════════════════════════════════════════════════════════════════
    MAIN PAGE
    ════════════════════════════════════════════════════════════════ */
 const VisionBoard = () => {
   return (
     <article className="max-w-[640px] mx-auto px-6 pb-20">
-      {/* ── 1. Title + Hero ── */}
-      <header className="pt-8 pb-20">
+      {/* ── Title ── */}
+      <header className="pt-8 pb-6">
         <p className="font-body text-xs text-muted-foreground mb-3 uppercase tracking-widest">
           Feb 2026
         </p>
@@ -216,7 +198,16 @@ const VisionBoard = () => {
         </h1>
       </header>
 
-      {/* ── 2. Ta Prohm + WHO? ── */}
+      {/* ── Hero: full collage ── */}
+      <div className="mb-20">
+        <img
+          src={collageFull}
+          alt="Complete vision board collage"
+          className="w-full h-auto"
+        />
+      </div>
+
+      {/* ── Temple + WHO ── */}
       <Section>
         <P>
           I found this image of the dark entry to the temple of{" "}
@@ -225,26 +216,20 @@ const VisionBoard = () => {
           it on my vision board. And without conscious action, right next to it, I
           cut the word: <em>WHO?</em>
         </P>
+
+        <Piece src={piece1} alt="Temple of Ta Prohm with WHO? annotation" rotate={-1.5} />
+
+        <P>And the questions start flowing.</P>
         <P>
-          And the questions start flowing. Who am I to start a blog? Who do I think
-          I am? And if not me — then who?
+          Who am I to start a blog? Who do I think I am? And if not me — then who?
         </P>
         <p className="font-hand text-3xl text-foreground mb-4">WHO?</p>
         <P className="text-muted-foreground">
-          That's the question. The only question on my vision board. Can you find it
-          too? <span className="italic">(Bottom right corner)</span>
+          That's the question. The only question on my vision board.
         </P>
-        <Piece
-          bgPos="88% 95%"
-          bgSize="260%"
-          aspect="4/3"
-          annotation="WHO? →"
-          notePos="bottom-4 right-4"
-          noteRotate={-5}
-        />
       </Section>
 
-      {/* ── 3. Collage explanation ── */}
+      {/* ── Collage explanation + temple metaphor ── */}
       <Section extraSpace>
         <P>
           <EssayLink href="https://artfulparent.com/make-vision-board-works-10-steps/">
@@ -267,7 +252,6 @@ const VisionBoard = () => {
         </P>
       </Section>
 
-      {/* ── 4. Temple metaphor ── */}
       <Section>
         <P>And that mindset? It goes deeper than a collage.</P>
         <P>
@@ -295,17 +279,9 @@ const VisionBoard = () => {
           (Brené Brown, <em>The Gifts of Imperfection</em>, 2010)
         </p>
         <P>Today I'm entering the temple. Are you coming with me?</P>
-        <Piece
-          bgPos="82% 100%"
-          bgSize="300%"
-          aspect="3/2"
-          annotation="enter here →"
-          notePos="top-3 left-3"
-          noteRotate={-4}
-        />
       </Section>
 
-      {/* ── 5. The climb ── */}
+      {/* ── The climb ── */}
       <Section>
         <P>
           So we enter. Inside our temple, we find a little kid. Hey — that's me.
@@ -322,24 +298,16 @@ const VisionBoard = () => {
           <em>"Let's start climbing that tree,"</em> said the little kid.
         </P>
         <P>All right, motherfucker. Let's go.</P>
+        <P>So we climb.</P>
+
+        <Piece src={piece2} alt="Tree climbers going up" rotate={1} />
+
         <P>
-          So we climb. And you can follow on the vision board — you can see people
+          And you can follow on the vision board — you can see people
           climbing that tree. (You can't see the backpack baby, but just imagine
           it.) The climbers — that's me. That's you if you want. That's us, our
           community, finding our way as we go <strong>UP</strong>.
         </P>
-        <Piece
-          bgPos="85% 40%"
-          bgSize="250%"
-          aspect="3/4"
-          annotation="that's us ↗"
-          notePos="bottom-4 left-4"
-          noteRotate={-6}
-        />
-      </Section>
-
-      {/* ── 6. The vision ── */}
-      <Section>
         <P>
           Not just up through hustle. Up through effort, through nature, through
           play, through rest, through love, through purpose. All of it. The whole
@@ -348,24 +316,13 @@ const VisionBoard = () => {
           life trying to inspire courage, health, happiness, and purpose into other
           people's lives.
         </P>
-        <Piece
-          bgPos="70% 8%"
-          bgSize="250%"
-          aspect="5/2"
-          annotation=""
-          notePos=""
-          noteRotate={0}
-        />
-        <p className="font-hand text-center text-2xl text-foreground mt-2">
-          vision · storyteller
-        </p>
       </Section>
 
-      {/* ── 7. The backstory — WHO am I? ── */}
+      {/* ── WHO am I — raw confession, no image ── */}
       <Section extraSpace>
-        <P>
-          Well, <em>WHO</em> do I think I am? To start teaching people?
-        </P>
+        <P>Well,</P>
+        <p className="font-hand text-3xl text-foreground mb-4">WHO</p>
+        <P>do I think I am? To start teaching people?</P>
         <P>
           Well, first — in the last five years, I have shown an incredible amount of
           courage. I have completely changed my health. I have become happier than I
@@ -396,99 +353,83 @@ const VisionBoard = () => {
         </P>
       </Section>
 
-      {/* ── 8. Poncho the wolf ── */}
+      {/* ── Poncho ── */}
       <Section>
         <P>
           Good. Because we're not done. Look at the vision board again — can you
           find the wolf?
         </P>
+
+        <Piece src={piece3} alt="Poncho the wolf dog" rotate={-2} />
+
         <P>
           That's Poncho. My dog. His charismatic face that I see every morning when
           I wake up. His jaw dropped on the bed sheet, asking me: are you gonna wake
           up so we can both partake in the dance of life today? My answer is always
           yes.
         </P>
-        <Piece
-          bgPos="18% 92%"
-          bgSize="300%"
-          aspect="4/3"
-          annotation="good morning, Poncho ♡"
-          notePos="top-3 right-3"
-          noteRotate={-3}
-        />
       </Section>
 
-      {/* ── 9. Central America + the wild ── */}
+      {/* ── Central America (mid-sentence drop) ── */}
       <Section>
         <P>
           Everybody who knows me personally will tell you that I'm a wild person.
           And I keep on being wild during 2026. At the center you can see a little
-          map of Central America, representing my past — my crazy, extremely
-          dangerous hitchhiking journey with a 5kg backpack through Central America
-          and into no-go zones. It reminds me what I achieved and the risks I took.
-          It helped me ground myself.
+          map of Central America,
         </P>
+
+        <Piece src={piece4} alt="Central America map" rotate={1.5} />
+
         <P>
-          And I need grounding for what I'm about to do in 2026. Because I'm about
-          to jump off the cliff and into a new world. A new career, new business,
-          new creativity. This blog is only the beginning.
+          representing my past — my crazy, extremely dangerous hitchhiking journey
+          with a 5kg backpack through Central America and into no-go zones. It
+          reminds me what I achieved and the risks I took. It helped me ground
+          myself. And I need grounding for what I'm about to do in 2026. Because I'm
+          about to jump off the cliff and into a new world. A new career, new
+          business, new creativity. This blog is only the beginning.
         </P>
+        <P>Look at the rest of the collage.</P>
+
+        <Piece src={piece5} alt="River cobra and kid dangling" rotate={-1} />
+
         <P>
-          Look at the rest of the collage. A river forming a question mark. A kid
-          dangling in the air. A cobra. None of it is safe. None of it is certain.
-          And that's exactly where I am right now. Where I think you are too. Where
-          the whole world is.
+          A river forming a question mark. A kid dangling in the air. A cobra. None
+          of it is safe. None of it is certain. And that's exactly where I am right
+          now. Where I think you are too. Where the whole world is.
         </P>
-        <Piece
-          bgPos="35% 55%"
-          bgSize="220%"
-          aspect="1/1"
-          annotation=""
-          notePos=""
-          noteRotate={0}
-        />
       </Section>
 
-      {/* ── 10. Rhythm + cosmos ── */}
+      {/* ── Rhythm + cosmos ── */}
       <Section>
         <P>
           This blog is about showing you my rhythm. I have been dancing to the
           rhythm of life, but it is time for me to start my own rhythm and see if
           people like the music I can make. And if they want to dance with me on it.
         </P>
-        <P>I'm in the cosmos. It is time for me to reinvent my life.</P>
-        <Piece
-          bgPos="12% 10%"
-          bgSize="260%"
-          aspect="4/3"
-          annotation="RÉINVENTE"
-          notePos="bottom-3 left-3"
-          noteRotate={-2}
-        />
-      </Section>
 
-      {/* ── 11. Grand reveal ── */}
-      <Section>
+        <Piece src={piece6} alt="Cosmos and RÉINVENTE" rotate={0.5} />
+
+        <P>
+          I'm in the cosmos. It is time for me to reinvent my life.
+        </P>
         <P>
           And if you think it's time for you to reinvent your life too, you should
           probably come around a few times to this blog. Because there's many things
-          coming.
+          coming. Here's the 2026 vision board of Julien, the storyteller. Let's soar.
         </P>
-        <P>
-          Here's the 2026 vision board of Julien, the storyteller.
-        </P>
-        <p className="font-hand text-2xl text-foreground text-center my-6">
-          Let's soar.
-        </p>
-        <Assembly />
+
+        <Piece src={piece7} alt="Storyteller and soar" rotate={-1.5} />
       </Section>
 
-      {/* ── 12. Dedication ── */}
+      {/* ── Dedication ── */}
       <Section extraSpace>
         <p className="font-body text-base text-muted-foreground italic text-center py-16">
           For Lucia — who gave me left-handed scissors. No one else ever did.
         </p>
       </Section>
+
+      {/* ── Grand Puzzle Assembly ── */}
+      <PuzzleAssembly />
 
       {/* ── Subscribe ── */}
       <SubscribeBox />
