@@ -1,10 +1,12 @@
+import { useState } from "react";
 import { useLanguage } from "@/contexts/LanguageContext";
 import SubscribeBox from "@/components/SubscribeBox";
 import PostalCardModal from "@/components/PostalCardModal";
+import ponchoPhoto from "@/assets/poncho-photo.jpg";
 
 const Home = () => {
   const { lang } = useLanguage();
-
+  const [showPoncho, setShowPoncho] = useState(false);
   return (
     <div className="max-w-[640px] mx-auto px-6 pb-20">
       {/* Hero: Name + photo */}
@@ -28,8 +30,8 @@ const Home = () => {
         <div className="font-body text-base text-foreground leading-[1.8] space-y-4">
           <p>
             {lang === "fr"
-              ? "Entrepreneur, écrivain, meilleur ami de Poncho, possibiliste dans l'âme et taré créatif. Fraîchement-ish libéré de mes addictions/anesthésiants et le plus heureux que j'aie jamais été."
-              : "Successful business owner, writer, Poncho's best friend, possibilist at heart and creative freak. Freshly-ish addiction/numbing free and the happiest I've ever been."}
+              ? <>Entrepreneur, écrivain, meilleur ami de <button onClick={() => setShowPoncho(true)} className="text-accent hover:text-foreground transition-colors cursor-pointer underline underline-offset-2">Poncho</button>, possibiliste dans l'âme et taré créatif. Fraîchement-ish libéré de mes addictions/anesthésiants et le plus heureux que j'aie jamais été.</>
+              : <>Successful business owner, writer, <button onClick={() => setShowPoncho(true)} className="text-accent hover:text-foreground transition-colors cursor-pointer underline underline-offset-2">Poncho's</button> best friend, possibilist at heart and creative freak. Freshly-ish addiction/numbing free and the happiest I've ever been.</>}
           </p>
           <p className="text-sm text-muted-foreground">
             <a href="/about" className="text-accent hover:text-foreground transition-colors">
@@ -97,6 +99,23 @@ const Home = () => {
       </section>
 
       <SubscribeBox />
+      {/* Poncho photo popup */}
+      {showPoncho && (
+        <div
+          className="fixed inset-0 z-50 flex items-center justify-center bg-black/60 backdrop-blur-sm p-4"
+          onClick={() => setShowPoncho(false)}
+        >
+          <div className="relative max-w-lg w-full" onClick={(e) => e.stopPropagation()}>
+            <img src={ponchoPhoto} alt="Poncho" className="w-full rounded-lg" />
+            <button
+              onClick={() => setShowPoncho(false)}
+              className="absolute top-2 right-2 w-8 h-8 rounded-full bg-black/50 text-white flex items-center justify-center text-sm hover:bg-black/70 transition-colors z-10"
+            >
+              ✕
+            </button>
+          </div>
+        </div>
+      )}
     </div>
   );
 };
