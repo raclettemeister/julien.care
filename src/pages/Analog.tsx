@@ -7,14 +7,14 @@ const sections = [
   {
     titleEn: "Writing ✍️",
     titleFr: "Écriture ✍️",
-    textEn: "I've been writing every day for 7 years. Not on a blog. In notebooks, documents, voice memos. Thousands of pages about life, discipline, pain, love, and becoming someone I'm not embarrassed by. Writing is how I think. Without it, I don't know who I am.",
-    textFr: "J'écris tous les jours depuis 7 ans. Pas sur un blog. Dans des carnets, des documents, des notes vocales. Des milliers de pages sur la vie, la discipline, la douleur, l'amour, et le fait de devenir quelqu'un dont je ne suis pas gêné. L'écriture est la façon dont je pense. Sans ça, je ne sais pas qui je suis.",
+    textEn: "I've been writing every day for seven years. Not on a blog — in notebooks, Google Docs, voice memos, and lost journals. Thousands of pages about life, pain, love, and the hard process of becoming someone I love. More on this coming soon.",
+    textFr: "J'écris tous les jours depuis sept ans. Pas sur un blog — dans des carnets, des Google Docs, des mémos vocaux et des journaux perdus. Des milliers de pages sur la vie, la douleur, l'amour, et le difficile processus de devenir quelqu'un que j'aime. Plus à venir bientôt.",
   },
   {
     titleEn: "Lindy Hop 💃",
     titleFr: "Lindy Hop 💃",
-    textEn: "Lucia and I dance Lindy Hop. It's 1930s swing. It's physical, musical, social, and it requires losing yourself in the music with another human being. No phone. No screen. Just rhythm, connection, and sweat. It's the most anti-digital thing in my life and I need it.",
-    textFr: "Lucia et moi, on danse le Lindy Hop. C'est du swing des années 1930. C'est physique, musical, social, et ça demande de se perdre dans la musique avec un autre être humain. Pas de téléphone. Pas d'écran. Juste le rythme, la connexion, et la sueur. C'est la chose la plus anti-numérique dans ma vie et j'en ai besoin.",
+    textEn: "Lucia introduced me to Lindy Hop. It's 1930s swing. It's physical, musical, social, and it requires losing yourself in the music with another human being. No phone. No screen. Just rhythm, connection, and sweat. It's the most anti-digital thing in my life and I need it.",
+    textFr: "Lucia m'a fait découvrir le Lindy Hop. C'est du swing des années 1930. C'est physique, musical, social, et ça demande de se perdre dans la musique avec un autre être humain. Pas de téléphone. Pas d'écran. Juste le rythme, la connexion, et la sueur. C'est la chose la plus anti-numérique dans ma vie et j'en ai besoin.",
   },
   {
     titleEn: "The Shop 🏪",
