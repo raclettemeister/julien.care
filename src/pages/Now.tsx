@@ -13,11 +13,11 @@ const Now = () => {
       <p className="font-body text-sm text-muted-foreground mb-2">
         {lang === "fr" ? (
           <>
-            (Ceci est une <a href="https://nownownow.com/about" target="_blank" rel="noopener noreferrer" className="underline text-accent hover:text-foreground">page now</a>, et si vous avez votre propre site, <a href="https://nownownow.com/about" target="_blank" rel="noopener noreferrer" className="underline text-accent hover:text-foreground">vous devriez en faire une aussi</a>.)
+            (Ceci est une page now, et si vous avez votre propre site, <a href="https://nownownow.com/about" target="_blank" rel="noopener noreferrer" className="underline text-accent hover:text-foreground">vous devriez en faire une aussi</a>.)
           </>
         ) : (
           <>
-            (This is a <a href="https://nownownow.com/about" target="_blank" rel="noopener noreferrer" className="underline text-accent hover:text-foreground">now page</a>, and if you have your own site, <a href="https://nownownow.com/about" target="_blank" rel="noopener noreferrer" className="underline text-accent hover:text-foreground">you should make one, too</a>.)
+            (This is a now page, and if you have your own site, <a href="https://nownownow.com/about" target="_blank" rel="noopener noreferrer" className="underline text-accent hover:text-foreground">you should make one, too</a>.)
           </>
         )}
       </p>
@@ -36,14 +36,22 @@ const Now = () => {
         <div className="font-body text-base text-foreground leading-[1.8] space-y-4">
           <p>
             {lang === "fr"
-              ? "J'ai transformé ma vraie boutique en jeu vidéo. Construit entièrement avec l'IA en deux semaines. Zéro ligne de code écrite par moi. C'est la chose la plus cool que j'ai jamais faite."
-              : "I turned my real shop into a video game. Built entirely with AI in two weeks. Zero lines of code written by me. It's the coolest thing I've ever made."}
+              ? "J'ai transformé ma vraie boutique en jeu vidéo. Construit entièrement avec des workflows agentic no-code. Zéro ligne de code écrite par moi. C'est la chose la plus cool que j'ai jamais faite. C'est un rêve d'enfance devenu réalité."
+              : "I turned my real shop into a video game. Built entirely with agentic no-code workflows. Zero lines of code written by me. It's the coolest thing I've ever made. It's a childhood dream come true."}
           </p>
           <p>
             {lang === "fr"
-              ? "Le jeu simule une vraie journée de travail à Chez Julien — servir les clients, gérer le stock, composer avec l'inattendu. C'est un casse-tête déguisé en gestion de boutique."
-              : "The game simulates a real work day at Chez Julien — serving customers, managing stock, dealing with the unexpected. It's a puzzle disguised as a shop management game."}
+              ? "Le jeu simule ce que ça m'a fait de démarrer ma boutique, le sacrifice que ça a demandé et l'excitation que ça a généré — servir les clients, gérer le stock, composer avec l'inattendu. C'est une biographie déguisée en jeu de gestion de boutique."
+              : "The game simulates what it felt like for me to start my shop, the sacrifice it took and the excitement it generated — serving customers, managing stock, dealing with the unexpected. It's a biography disguised as a shop management game."}
           </p>
+          <a
+            href="https://raclettemeister.github.io/claude-vibe_repo/"
+            target="_blank"
+            rel="noopener noreferrer"
+            className="inline-flex items-center gap-2 mt-2 px-5 py-2.5 bg-primary text-primary-foreground font-heading font-bold text-sm rounded-md hover:bg-primary/90 transition-colors"
+          >
+            🎮 {lang === "fr" ? "Essayer maintenant" : "Try it now"}
+          </a>
         </div>
       </div>
 
