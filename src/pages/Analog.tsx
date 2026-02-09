@@ -1,5 +1,7 @@
 import { useLanguage } from "@/contexts/LanguageContext";
+import { Link } from "react-router-dom";
 import SubscribeBox from "@/components/SubscribeBox";
+import visionBoardCollage from "@/assets/vision-board-collage.jpg";
 
 const sections = [
   {
@@ -35,6 +37,39 @@ const Analog = () => {
           ? "Tout ce que je fais ne se passe pas sur un écran. Dieu merci."
           : "Not everything I do happens on a screen. Thank God."}
       </p>
+
+      {/* Vision Board essay reference */}
+      <Link
+        to="/essays/vision-board-creative-thinking-through-collage"
+        className="block mb-10 pb-10 border-b border-border/40 group"
+      >
+        <div className="rounded-lg overflow-hidden border border-border/40 mb-3">
+          <img
+            src={visionBoardCollage}
+            alt={lang === "fr" ? "Vision Board : la pensée créative par le collage" : "Vision Board Creative Thinking through Collage"}
+            className="w-full h-44 object-cover object-center group-hover:scale-[1.02] transition-transform duration-300"
+            loading="lazy"
+          />
+        </div>
+        <div className="flex gap-2 mb-1">
+          <span className="font-body text-xs text-accent font-semibold">
+            {lang === "fr" ? "Créativité" : "Creativity"}
+          </span>
+          <span className="font-body text-xs text-accent font-semibold">
+            {lang === "fr" ? "Analogique" : "Analog"}
+          </span>
+        </div>
+        <h2 className="text-lg font-bold text-foreground leading-snug tracking-tight mb-1.5 group-hover:text-accent transition-colors">
+          {lang === "fr"
+            ? "Vision Board : la pensée créative par le collage"
+            : "Vision Board Creative Thinking through Collage"}
+        </h2>
+        <p className="font-body text-sm text-muted-foreground leading-relaxed">
+          {lang === "fr"
+            ? "J'ai UNE grande image d'un vision board fait main. L'essai vous guide morceau par morceau — et à la fin, le puzzle s'assemble."
+            : "I have ONE large image of a handmade vision board. The essay walks you through it piece by piece — and at the end, the puzzle assembles."}
+        </p>
+      </Link>
 
       {sections.map((s, i) => (
         <div key={i} className={`pb-8 mb-8 ${i < sections.length - 1 ? "border-b border-border/40" : ""}`}>

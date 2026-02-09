@@ -2,6 +2,7 @@ import { useLanguage } from "@/contexts/LanguageContext";
 import { essays } from "@/data/content";
 import { Link } from "react-router-dom";
 import SubscribeBox from "@/components/SubscribeBox";
+import visionBoardCollage from "@/assets/vision-board-collage.jpg";
 
 const Essays = () => {
   const { lang } = useLanguage();
@@ -10,13 +11,13 @@ const Essays = () => {
     <div className="max-w-[640px] mx-auto px-6 pb-20">
       <h1 className="text-[clamp(1.6rem,4vw,2.4rem)] font-bold text-foreground leading-tight tracking-tight mb-4">
         {lang === "fr"
-          ? "J'ai construit un jeu vidéo sur ma boutique. Sans écrire une seule ligne de code."
-          : "I built a video game about my shop. Without writing a single line of code."}
+          ? "C'est un blog. Il y a du texte. Lis-le. C'est fun. C'est cool. C'est sain."
+          : "It's a blog. There is text. Read it. It's fun. It's cool. It's healthy."}
       </h1>
       <p className="font-body text-base text-muted-foreground mb-12 leading-relaxed">
         {lang === "fr"
-          ? "J'écris sur la vie examinée, la discipline, et construire des choses avec l'IA. En français et en anglais. Chaque semaine."
-          : "I write about the examined life, getting tough with yourself, and building things with AI. In French and English. Every week."}
+          ? "J'écris sur la créativité, le courage, et trouver un sens dans un monde qui accélère. En français et en anglais. Du nouveau chaque semaine."
+          : "I write about creativity, courage, and finding purpose in an accelerating world. In French and English. New stuff every week."}
       </p>
 
       <p className="font-body text-xs font-semibold uppercase tracking-widest text-muted-foreground mb-6">
@@ -26,10 +27,22 @@ const Essays = () => {
       {essays.map((essay, i) => {
         const content = (
           <>
+            {essay.slug === "/essays/vision-board-creative-thinking-through-collage" && (
+              <div className="mb-3 rounded-lg overflow-hidden border border-border/40">
+                <img
+                  src={visionBoardCollage}
+                  alt={lang === "fr" ? essay.titleFr : essay.titleEn}
+                  className="w-full h-40 object-cover object-center"
+                  loading="lazy"
+                />
+              </div>
+            )}
             <div className="flex justify-between items-center mb-1">
-              <span className="font-body text-xs text-accent font-semibold">
-                {lang === "fr" ? essay.tagFr : essay.tag}
-              </span>
+              <div className="flex gap-2">
+                {(lang === "fr" ? essay.tagsFr : essay.tags).map((t) => (
+                  <span key={t} className="font-body text-xs text-accent font-semibold">{t}</span>
+                ))}
+              </div>
               <span className="font-body text-xs text-muted-foreground">
                 {lang === "fr" ? essay.dateFr : essay.date}
               </span>
