@@ -63,6 +63,15 @@ const Home = () => {
               ? "En parallèle, je gère toujours ma boutique, j'apprends à construire des logiciels, et j'écris chaque jour depuis 7 ans."
               : "Meanwhile, I'm still running my shop, learning to build software, and writing every day for the past 7 years."}
           </p>
+          <p>
+            {lang === "fr"
+              ? "Hobbylingly en train d'apprendre la guitare country/songwriter et danseur de Lindy Hop/voleur de piste de danse... et je cours mon premier 10K en mars !"
+              : "Hobbylingly learning to become a country guitar player/songwriter and Lindy Hop dancer/dancefloor stealer... and running my first 10K in march!"}
+            {" "}
+            <a href="https://www.runfornature.be/" target="_blank" rel="noopener noreferrer" className="text-accent hover:text-foreground transition-colors">
+              ({lang === "fr" ? "Run For Nature Rivierenland" : "Run For Nature Rivierenland"})
+            </a>
+          </p>
           <p className="text-sm text-muted-foreground">
             <a href="/now" className="text-accent hover:text-foreground transition-colors">
               {lang === "fr" ? "→ Voir ma page /now complète" : "→ See my full /now page"}
