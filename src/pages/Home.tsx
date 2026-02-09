@@ -1,6 +1,6 @@
 import { useLanguage } from "@/contexts/LanguageContext";
 import SubscribeBox from "@/components/SubscribeBox";
-import julienPhoto from "@/assets/julien-photo.jpg";
+import PostalCardModal from "@/components/PostalCardModal";
 
 const Home = () => {
   const { lang } = useLanguage();
@@ -9,9 +9,7 @@ const Home = () => {
     <div className="max-w-[640px] mx-auto px-6 pb-20">
       {/* Hero: Name + photo */}
       <div className="flex items-center gap-6 mb-10 mt-2">
-        <div className="w-24 h-24 rounded-full bg-muted border border-border shrink-0 overflow-hidden">
-          <img src={julienPhoto} alt="Julien Thibaut" className="w-full h-full object-cover" />
-        </div>
+        <PostalCardModal />
         <div>
           <h1 className="text-[clamp(1.8rem,5vw,2.6rem)] font-bold text-foreground leading-tight tracking-tight">
             Julien Thibaut
