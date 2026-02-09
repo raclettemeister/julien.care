@@ -61,27 +61,36 @@ const About = () => {
         <p>
           {lang === "fr" ? (
             <>
-              J'avais des addictions. J'étais un athlète de l'engourdissement. J'avais toutes les excuses du monde et zéro discipline. Puis j'ai découvert Carl Jung, et d'autres{" "}
+              J'avais des addictions. J'étais un athlète de l'engourdissement. J'avais toutes les excuses du monde et zéro discipline. Puis j'ai découvert Carl Jung, et d'autres mecs et{" "}
               <a href="https://en.wikipedia.org/wiki/Bren%C3%A9_Brown" target="_blank" rel="noopener noreferrer" className="underline text-accent hover:text-foreground transition-colors">
-                mecs et meufs cool en soirée
+                meufs
               </a>
-              , et l'idée que si tu n'examines pas ta vie, tu ne vis pas — tu réagis.
+              {" "}cool en soirée, et l'idée que si tu n'examines pas ta vie, tu ne vis pas — tu réagis.
             </>
           ) : (
             <>
-              I had addictions. I was a numbing athlete. I had every excuse in the world and zero discipline. Then I found Carl Jung, and other{" "}
+              I had addictions. I was a numbing athlete. I had every excuse in the world and zero discipline. Then I found Carl Jung, and other cool at party dudes and{" "}
               <a href="https://en.wikipedia.org/wiki/Bren%C3%A9_Brown" target="_blank" rel="noopener noreferrer" className="underline text-accent hover:text-foreground transition-colors">
-                cool at party dudes and dudettes
+                dudettes
               </a>
               , and the idea that if you don't examine your life, you're not living — you're reacting.
             </>
           )}
         </p>
         <p>
-          {lang === "fr"
-            ? "J'ai commencé à écrire tous les jours. J'ai construit des systèmes. J'ai confronté mon ombre. J'ai arrêté de me mentir. Ça a tout changé."
-            : "I started writing every day. I built systems. I confronted my shadow. I stopped lying to myself. It changed everything."}
+          {lang === "fr" ? (
+            <>
+              J'ai commencé à écrire tous les jours. Je suis allé en profondeur. J'ai beaucoup lu aussi. J'ai commencé à comprendre mon histoire. J'ai commencé à prendre la responsabilité de ce qui jaillissait dans le monde à travers moi. Ça a tout changé.
+            </>
+          ) : (
+            <>
+              I started writing every day. I went deep. I read a lot too. I started to understand my story. I started taking responsibility for what spewed into the world through me. It changed everything.
+            </>
+          )}
         </p>
+        <blockquote className="my-6 pl-4 border-l-2 border-accent font-heading text-base text-muted-foreground italic leading-relaxed">
+          "Until you make the unconscious conscious, it will direct your life and you will call it fate." — Carl Jung
+        </blockquote>
       </div>
 
       <blockquote className="my-10 pl-4 border-l-2 border-accent font-heading text-lg text-foreground italic leading-relaxed">
