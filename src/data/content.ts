@@ -1,5 +1,17 @@
 export const essays = [
   {
+    id: 0,
+    date: "Feb 2026",
+    dateFr: "fév. 2026",
+    titleEn: "Vision Board Creative Thinking through Collage",
+    titleFr: "Vision Board : la pensée créative par le collage",
+    excerptEn: "I have ONE large image of a handmade vision board. The essay walks you through it piece by piece — and at the end, the puzzle assembles.",
+    excerptFr: "J'ai UNE grande image d'un vision board fait main. L'essai vous guide morceau par morceau — et à la fin, le puzzle s'assemble.",
+    tag: "Creativity",
+    tagFr: "Créativité",
+    slug: "/essays/vision-board-creative-thinking-through-collage",
+  },
+  {
     id: 1,
     date: "Feb 23, 2026",
     dateFr: "23 fév. 2026",

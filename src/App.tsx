@@ -12,6 +12,7 @@ import Projects from "./pages/Projects";
 import Analog from "./pages/Analog";
 import About from "./pages/About";
 import Money from "./pages/Money";
+import VisionBoard from "./pages/essays/VisionBoard";
 import NotFound from "./pages/NotFound";
 
 const queryClient = new QueryClient();
@@ -27,6 +28,7 @@ const App = () => (
             <Routes>
               <Route path="/" element={<Home />} />
               <Route path="/essays" element={<Essays />} />
+              <Route path="/essays/vision-board-creative-thinking-through-collage" element={<VisionBoard />} />
               <Route path="/now" element={<Now />} />
               <Route path="/projects" element={<Projects />} />
               <Route path="/analog" element={<Analog />} />
