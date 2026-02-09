@@ -41,20 +41,14 @@ const Money = () => {
 
         <p>
           {lang === "fr"
-            ? "Parce que je gagne déjà ma vie. J'ai une boutique. Elle paie mes factures. Ce site n'a pas besoin de me rapporter un centime."
-            : "Because I already make a living. I have a shop. It pays my bills. This site doesn't need to make me a single cent."}
+            ? "J'écris parce que ça me rend meilleur. Je partage parce que les meilleures choses qui me sont arrivées dans la vie sont venues de gens qui ont partagé."
+            : "I write because it makes me better. I share because the best things that happened to me in life came from people who shared."}
         </p>
 
         <p>
           {lang === "fr"
-            ? "J'écris parce que ça me rend meilleur. Je partage parce que les meilleures choses qui me sont arrivées dans la vie sont venues de gens qui ont partagé gratuitement. Des livres, des blogs, des conversations. Je rends la pareille."
-            : "I write because it makes me better. I share because the best things that happened to me in life came from people who shared freely. Books, blogs, conversations. I'm paying it forward."}
-        </p>
-
-        <p>
-          {lang === "fr"
-            ? "Le jour où je mets un prix sur ce contenu, c'est le jour où j'arrête d'être honnête. Et l'honnêteté, c'est tout ce que j'ai."
-            : "The day I put a price on this content is the day I stop being honest. And honesty is all I have."}
+            ? "Les seules choses que j'ai achetées qui m'ont vraiment aidé ? Des livres, un thérapeute, et des programmes de développement personnel pas chers."
+            : "The only things I ever bought that truly helped me? Books, a therapist, and cheap self-discovery programs."}
         </p>
 
         <h2 className="font-heading text-xl font-bold text-foreground pt-4">
@@ -63,14 +57,14 @@ const Money = () => {
 
         <p>
           {lang === "fr"
-            ? "Il se peut que je vende des choses un jour. Mais jamais ici. Certains de mes projets — listés sur ma page Projets — pourraient être payants. Mais tu n'en entendras jamais parler dans la newsletter."
-            : "I might sell things someday. But never here. Some of my projects — listed on my Projects page — might be paid. But you'll never hear about it in the newsletter."}
+            ? "Si un jour je vends quelque chose, c'est parce que ça demande trop de temps et que je dois récupérer mon investissement. De la même manière que ces gens l'ont fait avec les livres, les thérapeutes et les programmes de développement personnel."
+            : "If I ever have to sell something, it's because it takes too much time and I need to recoup my investment. The same way those people did with the books, therapists, and cheap self-discovery programs."}
         </p>
 
         <p>
           {lang === "fr"
-            ? "Si j'en parle dans un essai, c'est parce que le processus de création est intéressant, pas parce que j'essaie de te vendre le produit. La différence est importante."
-            : "If I mention one in an essay, it's because the process of building it is interesting — not because I'm trying to sell you the product. The difference matters."}
+            ? "Si je crée un jour quelque chose de payant, tu n'en entendras jamais parler dans la newsletter ni sur ce site. Ce sera uniquement référencé dans mon onglet Projets, qui liste tout ce sur quoi je travaille — sans jamais essayer de te pousser à payer."
+            : "If I ever make anything that sells, it will never be pushed in the newsletter or on this website. It will only be referenced in my Projects tab, which lists everything I work on — without ever trying to push you to pay for any of it."}
         </p>
       </div>
 
