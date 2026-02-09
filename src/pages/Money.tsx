@@ -56,6 +56,22 @@ const Money = () => {
             ? "Le jour où je mets un prix sur ce contenu, c'est le jour où j'arrête d'être honnête. Et l'honnêteté, c'est tout ce que j'ai."
             : "The day I put a price on this content is the day I stop being honest. And honesty is all I have."}
         </p>
+
+        <h2 className="font-heading text-xl font-bold text-foreground pt-4">
+          {lang === "fr" ? "Un caveat." : "One caveat."}
+        </h2>
+
+        <p>
+          {lang === "fr"
+            ? "Il se peut que je vende des choses un jour. Mais jamais ici. Certains de mes projets — listés sur ma page Projets — pourraient être payants. Mais tu n'en entendras jamais parler dans la newsletter."
+            : "I might sell things someday. But never here. Some of my projects — listed on my Projects page — might be paid. But you'll never hear about it in the newsletter."}
+        </p>
+
+        <p>
+          {lang === "fr"
+            ? "Si j'en parle dans un essai, c'est parce que le processus de création est intéressant, pas parce que j'essaie de te vendre le produit. La différence est importante."
+            : "If I mention one in an essay, it's because the process of building it is interesting — not because I'm trying to sell you the product. The difference matters."}
+        </p>
       </div>
 
       <SubscribeBox />
