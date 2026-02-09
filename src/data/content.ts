@@ -1,0 +1,62 @@
+export const essays = [
+  {
+    id: 1,
+    date: "Feb 23, 2026",
+    dateFr: "23 fév. 2026",
+    titleEn: "I Built a Video Game About My Shop in Two Weeks Without Writing Code",
+    titleFr: "J'ai créé un jeu vidéo sur ma boutique en deux semaines sans écrire une ligne de code",
+    excerptEn: "Everyone told me you need to learn to code. I said no. I told an AI what I wanted, argued with it for 14 days, and shipped a real game. Here's exactly how.",
+    excerptFr: "Tout le monde m'a dit qu'il fallait apprendre à coder. J'ai dit non. J'ai dit à une IA ce que je voulais, je me suis battu avec elle pendant 14 jours, et j'ai sorti un vrai jeu. Voici exactement comment.",
+    tag: "AI as Your Hands",
+    tagFr: "L'IA comme tes mains",
+  },
+  {
+    id: 2,
+    date: "Mar 2, 2026",
+    dateFr: "2 mars 2026",
+    titleEn: "Your Information Diet Is Killing You. Here's Mine.",
+    titleFr: "Ton régime informationnel te tue. Voici le mien.",
+    excerptEn: "You scroll TikTok for 3 hours and feel worse. I read newsletters for 30 minutes and feel sharper. The difference isn't willpower. It's architecture.",
+    excerptFr: "Tu scrolles TikTok pendant 3 heures et tu te sens moins bien. Je lis des newsletters pendant 30 minutes et je me sens plus affûté. La différence n'est pas la volonté. C'est l'architecture.",
+    tag: "Information Clarity",
+    tagFr: "Clarté informationnelle",
+  },
+  {
+    id: 3,
+    date: "Mar 9, 2026",
+    dateFr: "9 mars 2026",
+    titleEn: "The Day I Decided Mediocrity Was No Longer an Option",
+    titleFr: "Le jour où j'ai décidé que la médiocrité n'était plus une option",
+    excerptEn: "I was 24, hungover again, and I looked at myself in the mirror and said something I can't repeat here. That was the last easy day.",
+    excerptFr: "J'avais 24 ans, encore une gueule de bois, et je me suis regardé dans le miroir et j'ai dit quelque chose que je ne peux pas répéter ici. C'était le dernier jour facile.",
+    tag: "Getting Tough",
+    tagFr: "Se durcir",
+  },
+];
+
+export const projects = [
+  {
+    titleEn: "Chez Julien Simulator",
+    titleFr: "Simulateur Chez Julien",
+    descEn: "A video game about running my real shop. Built in 2 weeks with AI. Zero lines of code written by me.",
+    descFr: "Un jeu vidéo sur la gestion de ma vraie boutique. Construit en 2 semaines avec l'IA. Zéro ligne de code écrite par moi.",
+    status: "Live" as const,
+    emoji: "🎮",
+  },
+  {
+    titleEn: "Examine Your Life",
+    titleFr: "Examine Ta Vie",
+    descEn: "Next-gen self-authoring program. Think Jordan Peterson's program, rebuilt for the AI age. The big one.",
+    descFr: "Programme d'auto-écriture nouvelle génération. Le programme de Jordan Peterson, reconstruit pour l'ère de l'IA. Le grand projet.",
+    status: "Coming 2027" as const,
+    emoji: "🔍",
+  },
+  {
+    titleEn: "Lindy Hop Musicality Lab",
+    titleFr: "Labo Musicalité Lindy Hop",
+    descEn: "A web app that teaches you to hear swing music the way dancers hear it. Because my girlfriend and I are obsessed.",
+    descFr: "Une appli web qui t'apprend à entendre la musique swing comme les danseurs l'entendent. Parce que ma copine et moi, on est obsédés.",
+    status: "Coming 2027" as const,
+    emoji: "🎷",
+  },
+];
