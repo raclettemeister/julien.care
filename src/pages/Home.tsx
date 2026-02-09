@@ -1,5 +1,6 @@
 import { useLanguage } from "@/contexts/LanguageContext";
 import SubscribeBox from "@/components/SubscribeBox";
+import julienPhoto from "@/assets/julien-photo.jpg";
 
 const Home = () => {
   const { lang } = useLanguage();
@@ -8,10 +9,8 @@ const Home = () => {
     <div className="max-w-[640px] mx-auto px-6 pb-20">
       {/* Hero: Name + photo */}
       <div className="flex items-center gap-6 mb-10 mt-2">
-        <div className="w-24 h-24 rounded-full bg-muted border border-border flex items-center justify-center shrink-0 overflow-hidden">
-          <span className="font-body text-xs text-muted-foreground">
-            {lang === "fr" ? "Photo bientôt" : "Photo soon"}
-          </span>
+        <div className="w-24 h-24 rounded-full bg-muted border border-border shrink-0 overflow-hidden">
+          <img src={julienPhoto} alt="Julien Thibaut" className="w-full h-full object-cover" />
         </div>
         <div>
           <h1 className="text-[clamp(1.8rem,5vw,2.6rem)] font-bold text-foreground leading-tight tracking-tight">
