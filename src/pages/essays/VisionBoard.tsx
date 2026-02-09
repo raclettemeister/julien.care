@@ -223,7 +223,7 @@ const VisionBoard = () => {
         </P>
         <p className="font-hand text-3xl text-foreground mb-4">WHO?</p>
         <P className="text-muted-foreground">
-          That's the question. The only question on my vision board.
+          That's the question. The only question on my vision board. Can you find it?
         </P>
       </Section>
 
@@ -288,17 +288,14 @@ const VisionBoard = () => {
           That's you. That's the kid we need to start having a conversation with.
           Start having fun with. Play with. Love.
         </P>
-        <P>So let's grab that kid. Baby backpack style.</P>
         <P>
-          He's sitting next to a giant tree that starts from the bottom of the
-          temple, all the way up through the bricks, through the stones — and you
-          can see the light upstairs.
+          Right next to him is a giant tree that starts from the bottom of the
+          temple, all the way up through the stones — and you can see the light
+          and the canopy inviting you to climb.
         </P>
         <P>
-          <em>"Let's start climbing that tree,"</em> said the little kid.
+          <em>"Let's go, motherfucker,"</em> said the baby, in a Samuel L. Jackson voice. So we climb.
         </P>
-        <P>All right, motherfucker. Let's go.</P>
-        <P>So we climb.</P>
 
         <Piece src={piece2} alt="Tree climbers going up" rotate={1} />
 
@@ -357,7 +354,7 @@ const VisionBoard = () => {
       <Section>
         <P>
           Good. Because we're not done. Look at the vision board again — can you
-          find the wolf?
+          find the wolf? That wolf reminded me of Poncho, so I cut him out of a postcard.
         </P>
 
         <Piece src={piece3} alt="Poncho the wolf dog" rotate={-2} />
