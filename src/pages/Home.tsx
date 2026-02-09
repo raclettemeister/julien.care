@@ -1,8 +1,11 @@
 import { useState } from "react";
 import { useLanguage } from "@/contexts/LanguageContext";
+import { Link } from "react-router-dom";
 import SubscribeBox from "@/components/SubscribeBox";
 import PostalCardModal from "@/components/PostalCardModal";
 import ponchoPhoto from "@/assets/poncho-photo.jpg";
+import essayThumbnail from "@/assets/essays/thumbnail-essay-1.jpg";
+import { essays } from "@/data/content";
 
 const Home = () => {
   const { lang } = useLanguage();
@@ -21,6 +24,29 @@ const Home = () => {
           </p>
         </div>
       </div>
+
+      {/* Latest essay */}
+      {essays[0] && (
+        <Link to={essays[0].slug} className="block mb-10 group">
+          <div className="rounded-lg overflow-hidden border border-border/40 mb-3">
+            <img
+              src={essayThumbnail}
+              alt={lang === "fr" ? essays[0].titleFr : essays[0].titleEn}
+              className="w-full h-40 object-cover object-center group-hover:scale-[1.02] transition-transform duration-300"
+              loading="lazy"
+            />
+          </div>
+          <p className="font-body text-xs font-semibold uppercase tracking-widest text-muted-foreground mb-1">
+            {lang === "fr" ? "Dernier essai" : "Latest essay"}
+          </p>
+          <h2 className="text-lg font-bold text-foreground leading-snug tracking-tight group-hover:text-accent transition-colors">
+            {lang === "fr" ? essays[0].titleFr : essays[0].titleEn}
+          </h2>
+          <p className="font-body text-sm text-muted-foreground mt-0.5">
+            {lang === "fr" ? "Collage vision board, un voyage créatif" : "Vision board collage, a creativity journey"}
+          </p>
+        </Link>
+      )}
 
       {/* Who am I */}
       <section className="mb-10">
