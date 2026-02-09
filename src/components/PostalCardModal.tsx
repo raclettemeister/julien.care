@@ -1,5 +1,6 @@
 import { useState } from "react";
 import julienPhoto from "@/assets/julien-photo.jpg";
+import julienFullPhoto from "@/assets/julien-full-photo.png";
 
 const PostalCardModal = () => {
   const [open, setOpen] = useState(false);
@@ -38,7 +39,7 @@ const PostalCardModal = () => {
             {/* Photo */}
             <div className="relative">
               <img
-                src={julienPhoto}
+                src={julienFullPhoto}
                 alt="Julien Thibaut with Taylor GS Mini"
                 className="w-full"
               />
