@@ -51,7 +51,7 @@ const Essays = () => {
               {lang === "fr" ? essay.titleFr : essay.titleEn}
             </h2>
             <p className="font-body text-sm text-muted-foreground leading-relaxed">
-              {lang === "fr" ? essay.excerptFr : essay.excerptEn}
+              {lang === "fr" ? "Collage vision board, un voyage créatif" : "Vision board collage, a creativity journey"}
             </p>
           </>
         );
