@@ -317,9 +317,9 @@ const VisionBoard = () => {
 
       {/* ── WHO am I — raw confession, no image ── */}
       <Section extraSpace>
-        <P>Well,</P>
-        <p className="font-hand text-3xl text-foreground mb-4">WHO</p>
-        <P>do I think I am? To start teaching people?</P>
+        <P>
+          Well, <span className="font-hand text-3xl">WHO</span> do I think I am? To start teaching people?
+        </P>
         <P>
           Well, first — in the last five years, I have shown an incredible amount of
           courage. I have completely changed my health. I have become happier than I
