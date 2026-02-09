@@ -3,8 +3,9 @@ import { Link } from "react-router-dom";
 import { useState } from "react";
 import SubscribeBox from "@/components/SubscribeBox";
 import oursMeme from "@/assets/ours-meme.jpg";
+import apartmentPhoto from "@/assets/apartment-photo.jpg";
 
-const OurPopover = ({ children }: { children: React.ReactNode }) => {
+const ImagePopover = ({ children, src, alt }: { children: React.ReactNode; src: string; alt: string }) => {
   const [show, setShow] = useState(false);
 
   return (
@@ -18,8 +19,8 @@ const OurPopover = ({ children }: { children: React.ReactNode }) => {
       {show && (
         <>
           <div className="fixed inset-0 z-40" onClick={() => setShow(false)} />
-          <span className="absolute z-50 bottom-full left-1/2 -translate-x-1/2 mb-2 w-44 rounded-md overflow-hidden shadow-lg border border-border/40 bg-card">
-            <img src={oursMeme} alt="Our" className="w-full" />
+          <span className="absolute z-50 bottom-full left-1/2 -translate-x-1/2 mb-2 w-56 rounded-md overflow-hidden shadow-lg border border-border/40 bg-card">
+            <img src={src} alt={alt} className="w-full" />
           </span>
         </>
       )}
@@ -39,9 +40,17 @@ const About = () => {
       <div className="font-body text-base text-foreground leading-[1.85] space-y-5">
         <p>
           {lang === "fr"
-            ? "J'ai 31 ans, j'écris depuis mon appartement décoré de façon créative. Je gère la boutique en bas qui fait ~500K€ par an. Je suis propriétaire de 48% de l'immeuble dans lequel je dors. Je vis avec l'amour de ma vie, et "
-            : "I'm 31, writing from my creative decorated apartment. I run the shop downstairs that does ~€500K a year. I own 48% of the building I'm sleeping in. I live with the love of my life, and "}
-          <OurPopover>{lang === "fr" ? "notre" : "our"}</OurPopover>
+            ? "J'ai 31 ans, j'écris depuis mon "
+            : "I'm 31, writing from my "}
+          <ImagePopover src={apartmentPhoto} alt="My apartment">
+            {lang === "fr" ? "appartement décoré de façon créative" : "creative decorated apartment"}
+          </ImagePopover>
+          {lang === "fr"
+            ? ". Je gère la boutique en bas qui fait ~500K€ par an. Je suis propriétaire de 48% de l'immeuble dans lequel je dors. Je vis avec l'amour de ma vie, et "
+            : ". I run the shop downstairs that does ~€500K a year. I own 48% of the building I'm sleeping in. I live with the love of my life, and "}
+          <ImagePopover src={oursMeme} alt="Our">
+            {lang === "fr" ? "notre" : "our"}
+          </ImagePopover>
           {lang === "fr" ? " chien Poncho." : " dog Poncho."}
         </p>
         <p>
