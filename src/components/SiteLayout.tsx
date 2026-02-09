@@ -5,7 +5,7 @@ import SiteFooter from "./SiteFooter";
 const SiteLayout = ({ children }: { children: ReactNode }) => (
   <div className="min-h-screen bg-background text-foreground">
     <SiteNav />
-    <main>{children}</main>
+    <main className="max-w-[640px] mx-auto">{children}</main>
     <SiteFooter />
   </div>
 );

@@ -5,12 +5,12 @@ const About = () => {
   const { lang } = useLanguage();
 
   return (
-    <div className="max-w-[680px] mx-auto px-6 py-20">
-      <h1 className="text-[2.5rem] font-bold text-foreground tracking-tight mb-10">
+    <div className="max-w-[640px] mx-auto px-6 pb-20">
+      <h1 className="text-[2rem] font-bold text-foreground tracking-tight mb-8">
         {lang === "fr" ? "L'histoire" : "The Story"}
       </h1>
 
-      <div className="font-body text-lg text-foreground leading-[1.85] space-y-6">
+      <div className="font-body text-base text-foreground leading-[1.85] space-y-5">
         <p>
           {lang === "fr"
             ? "J'ai 31 ans. Je vis en Belgique. Je gère une boutique qui fait ~500K€ par an. Je suis propriétaire de 48% de l'immeuble. Je vis avec Lucia, l'amour de ma vie, et notre chien Poncho."
@@ -31,13 +31,15 @@ const About = () => {
             ? "J'ai commencé à écrire tous les jours. J'ai construit des systèmes. J'ai confronté mon ombre. J'ai arrêté de me mentir. Ça a tout changé."
             : "I started writing every day. I built systems. I confronted my shadow. I stopped lying to myself. It changed everything."}
         </p>
+      </div>
 
-        <blockquote className="sketch-border border-l-4 !border-l-accent pl-6 py-4 my-10 italic font-heading text-xl leading-relaxed bg-accent-light/30">
-          {lang === "fr"
-            ? "Je ne suis pas un gourou. Je suis un mec qui a fait le travail et qui te dit exactement comment ça s'est passé. Si tu veux du soft, tu es au mauvais endroit."
-            : "I'm not a guru. I'm a guy who did the work and is telling you exactly how it went. If you want soft, you're in the wrong place."}
-        </blockquote>
+      <blockquote className="my-10 pl-4 border-l-2 border-accent font-heading text-lg text-foreground italic leading-relaxed">
+        {lang === "fr"
+          ? "Je ne suis pas un gourou. Je suis un mec qui a fait le travail et qui te dit exactement comment ça s'est passé. Si tu veux du soft, tu es au mauvais endroit."
+          : "I'm not a guru. I'm a guy who did the work and is telling you exactly how it went. If you want soft, you're in the wrong place."}
+      </blockquote>
 
+      <div className="font-body text-base text-foreground leading-[1.85] space-y-5">
         <p>
           {lang === "fr"
             ? "Maintenant je construis des logiciels sans savoir coder. Je dis à l'IA ce que je veux et on se bat jusqu'à ce que ça existe. J'ai fait un jeu vidéo en deux semaines. Je construis des apps. Je construis ce site."
