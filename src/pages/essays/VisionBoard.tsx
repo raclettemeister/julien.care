@@ -194,7 +194,7 @@ const VisionBoard = () => {
           Feb 2026
         </p>
         <h1 className="font-hand text-[clamp(2.4rem,7vw,3.8rem)] text-foreground leading-[1.05] tracking-tight">
-          Vision Board Creative Thinking through Collage
+          Who Do You Think You Are?
         </h1>
       </header>
 
