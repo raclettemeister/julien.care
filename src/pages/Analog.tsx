@@ -17,8 +17,8 @@ const Analog = () => {
       </h1>
       <p className="font-body text-base text-muted-foreground mb-10 leading-relaxed">
         {lang === "fr"
-          ? "Faire les choses avec ses mains, lentement, c'est plus important que jamais. À l'ère du vite et facile. Lent et difficile, c'est le nouveau sexy."
-          : "Doing things with your hand, slowly, is more important than ever. In the age of fast and easy. Slow and hard is the new sexy."}
+          ? "Faire des choses créatives avec ses mains est plus important que jamais. À l'ère du vite et facile, lent et difficile est le nouveau sexy."
+          : "Doing creative things with your hands is more important than ever. In the age of fast and easy, slow and hard is the new sexy."}
       </p>
 
       {/* Essays tagged "Analog" */}
