@@ -24,17 +24,17 @@ const SubscribeBox = () => {
   return (
     <div className="border-t border-border/40 pt-8 mt-12 max-w-[640px] mx-auto">
       <p className="font-heading text-base font-semibold text-foreground mb-1">
-        {lang === "fr" ? "La newsletter, c'est le nouveau cool." : "Newsletter is the new cool."}
+        {lang === "fr" ? "Je crois que les newsletters créées par de vraies personnes deviennent la meilleure façon d'apprendre quoi que ce soit." : "I believe newsletters curated by real people are becoming the best way to learn anything."}
       </p>
       <p className="font-body text-sm text-muted-foreground mb-2">
         {lang === "fr"
-          ? "Pas de pubs. Pas de big tech. Non addictif. C'est gratuit et tu n'es pas mon produit. Je n'essaierai jamais de te vendre quoi que ce soit."
-          : "No ads. No big tech. Non-addictive. It's free and you're not my product. I will never try to sell you anything."}
+          ? "Des actus aux événements locaux en passant par les idées créatives. Celle-ci est la mienne. Tu devrais en créer une aussi !"
+          : "From news to local events to creative ideas. This is mine. You should make one too!"}
       </p>
-      <p className="font-body text-sm text-muted-foreground mb-4">
+      <p className="font-body text-xs text-muted-foreground/80 mb-4">
         {lang === "fr"
-          ? "Juste du contenu de qualité, facile à lire, pour ta propre créativité et ton parcours personnel vers la liberté et le succès."
-          : "Just high quality, easily readable, insight for your own creativity and personal journey to freedom and success."}
+          ? "Attends-toi à des emails faciles à lire sur ce qui me passionne en ce moment : idées créatives, trucs que je construis, et ce que je suis en train de comprendre."
+          : "Expect easy-to-read emails about stuff I'm passionate about at the moment: creative ideas, things I'm building, and what I'm figuring out."}
       </p>
       <div className="flex gap-2">
         <input
