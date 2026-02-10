@@ -20,13 +20,20 @@ const IntroSequence = ({ children }: { children: React.ReactNode }) => {
   const [rebootText, setRebootText] = useState(false);
   const dotsInterval = useRef<ReturnType<typeof setInterval>>();
 
+  const skip = () => setPhase("done");
+
+  useEffect(() => {
+    const handleKey = () => skip();
+    window.addEventListener("keydown", handleKey);
+    return () => window.removeEventListener("keydown", handleKey);
+  }, []);
+
   useEffect(() => {
     // Phase transitions
     const t1 = setTimeout(() => setPhase("pause"), INTRO_TIMING.connectingDuration);
     const t2 = setTimeout(() => setPhase("error"), INTRO_TIMING.errorDelay);
     const t3 = setTimeout(() => {
       setPhase("reboot");
-      // Animate dots one by one
       let d = 0;
       dotsInterval.current = setInterval(() => {
         d++;
