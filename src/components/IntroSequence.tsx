@@ -8,7 +8,7 @@ const INTRO_TIMING = {
   errorDelay: 2500,
   rebootDelay: 4000,
   dotAnimationInterval: 300,
-  unfoldDelay: 5500,
+  unfoldDelay: 8100,
   unfoldDuration: 1800,
 };
 
@@ -33,7 +33,7 @@ const IntroSequence = ({ children }: { children: React.ReactNode }) => {
         setDots(d);
         if (d >= 3) {
           clearInterval(dotsInterval.current);
-          setTimeout(() => setRebootText(true), 400);
+          setTimeout(() => setRebootText(true), 3000);
         }
       }, INTRO_TIMING.dotAnimationInterval);
     }, INTRO_TIMING.rebootDelay);
