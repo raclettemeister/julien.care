@@ -8,7 +8,7 @@ const INTRO_TIMING = {
   errorDelay: 2500,
   rebootDelay: 4000,
   dotAnimationInterval: 300,
-  unfoldDelay: 8100,
+  unfoldDelay: 10900,
   unfoldDuration: 1800,
 };
 
