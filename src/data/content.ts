@@ -1,3 +1,5 @@
+import essayThumbnail1 from "@/assets/essays/thumbnail-essay-1.jpg";
+
 export const essays = [
   {
     id: 0,
@@ -7,6 +9,9 @@ export const essays = [
     titleFr: "Pour qui tu te prends ?",
     excerptEn: "I have ONE large image of a handmade vision board. The essay walks you through it piece by piece — and at the end, the puzzle assembles.",
     excerptFr: "J'ai UNE grande image d'un vision board fait main. L'essai vous guide morceau par morceau — et à la fin, le puzzle s'assemble.",
+    subtitleEn: "Vision board collage, a creativity journey",
+    subtitleFr: "Collage vision board, un voyage créatif",
+    thumbnail: essayThumbnail1,
     tags: ["Creativity", "Analog"] as const,
     tagsFr: ["Créativité", "Analogique"] as const,
     slug: "/essays/vision-board-creative-thinking-through-collage",

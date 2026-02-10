@@ -5,7 +5,7 @@ import SubscribeBox from "@/components/SubscribeBox";
 import PostalCardModal from "@/components/PostalCardModal";
 import IntroSequence from "@/components/IntroSequence";
 import ponchoPhoto from "@/assets/poncho-photo.jpg";
-import essayThumbnail from "@/assets/essays/thumbnail-essay-1.jpg";
+// thumbnail now comes from essay data
 import { essays } from "@/data/content";
 
 const Home = () => {
@@ -32,7 +32,7 @@ const Home = () => {
         <Link to={essays[0].slug} className="block mb-10 group">
           <div className="rounded-lg overflow-hidden border border-border/40 mb-3">
             <img
-              src={essayThumbnail}
+              src={essays[0].thumbnail}
               alt={lang === "fr" ? essays[0].titleFr : essays[0].titleEn}
               className="w-full h-40 object-cover object-center group-hover:scale-[1.02] transition-transform duration-300"
               loading="lazy"
@@ -45,7 +45,7 @@ const Home = () => {
             {lang === "fr" ? essays[0].titleFr : essays[0].titleEn}
           </h2>
           <p className="font-body text-sm text-muted-foreground mt-0.5">
-            {lang === "fr" ? "Collage vision board, un voyage créatif" : "Vision board collage, a creativity journey"}
+            {lang === "fr" ? essays[0].subtitleFr : essays[0].subtitleEn}
           </p>
         </Link>
       )}

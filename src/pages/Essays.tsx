@@ -2,7 +2,7 @@ import { useLanguage } from "@/contexts/LanguageContext";
 import { essays } from "@/data/content";
 import { Link } from "react-router-dom";
 import SubscribeBox from "@/components/SubscribeBox";
-import essayThumbnail from "@/assets/essays/thumbnail-essay-1.jpg";
+// thumbnail now comes from essay data
 import { useEffect, useRef, useState } from "react";
 
 const TYPEWRITER_SESSION_KEY = "essays_typewriter_seen";
@@ -120,10 +120,10 @@ const Essays = () => {
       {essays.map((essay, i) => {
         const content = (
           <>
-            {essay.slug === "/essays/vision-board-creative-thinking-through-collage" && (
+            {essay.thumbnail && (
               <div className="mb-3 rounded-lg overflow-hidden border border-border/40">
                 <img
-                  src={essayThumbnail}
+                  src={essay.thumbnail}
                   alt={lang === "fr" ? essay.titleFr : essay.titleEn}
                   className="w-full h-40 object-cover object-center"
                   loading="lazy"
@@ -144,7 +144,7 @@ const Essays = () => {
               {lang === "fr" ? essay.titleFr : essay.titleEn}
             </h2>
             <p className="font-body text-sm text-muted-foreground leading-relaxed">
-              {lang === "fr" ? "Collage vision board, un voyage créatif" : "Vision board collage, a creativity journey"}
+              {lang === "fr" ? essay.subtitleFr : essay.subtitleEn}
             </p>
           </>
         );
