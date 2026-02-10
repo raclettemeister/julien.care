@@ -10,8 +10,8 @@ const CHAR_BASE_SPEED = 70; // ms per character
 const CHAR_VARIATION = 15; // ±ms random variation
 
 const heroText = {
-  en: "You here? Awesome! I write stuff. Tell me what you think :)",
-  fr: "T'es là ? Génial ! J'écris des trucs. Dis-moi ce que t'en penses :)",
+  en: "You? here? That's Awesome! welcome to my blog, I'm happy you came! I write about lots of stuff! Tell me what you think ;)",
+  fr: "Toi ? ici ? C'est génial ! Bienvenue sur mon blog, je suis content que tu sois là ! J'écris sur plein de trucs ! Dis-moi ce que t'en penses ;)",
 };
 
 const Essays = () => {
