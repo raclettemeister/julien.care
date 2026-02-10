@@ -3,6 +3,7 @@ import { useLanguage } from "@/contexts/LanguageContext";
 import { Link } from "react-router-dom";
 import SubscribeBox from "@/components/SubscribeBox";
 import PostalCardModal from "@/components/PostalCardModal";
+import IntroSequence from "@/components/IntroSequence";
 import ponchoPhoto from "@/assets/poncho-photo.jpg";
 import essayThumbnail from "@/assets/essays/thumbnail-essay-1.jpg";
 import { essays } from "@/data/content";
@@ -11,6 +12,7 @@ const Home = () => {
   const { lang } = useLanguage();
   const [showPoncho, setShowPoncho] = useState(false);
   return (
+    <IntroSequence>
     <div className="max-w-[640px] mx-auto px-6 pb-20">
       {/* Hero: Name + photo */}
       <div className="flex items-center gap-6 mb-10 mt-2">
@@ -143,6 +145,7 @@ const Home = () => {
         </div>
       )}
     </div>
+    </IntroSequence>
   );
 };
 
