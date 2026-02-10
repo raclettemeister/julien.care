@@ -24,11 +24,11 @@ const SubscribeBox = () => {
   return (
     <div className="border-t border-border/40 pt-8 mt-12 max-w-[640px] mx-auto">
       <p className="font-heading text-base font-semibold text-foreground mb-1">
-        {lang === "fr" ? "Je crois que les newsletters créées par de vraies personnes deviennent la meilleure façon d'apprendre quoi que ce soit." : "I believe newsletters curated by real people are becoming the best way to learn anything."}
+        {lang === "fr" ? "Je suis persuadé que les newsletters gérées par des humains passionnés sont la meilleure façon d'apprendre quoi que ce soit aujourd'hui." : "I believe newsletters curated by real people are becoming the best way to learn anything."}
       </p>
       <p className="font-body text-sm text-muted-foreground mb-2">
         {lang === "fr"
-          ? "Des actus aux événements locaux en passant par les idées créatives. Celle-ci est la mienne. Tu devrais en créer une aussi !"
+          ? "Des news aux événements locaux près de chez vous en passant par des idées créatives à reproduire chez vous. Voici ma newsletter. Tu devrais en créer une aussi !"
           : "From news to local events to creative ideas. This is mine. You should make one too!"}
       </p>
       <p className="font-body text-xs text-muted-foreground/80 mb-4">
