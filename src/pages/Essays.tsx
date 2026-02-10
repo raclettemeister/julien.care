@@ -12,8 +12,8 @@ const CHAR_VARIATION = 15; // ±ms random variation
 const PAUSE_AFTER_PUNCTUATION = 400; // ms pause after ? or !
 
 const heroText = {
-  en: "You? here? That's Awesome! welcome to my blog, I'm happy you came! I write about lots of stuff!\nTell me what you think",
-  fr: "Toi ? ici ? C'est génial ! Bienvenue sur mon blog, je suis content que tu sois là ! J'écris sur plein de trucs !\nDis-moi ce que t'en penses",
+  en: "You? here? That's Awesome! welcome to my blog. I'm happy you came! I write about lots of stuff\nTell me what you think",
+  fr: "Toi ? ici ? C'est génial ! Bienvenue sur mon blog. Je suis content que tu sois là ! J'écris sur plein de trucs\nDis-moi ce que t'en penses",
 };
 
 const Essays = () => {
