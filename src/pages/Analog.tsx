@@ -17,8 +17,8 @@ const Analog = () => {
       </h1>
       <p className="font-body text-base text-muted-foreground mb-10 leading-relaxed">
         {lang === "fr"
-          ? "Tout ce que je fais ne se passe pas sur un écran. Dieu merci."
-          : "Not everything I do happens on a screen. Thank God."}
+          ? "Faire les choses avec ses mains, lentement, c'est plus important que jamais. À l'ère du vite et facile. Lent et difficile, c'est le nouveau sexy."
+          : "Doing things with your hand, slowly, is more important than ever. In the age of fast and easy. Slow and hard is the new sexy."}
       </p>
 
       {/* Essays tagged "Analog" */}
