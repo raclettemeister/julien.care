@@ -9,9 +9,11 @@ const TYPEWRITER_SESSION_KEY = "essays_typewriter_seen";
 const CHAR_BASE_SPEED = 70; // ms per character
 const CHAR_VARIATION = 15; // ±ms random variation
 
+const PAUSE_AFTER_PUNCTUATION = 400; // ms pause after ? or !
+
 const heroText = {
-  en: "You? here? That's Awesome! welcome to my blog, I'm happy you came! I write about lots of stuff! Tell me what you think ;)",
-  fr: "Toi ? ici ? C'est génial ! Bienvenue sur mon blog, je suis content que tu sois là ! J'écris sur plein de trucs ! Dis-moi ce que t'en penses ;)",
+  en: "You? here? That's Awesome! welcome to my blog, I'm happy you came! I write about lots of stuff!\nTell me what you think",
+  fr: "Toi ? ici ? C'est génial ! Bienvenue sur mon blog, je suis content que tu sois là ! J'écris sur plein de trucs !\nDis-moi ce que t'en penses",
 };
 
 const Essays = () => {
@@ -37,7 +39,9 @@ const Essays = () => {
       if (i < fullText.length) {
         i++;
         setDisplayedText(fullText.slice(0, i));
-        const delay = CHAR_BASE_SPEED + (Math.random() * 2 - 1) * CHAR_VARIATION;
+        const justTyped = fullText[i - 1];
+        const pause = (justTyped === "?" || justTyped === "!") ? PAUSE_AFTER_PUNCTUATION : 0;
+        const delay = CHAR_BASE_SPEED + (Math.random() * 2 - 1) * CHAR_VARIATION + pause;
         timeout = setTimeout(type, delay);
       } else {
         setTypingDone(true);
@@ -62,7 +66,12 @@ const Essays = () => {
     <div className="max-w-[640px] mx-auto px-6 pb-20">
       {/* Typewriter Hero */}
       <h1 className="text-[clamp(1.6rem,4vw,2.4rem)] font-bold italic text-foreground leading-tight tracking-tight mb-12 min-h-[3.6em]">
-        {displayedText}
+        {displayedText.split("\n").map((line, idx, arr) => (
+          <span key={idx}>
+            {line}
+            {idx < arr.length - 1 && <br />}
+          </span>
+        ))}
         {!typingDone && (
           <span className="inline-block w-[2px] h-[1.1em] bg-foreground ml-0.5 align-text-bottom animate-[blink_1s_step-end_infinite]" />
         )}
