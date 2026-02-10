@@ -12,7 +12,7 @@ const CHAR_VARIATION = 15; // ±ms random variation
 const PAUSE_AFTER_PUNCTUATION = 400; // ms pause after ? or !
 
 const heroText = {
-  en: "You? here? That's Awesome! welcome to my blog. I'm happy you came! I write about lots of stuff\nTell me what you think",
+  en: "You? here? That's Awesome! Welcome to my blog. I'm happy you came! I write about lots of stuff\nTell me what you think",
   fr: "Toi ? ici ? C'est génial ! Bienvenue sur mon blog. Je suis content que tu sois là ! J'écris sur plein de trucs\nDis-moi ce que t'en penses",
 };
 
@@ -80,9 +80,12 @@ const Essays = () => {
       {/* Latest Essay label with sharpie circle */}
       <div className="flex items-center gap-3 mb-6 flex-wrap">
         <div className="relative inline-block">
-          <p className="font-body text-xs font-semibold uppercase tracking-widest text-muted-foreground relative z-10 px-2 py-1">
+          <Link
+            to={essays[0]?.slug || "#"}
+            className="font-body text-xs font-semibold uppercase tracking-widest text-muted-foreground hover:text-accent transition-colors relative z-10 px-2 py-1"
+          >
             {lang === "fr" ? "Dernier essai" : "Latest essay"}
-          </p>
+          </Link>
 
           {/* Sharpie circle SVG */}
           <svg
