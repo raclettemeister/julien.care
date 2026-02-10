@@ -5,26 +5,7 @@ import { essays } from "@/data/content";
 
 const analogEssays = essays.filter((e) => e.tags.includes("Analog"));
 
-const sections = [
-  {
-    titleEn: "Writing ✍️",
-    titleFr: "Écriture ✍️",
-    textEn: "I've been writing every day for seven years. Not on a blog — in notebooks, Google Docs, voice memos, and lost journals. Thousands of pages about life, pain, love, and the hard process of becoming someone I love. More on this coming soon.",
-    textFr: "J'écris tous les jours depuis sept ans. Pas sur un blog — dans des carnets, des Google Docs, des mémos vocaux et des journaux perdus. Des milliers de pages sur la vie, la douleur, l'amour, et le difficile processus de devenir quelqu'un que j'aime. Plus à venir bientôt.",
-  },
-  {
-    titleEn: "Lindy Hop 💃",
-    titleFr: "Lindy Hop 💃",
-    textEn: "Lucia introduced me to Lindy Hop. It's 1930s swing. Contrary to other dances I tried, it's so free without too many rules to overwhelm you and full of improvisation. I'm already dancing with live bands after a few months, and I can't wait to see myself becoming an expressive dancer.",
-    textFr: "Lucia m'a fait découvrir le Lindy Hop. C'est du swing des années 1930. Contrairement aux autres danses que j'ai essayées, c'est tellement libre, sans trop de règles pour te submerger et plein d'improvisation. Je danse déjà avec des groupes live après quelques mois, et j'ai hâte de me voir devenir un danseur expressif.",
-  },
-  {
-    titleEn: "The Shop 🏪",
-    titleFr: "La boutique 🏪",
-    textEn: "Chez Julien is a physical shop in Belgium. Real products, real customers, real problems. No SaaS. No VC money. Just honest commerce, dirty hands, and decisions that matter. This is where I learned everything I know about running a business. Rumors say the raclette there is the best on the planet.",
-    textFr: "Chez Julien est une boutique physique en Belgique. Des vrais produits, des vrais clients, des vrais problèmes. Pas de SaaS. Pas de VC. Juste du commerce honnête, des mains sales, et des décisions qui comptent. C'est là que j'ai appris tout ce que je sais sur la gestion d'une entreprise. La rumeur dit que la raclette y est la meilleure de la planète.",
-  },
-];
+const PIN_ROTATIONS = ["-1.5deg", "1.2deg", "-0.8deg", "1.8deg", "-1deg"];
 
 const Analog = () => {
   const { lang } = useLanguage();
@@ -41,7 +22,7 @@ const Analog = () => {
       </p>
 
       {/* Essays tagged "Analog" */}
-      {analogEssays.map((essay, i) => (
+      {analogEssays.map((essay) => (
         <Link
           key={essay.id}
           to={essay.slug}
@@ -71,16 +52,56 @@ const Analog = () => {
         </Link>
       ))}
 
-      {sections.map((s, i) => (
-        <div key={i} className={`pb-8 mb-8 ${i < sections.length - 1 ? "border-b border-border/40" : ""}`}>
-          <h2 className="text-lg font-bold text-foreground mb-2">
-            {lang === "fr" ? s.titleFr : s.titleEn}
-          </h2>
-          <p className="font-body text-base text-foreground leading-[1.8]">
-            {lang === "fr" ? s.textFr : s.textEn}
-          </p>
+      {/* Cork board — 5 coolest analog things */}
+      <h2 className="text-lg font-bold text-foreground mb-4">
+        {lang === "fr" ? "5 trucs analogiques du moment" : "5 analog things right now"}
+      </h2>
+      <div
+        className="relative rounded-lg p-6 mb-10"
+        style={{
+          background: "linear-gradient(135deg, hsl(30 40% 62%), hsl(28 35% 55%))",
+          boxShadow: "inset 0 2px 8px rgba(0,0,0,0.25), 0 2px 6px rgba(0,0,0,0.1)",
+        }}
+      >
+        {/* Cork texture dots */}
+        <div
+          className="absolute inset-0 rounded-lg opacity-30 pointer-events-none"
+          style={{
+            backgroundImage: "radial-gradient(circle, hsl(25 30% 40%) 1px, transparent 1px)",
+            backgroundSize: "8px 8px",
+          }}
+        />
+
+        <div className="relative flex flex-col gap-4">
+          {[1, 2, 3, 4, 5].map((n, i) => (
+            <div
+              key={n}
+              className="relative"
+              style={{ transform: `rotate(${PIN_ROTATIONS[i]})` }}
+            >
+              {/* Pin */}
+              <div
+                className="absolute -top-2 left-6 w-4 h-4 rounded-full z-10"
+                style={{
+                  background: "radial-gradient(circle at 35% 35%, hsl(0 70% 55%), hsl(0 60% 38%))",
+                  boxShadow: "0 2px 4px rgba(0,0,0,0.35), inset 0 1px 1px rgba(255,255,255,0.3)",
+                }}
+              />
+              {/* Post-it note */}
+              <div
+                className="bg-white rounded-sm px-5 py-4"
+                style={{
+                  boxShadow: "2px 3px 8px rgba(0,0,0,0.18), 0 1px 2px rgba(0,0,0,0.1)",
+                }}
+              >
+                <p className="font-body text-sm text-muted-foreground italic">
+                  {lang === "fr" ? "Bientôt..." : "Coming soon..."}
+                </p>
+              </div>
+            </div>
+          ))}
         </div>
-      ))}
+      </div>
 
       <SubscribeBox />
     </div>
