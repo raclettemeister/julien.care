@@ -68,7 +68,8 @@ const IntroSequence = ({ children }: { children: React.ReactNode }) => {
       {/* Overlay */}
       {!isDone && (
         <div
-          className="fixed inset-0 z-[9999] flex items-center justify-center"
+          className="fixed inset-0 z-[9999] flex items-center justify-center cursor-pointer"
+          onClick={skip}
           style={{ perspective: "1500px", pointerEvents: phase === "unfold" ? "none" : "auto" }}
         >
           {/* Left half */}
