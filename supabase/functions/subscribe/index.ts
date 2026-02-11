@@ -171,6 +171,7 @@ serve(async (req) => {
     // Send welcome email (non-blocking)
     console.log('Sending welcome email to:', email);
     try {
+      await new Promise(resolve => setTimeout(resolve, 1500));
       const emailResponse = await fetch('https://api.resend.com/emails', {
         method: 'POST',
         headers: {
