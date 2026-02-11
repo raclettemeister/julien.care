@@ -13,7 +13,7 @@ const ESSAYS = [
 const DEFAULT_OG = {
   title: "julien.care — Life, creativity, and figuring things out",
   description: "A blog about the examined life. Creativity, tough love, real stories. Honest stuff, no bullshit. Written from Brussels with love, by Julien.",
-  image: "https://vmhwyzwuwfshlqgdunkd.supabase.co/storage/v1/object/public/images//dosmesos-28-2.jpg",
+  image: "https://vmhwyzwuwfshlqgdunkd.supabase.co/storage/v1/object/public/images//julienOG.jpg",
   url: "https://julien.care",
 };
 
