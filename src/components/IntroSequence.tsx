@@ -19,8 +19,15 @@ const IntroSequence = ({ children }: { children: React.ReactNode }) => {
   const [dots, setDots] = useState(0);
   const [rebootText, setRebootText] = useState(false);
   const dotsInterval = useRef<ReturnType<typeof setInterval>>();
+  const timers = useRef<ReturnType<typeof setTimeout>[]>([]);
 
-  const skip = () => setPhase("done");
+  const skip = () => {
+    // Clear all pending timers so no phase overrides "done"
+    timers.current.forEach(clearTimeout);
+    timers.current = [];
+    if (dotsInterval.current) clearInterval(dotsInterval.current);
+    setPhase("done");
+  };
 
   useEffect(() => {
     const handleKey = () => skip();
@@ -29,7 +36,6 @@ const IntroSequence = ({ children }: { children: React.ReactNode }) => {
   }, []);
 
   useEffect(() => {
-    // Phase transitions
     const t1 = setTimeout(() => setPhase("pause"), INTRO_TIMING.connectingDuration);
     const t2 = setTimeout(() => setPhase("error"), INTRO_TIMING.errorDelay);
     const t3 = setTimeout(() => {
@@ -50,8 +56,10 @@ const IntroSequence = ({ children }: { children: React.ReactNode }) => {
       INTRO_TIMING.unfoldDelay + INTRO_TIMING.unfoldDuration + 100
     );
 
+    timers.current = [t1, t2, t3, t4, t5];
+
     return () => {
-      [t1, t2, t3, t4, t5].forEach(clearTimeout);
+      timers.current.forEach(clearTimeout);
       if (dotsInterval.current) clearInterval(dotsInterval.current);
     };
   }, []);
