@@ -70,6 +70,7 @@ const IntroSequence = ({ children }: { children: React.ReactNode }) => {
         <div
           className="fixed inset-0 z-[9999] flex items-center justify-center cursor-pointer"
           onClick={skip}
+          onDoubleClick={skip}
           style={{ perspective: "1500px", pointerEvents: phase === "unfold" ? "none" : "auto" }}
         >
           {/* Left half */}
