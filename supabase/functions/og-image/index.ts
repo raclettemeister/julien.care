@@ -61,6 +61,17 @@ serve(async (req) => {
     return new Response("Not a crawler", { status: 404 });
   }
 
+  // Check if it's the game page
+  if (path === "/game") {
+    return new Response(buildOgHtml({
+      title: "Chez Julien Simulator — Play the Game",
+      description: "Run a specialty food shop in Brussels. Make decisions, face events, try not to go bankrupt. A simulation game by Julien.",
+      image: DEFAULT_OG.image,
+      url: "https://julien.care/game",
+      type: "website",
+    }), { headers: { "Content-Type": "text/html; charset=utf-8" } });
+  }
+
   // Check if it's an essay page
   const essayMatch = path.match(/^\/essays\/(.+)$/);
   if (essayMatch) {
