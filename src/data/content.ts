@@ -26,6 +26,7 @@ export const projects = [
     descFr: "Un jeu vidéo sur la gestion de ma vraie boutique. Construit en 2 semaines avec l'IA. Zéro ligne de code écrite par moi.",
     status: "Live" as const,
     emoji: "🎮",
+    link: "/game",
   },
   {
     titleEn: "Examine Your Life",
