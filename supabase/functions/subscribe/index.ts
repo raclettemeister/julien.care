@@ -1,86 +1,99 @@
-import { createClient } from "https://esm.sh/@supabase/supabase-js@2";
+import { serve } from "https://deno.land/std@0.168.0/http/server.ts"
+import { createClient } from "https://esm.sh/@supabase/supabase-js@2"
 
 const corsHeaders = {
-  "Access-Control-Allow-Origin": "*",
-  "Access-Control-Allow-Headers":
-    "authorization, x-client-info, apikey, content-type, x-supabase-client-platform, x-supabase-client-platform-version, x-supabase-client-runtime, x-supabase-client-runtime-version",
-};
-
-function json(body: Record<string, string>, status = 200) {
-  return new Response(JSON.stringify(body), {
-    status,
-    headers: { ...corsHeaders, "Content-Type": "application/json" },
-  });
+  'Access-Control-Allow-Origin': '*',
+  'Access-Control-Allow-Headers': 'authorization, x-client-info, apikey, content-type, x-supabase-client-platform, x-supabase-client-platform-version, x-supabase-client-runtime, x-supabase-client-runtime-version',
 }
 
-Deno.serve(async (req) => {
-  if (req.method === "OPTIONS") {
-    return new Response(null, { headers: corsHeaders });
+serve(async (req) => {
+  if (req.method === 'OPTIONS') {
+    return new Response(null, { headers: corsHeaders })
   }
 
   try {
-    const { email } = await req.json();
+    const { email } = await req.json()
+    console.log('Subscribe request received for:', email)
 
-    // Validate email
-    if (!email || typeof email !== "string" || !email.includes("@") || !email.includes(".")) {
-      return json({ status: "error", message: "Invalid email address" }, 400);
+    if (!email || !email.includes('@') || !email.includes('.')) {
+      console.log('Invalid email:', email)
+      return new Response(
+        JSON.stringify({ status: 'error', message: 'invalid_email' }),
+        { headers: { ...corsHeaders, 'Content-Type': 'application/json' }, status: 400 }
+      )
     }
 
-    const trimmedEmail = email.trim().toLowerCase();
+    const supabaseUrl = Deno.env.get('SUPABASE_URL')!
+    const supabaseKey = Deno.env.get('SUPABASE_SERVICE_ROLE_KEY')!
+    const supabase = createClient(supabaseUrl, supabaseKey)
 
-    // Insert into Supabase
-    const supabaseUrl = Deno.env.get("SUPABASE_URL")!;
-    const supabaseKey = Deno.env.get("SUPABASE_SERVICE_ROLE_KEY")!;
-    const supabase = createClient(supabaseUrl, supabaseKey);
+    const { error: dbError } = await supabase
+      .from('subscribers')
+      .upsert({ email }, { onConflict: 'email' })
 
-    const { error: insertError } = await supabase
-      .from("subscribers")
-      .insert({ email: trimmedEmail });
-
-    let alreadySubscribed = false;
-    if (insertError) {
-      // Unique constraint violation = already subscribed
-      if (insertError.code === "23505") {
-        alreadySubscribed = true;
-      } else {
-        console.error("Insert error:", insertError);
-        return json({ status: "error", message: "Database error" }, 500);
-      }
+    if (dbError) {
+      console.log('Database error:', dbError.message)
+    } else {
+      console.log('Saved to database')
     }
 
-    // Add contact to Resend audience
-    const resendKey = Deno.env.get("RESEND_API_KEY");
-    if (resendKey) {
-      try {
-        // Get first audience
-        const audRes = await fetch("https://api.resend.com/audiences", {
-          headers: { Authorization: `Bearer ${resendKey}` },
-        });
-        const audData = await audRes.json();
-        const audienceId = audData?.data?.[0]?.id;
-
-        if (audienceId) {
-          await fetch(`https://api.resend.com/audiences/${audienceId}/contacts`, {
-            method: "POST",
-            headers: {
-              Authorization: `Bearer ${resendKey}`,
-              "Content-Type": "application/json",
-            },
-            body: JSON.stringify({ email: trimmedEmail, unsubscribed: false }),
-          });
-        }
-      } catch (e) {
-        console.error("Resend error:", e);
-        // Don't fail the whole request if Resend fails
-      }
+    const resendKey = Deno.env.get('RESEND_API_KEY')
+    if (!resendKey) {
+      console.log('ERROR: RESEND_API_KEY secret not found')
+      return new Response(
+        JSON.stringify({ status: 'error', message: 'server_config_error' }),
+        { headers: { ...corsHeaders, 'Content-Type': 'application/json' }, status: 500 }
+      )
     }
 
-    return json({
-      status: "ok",
-      message: alreadySubscribed ? "already_subscribed" : "subscribed",
-    });
-  } catch (e) {
-    console.error("Unexpected error:", e);
-    return json({ status: "error", message: "Something went wrong" }, 500);
+    console.log('Fetching Resend audiences...')
+    const audiencesRes = await fetch('https://api.resend.com/audiences', {
+      headers: { 'Authorization': `Bearer ${resendKey}` }
+    })
+    const audiencesData = await audiencesRes.json()
+    console.log('Audiences response:', JSON.stringify(audiencesData))
+
+    if (!audiencesData.data || audiencesData.data.length === 0) {
+      console.log('ERROR: No audiences found in Resend')
+      return new Response(
+        JSON.stringify({ status: 'error', message: 'no_audience' }),
+        { headers: { ...corsHeaders, 'Content-Type': 'application/json' }, status: 500 }
+      )
+    }
+
+    const audienceId = audiencesData.data[0].id
+    console.log('Using audience:', audienceId)
+
+    const contactRes = await fetch(`https://api.resend.com/audiences/${audienceId}/contacts`, {
+      method: 'POST',
+      headers: {
+        'Authorization': `Bearer ${resendKey}`,
+        'Content-Type': 'application/json'
+      },
+      body: JSON.stringify({ email, unsubscribed: false })
+    })
+    const contactData = await contactRes.json()
+    console.log('Resend contact response:', JSON.stringify(contactData))
+
+    if (!contactRes.ok) {
+      console.log('Resend API error:', contactRes.status)
+      return new Response(
+        JSON.stringify({ status: 'error', message: 'resend_error' }),
+        { headers: { ...corsHeaders, 'Content-Type': 'application/json' }, status: 500 }
+      )
+    }
+
+    console.log('Successfully subscribed:', email)
+    return new Response(
+      JSON.stringify({ status: 'ok', message: 'subscribed' }),
+      { headers: { ...corsHeaders, 'Content-Type': 'application/json' } }
+    )
+
+  } catch (err) {
+    console.log('Unexpected error:', err.message)
+    return new Response(
+      JSON.stringify({ status: 'error', message: 'server_error' }),
+      { headers: { ...corsHeaders, 'Content-Type': 'application/json' }, status: 500 }
+    )
   }
-});
+})
