@@ -84,6 +84,10 @@ const Home = () => {
             {lang === "fr"
               ? "Je lance un jeu vidéo. Le jeu s'appelle Chez Julien Simulator — c'est littéralement ma boutique transformée en jeu."
               : "I'm launching a video game. The game is called Chez Julien Simulator — it's literally my shop turned into a game."}
+            {" "}
+            <Link to="/game" className="text-accent hover:text-foreground transition-colors font-semibold">
+              {lang === "fr" ? "🎮 Jouer maintenant" : "🎮 Play it now"}
+            </Link>
           </p>
           <p>
             {lang === "fr"
