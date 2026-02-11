@@ -1,4 +1,5 @@
 import { useLanguage } from "@/contexts/LanguageContext";
+import { Link } from "react-router-dom";
 import { projects } from "@/data/content";
 import SubscribeBox from "@/components/SubscribeBox";
 
@@ -37,10 +38,10 @@ const Projects = () => {
           <p className="font-body text-sm text-muted-foreground leading-relaxed">
             {lang === "fr" ? p.descFr : p.descEn}
           </p>
-          {p.status === "Live" && (
-            <p className="font-body text-sm text-accent font-semibold mt-2 cursor-pointer hover:underline">
+          {p.status === "Live" && p.link && (
+            <Link to={p.link} className="inline-block font-body text-sm text-accent font-semibold mt-2 hover:underline no-underline">
               {lang === "fr" ? "Jouer maintenant →" : "Play now →"}
-            </p>
+            </Link>
           )}
         </div>
       ))}
