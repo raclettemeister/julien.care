@@ -8,17 +8,23 @@ const SubscribeBox = () => {
   const [state, setState] = useState<"idle" | "loading" | "subscribed" | "already" | "error">("idle");
 
   const handleSubmit = async () => {
-    if (!email || state === "loading") return;
+    if (!email || !email.includes("@") || state === "loading") return;
     setState("loading");
     try {
       const { data, error } = await supabase.functions.invoke("subscribe", {
-        body: { email },
+        body: { email: email.trim() },
       });
       if (error) throw error;
-      if (data?.message === "already_subscribed") {
+      // data may be a string or object depending on SDK version
+      const parsed = typeof data === "string" ? JSON.parse(data) : data;
+      if (parsed?.status === "error") {
+        setState("error");
+      } else if (parsed?.message === "already_subscribed") {
         setState("already");
-      } else {
+      } else if (parsed?.message === "subscribed") {
         setState("subscribed");
+      } else {
+        setState("error");
       }
     } catch {
       setState("error");
