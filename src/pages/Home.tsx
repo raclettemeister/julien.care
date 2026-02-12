@@ -58,8 +58,8 @@ const Home = () => {
         <div className="font-body text-base text-foreground leading-[1.8] space-y-4">
           <p>
             {lang === "fr"
-              ? <>Entrepreneur, écrivain, meilleur ami de <button onClick={() => setShowPoncho(true)} className="text-accent hover:text-foreground transition-colors cursor-pointer underline underline-offset-2">Poncho</button>, possibiliste dans l'âme et taré créatif. Fraîchement-ish libéré de mes addictions/anesthésiants et le plus heureux que j'aie jamais été.</>
-              : <>Successful business owner, writer, <button onClick={() => setShowPoncho(true)} className="text-accent hover:text-foreground transition-colors cursor-pointer underline underline-offset-2">Poncho's</button> best friend, possibilist at heart and creative freak. Freshly-ish addiction/numbing free and the happiest I've ever been.</>}
+              ? <>Entrepreneur, écrivain, meilleur ami de <button onClick={() => setShowPoncho(true)} className="text-accent hover:text-foreground transition-colors cursor-pointer underline underline-offset-2">Poncho</button>, optimiste incurable et taré créatif.</>
+              : <>Business owner, writer, <button onClick={() => setShowPoncho(true)} className="text-accent hover:text-foreground transition-colors cursor-pointer underline underline-offset-2">Poncho's</button> best friend, die hard optimist and creative freak.</>}
           </p>
           <p className="text-sm text-muted-foreground">
             <a href="/about" className="text-accent hover:text-foreground transition-colors">
@@ -77,8 +77,8 @@ const Home = () => {
         <div className="font-body text-base text-foreground leading-[1.8] space-y-4">
           <p>
             {lang === "fr"
-              ? "En train de construire un blog, tu es ici. (Surpriiise.)"
-              : "Currently building a blog, you are here. (Surpriiise.)"}
+              ? "En train de construire un blog, tu es ici."
+              : "Currently building a blog, you are here."}
           </p>
           <p>
             {lang === "fr"
@@ -96,12 +96,8 @@ const Home = () => {
           </p>
           <p>
             {lang === "fr"
-              ? "Hobbylingly en train d'apprendre la guitare country/songwriter et danseur de Lindy Hop/voleur de piste de danse... et je cours mon premier 10K en mars !"
-              : "Hobbylingly learning to become a country guitar player/songwriter and Lindy Hop dancer/dancefloor stealer... and running my first 10K in march!"}
-            {" "}
-            <a href="https://www.runfornature.be/" target="_blank" rel="noopener noreferrer" className="text-accent hover:text-foreground transition-colors">
-              ({lang === "fr" ? "Run For Nature Rivierenland" : "Run For Nature Rivierenland"})
-            </a>
+              ? "Hobbylingly en train d'apprendre la guitare country/songwriter et danseur de Lindy Hop/voleur de piste de danse..."
+              : "Hobbylingly learning to become a country guitar player/songwriter and Lindy Hop dancer/dancefloor stealer..."}
           </p>
           <p className="text-sm text-muted-foreground">
             <a href="/now" className="text-accent hover:text-foreground transition-colors">
