@@ -119,6 +119,37 @@ serve(async (req) => {
       console.error('ntfy.sh failed (non-blocking):', ntfyErr);
     }
 
+    // Create Notion page
+    try {
+      const notionKey = Deno.env.get('NOTION_API_KEY');
+      if (notionKey) {
+        const today = new Date().toISOString().split('T')[0];
+        const notionRes = await fetch('https://api.notion.com/v1/pages', {
+          method: 'POST',
+          headers: {
+            'Authorization': `Bearer ${notionKey}`,
+            'Content-Type': 'application/json',
+            'Notion-Version': '2022-06-28',
+          },
+          body: JSON.stringify({
+            parent: { database_id: 'e9fbd0e180224c5db25465b77437a8c5' },
+            properties: {
+              'Name': { title: [{ text: { content: email } }] },
+              'Email': { email: email },
+              'Status': { select: { name: 'To Send' } },
+              'Subscribed': { date: { start: today } },
+            },
+          }),
+        });
+        const notionData = await notionRes.json();
+        console.log('Notion page created:', JSON.stringify(notionData));
+      } else {
+        console.log('NOTION_API_KEY not set, skipping Notion');
+      }
+    } catch (notionErr) {
+      console.error('Notion failed (non-blocking):', notionErr);
+    }
+
     console.log('Successfully subscribed:', email)
     return new Response(
       JSON.stringify({ status: 'ok', message: 'subscribed' }),
