@@ -24,8 +24,8 @@ const Now = () => {
 
       <p className="font-body text-sm text-muted-foreground mb-12">
         {lang === "fr"
-          ? "Dernière mise à jour : 9 février 2026, depuis Bruxelles, où c'est la fin de l'hiver."
-          : "Updated February 9th, 2026, from Brussels, where it's late winter."}
+          ? "Dernière mise à jour : 12 février 2026, depuis Bruxelles, où c'est la fin de l'hiver."
+          : "Updated February 12th, 2026, from Brussels, where it's late winter."}
       </p>
 
       {/* Section 1: Chez Julien Simulator */}
@@ -77,8 +77,8 @@ const Now = () => {
         <div className="font-body text-base text-foreground leading-[1.8] space-y-4">
           <p>
             {lang === "fr"
-              ? "D'habitude, je cours encore à fond. J'apprends à mon équipe à pouvoir marcher sans moi pour qu'on puisse tous grandir et évoluer. J'ai hâte de voir leur propre développement personnel, et j'espère pouvoir jouer un rôle positif dans leur propre épanouissement."
-              : "Usually I'm still running hard. I'm teaching my team to be able to walk without me so we can all grow and evolve. Can't wait to witness their own personal growth, and I hope I can be a positive part in their own personal blooming."}
+              ? "D'habitude, je cours encore à fond. J'apprends à mon équipe à pouvoir gérer une boutique prospère et dynamique sans moi. J'ai hâte de voir leur propre développement personnel, et j'espère pouvoir jouer un rôle positif dans leur propre épanouissement."
+              : "Usually I'm still running hard. I'm teaching my team to be able to manage a successful and vibrant shop without me. Can't wait to witness their own personal growth, and I hope I can be a positive part in their own personal blooming."}
           </p>
         </div>
       </div>
