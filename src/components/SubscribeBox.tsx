@@ -75,7 +75,7 @@ const SubscribeBox = () => {
       <div className="flex gap-2">
         <input
           type="text"
-          placeholder={lang === "fr" ? "Ton prénom (optionnel)" : "First name (optional)"}
+          placeholder={lang === "fr" ? "surnom (optionnel)" : "nickname (optional)"}
           value={name}
           onChange={(e) => setName(e.target.value)}
           className="font-body w-[140px] px-3 py-2 border border-border text-sm outline-none bg-background focus:border-foreground transition-colors"

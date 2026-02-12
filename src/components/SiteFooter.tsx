@@ -13,8 +13,8 @@ const SiteFooter = () => {
         </p>
         <p className="font-body text-xs text-muted-foreground/50 mt-3">
           {lang === "fr"
-            ? "Pas de pubs. Pas de cookies (sauf ceux au chocolat noir et fleur de sel qu'on sert à la boutique). Pas de shitGPT slop, pas de conneries."
-            : "No ads. No cookies (except the sea salt dark chocolate ones I serve at the shop). No AI slop, no nonsense."}
+            ? "Pas de pubs. Pas de cookies (sauf ceux au chocolat noir et fleur de sel qu'on sert à la boutique). Pas de shitGPT slop."
+            : "No ads. No cookies (except the sea salt dark chocolate ones I serve at the shop). No AI slop."}
         </p>
       </div>
     </footer>
