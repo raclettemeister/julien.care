@@ -42,6 +42,61 @@ serve(async (req) => {
 
       const RESEND_API_KEY = Deno.env.get("RESEND_API_KEY");
       if (RESEND_API_KEY) {
+        // Parse game state for clean display
+        let gameInfo = { day: "?", timeOfDay: "?", bank: "?", monthlySales: "?", stress: "?", concept: "?", gameOver: false };
+        try {
+          if (game_state) {
+            const gs = JSON.parse(game_state);
+            gameInfo = {
+              day: gs.day ?? gs.currentDay ?? "?",
+              timeOfDay: gs.timeOfDay ?? gs.time ?? "?",
+              bank: gs.bank ?? gs.money ?? gs.balance ?? "?",
+              monthlySales: gs.monthlySales ?? gs.sales ?? "?",
+              stress: gs.stress ?? gs.stressLevel ?? "?",
+              concept: gs.concept ?? gs.shopConcept ?? "?",
+              gameOver: gs.gameOver ?? gs.isGameOver ?? false,
+            };
+          }
+        } catch { /* keep defaults */ }
+
+        // Parse browser info for one-liner
+        let browserLine = browser_info || "Not captured";
+        try {
+          if (browser_info) {
+            const bi = JSON.parse(browser_info);
+            browserLine = [bi.browser || bi.userAgent, bi.screenSize || bi.screen, bi.platform || bi.os].filter(Boolean).join(" · ") || browser_info;
+          }
+        } catch { /* use raw string */ }
+
+        const stressVal = typeof gameInfo.stress === "number" ? `${gameInfo.stress}%` : gameInfo.stress;
+        const bankVal = typeof gameInfo.bank === "number" ? `€${gameInfo.bank.toLocaleString()}` : gameInfo.bank;
+        const salesVal = typeof gameInfo.monthlySales === "number" ? `€${gameInfo.monthlySales.toLocaleString()}` : gameInfo.monthlySales;
+
+        const html = `
+<div style="font-family:-apple-system,Helvetica,Arial,sans-serif;max-width:560px;margin:0 auto;color:#1a1a1a">
+  <h2 style="margin:0 0 16px">🐛 Bug Report <span style="font-weight:normal;color:#888;font-size:14px">#${data.id.slice(0,8)}</span></h2>
+
+  <table style="width:100%;border-collapse:collapse;font-size:15px;margin-bottom:20px">
+    <tr><td style="padding:6px 12px 6px 0;color:#666;width:120px">Day</td><td style="padding:6px 0;font-weight:600">${gameInfo.day} (${gameInfo.timeOfDay})</td></tr>
+    <tr style="background:#f9f9f9"><td style="padding:6px 12px 6px 0;color:#666">Money</td><td style="padding:6px 0;font-weight:600">${bankVal}</td></tr>
+    <tr><td style="padding:6px 12px 6px 0;color:#666">Monthly Sales</td><td style="padding:6px 0;font-weight:600">${salesVal}</td></tr>
+    <tr style="background:#f9f9f9"><td style="padding:6px 12px 6px 0;color:#666">Stress</td><td style="padding:6px 0;font-weight:600">${stressVal}</td></tr>
+    <tr><td style="padding:6px 12px 6px 0;color:#666">Concept</td><td style="padding:6px 0;font-weight:600">${gameInfo.concept}</td></tr>
+    <tr style="background:#f9f9f9"><td style="padding:6px 12px 6px 0;color:#666">Game Over</td><td style="padding:6px 0;font-weight:600">${gameInfo.gameOver ? "🔴 Yes" : "🟢 No"}</td></tr>
+  </table>
+
+  <p style="font-size:13px;color:#666;margin:0 0 4px">🖥 <strong>Browser:</strong> ${browserLine}</p>
+
+  ${recent_errors && recent_errors !== "None" ? `<div style="margin-top:16px"><p style="font-size:13px;color:#c00;margin:0 0 4px">⚠️ <strong>Recent Errors</strong></p><pre style="background:#fff5f5;border:1px solid #fcc;padding:10px;font-size:12px;border-radius:4px;overflow-x:auto;white-space:pre-wrap">${recent_errors}</pre></div>` : ""}
+
+  <p style="font-size:13px;color:#999;margin:20px 0 8px">Player may add a description shortly.</p>
+
+  <details style="margin-top:24px">
+    <summary style="font-size:12px;color:#aaa;cursor:pointer">Raw data (for debugging)</summary>
+    <pre style="background:#f5f5f5;color:#999;padding:10px;font-size:11px;border-radius:4px;overflow-x:auto;white-space:pre-wrap;margin-top:8px">${JSON.stringify({ game_state, browser_info, recent_errors, timestamp }, null, 2)}</pre>
+  </details>
+</div>`;
+
         await fetch("https://api.resend.com/emails", {
           method: "POST",
           headers: {
@@ -51,8 +106,8 @@ serve(async (req) => {
           body: JSON.stringify({
             from: "Bug Report <julien@julien.care>",
             to: ["staycreative@julien.care"],
-            subject: "🐛 New bug report from Chez Julien Simulator",
-            text: `New bug report!\n\nReport ID: ${data.id}\n\nGame state:\n${game_state || "Not captured"}\n\nBrowser:\n${browser_info || "Not captured"}\n\nRecent errors:\n${recent_errors || "None"}\n\nTime: ${timestamp || new Date().toISOString()}\n\n---\nPlayer may add a description shortly.\nView all reports in Supabase dashboard.`,
+            subject: `🐛 Bug report — Day ${gameInfo.day} · ${stressVal} stress`,
+            html,
           }),
         });
       }
