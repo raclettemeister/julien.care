@@ -19,7 +19,9 @@ const About = () => {
       <div className="font-body text-base text-foreground leading-[1.85] space-y-5">
         {lang === "fr" ? (
           <>
-            <p>J'étais perdu et j'avais peur.</p>
+            <p>J'ai grandi perdu et effrayé.</p>
+
+            <p>Je ne trouvais rien qui méritait d'être poursuivi.</p>
 
             <p>Je buvais. Je fuyais. J'attendais des conditions parfaites qui ne viendraient jamais.</p>
 
@@ -61,7 +63,9 @@ const About = () => {
           </>
         ) : (
           <>
-            <p>I was lost and afraid.</p>
+            <p>I grew up lost and afraid.</p>
+
+            <p>Found nothing worth pursuing.</p>
 
             <p>I drank. I ran. I waited for perfect conditions that would never come.</p>
 
