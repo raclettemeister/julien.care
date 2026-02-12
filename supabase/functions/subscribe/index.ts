@@ -134,7 +134,7 @@ serve(async (req) => {
           body: JSON.stringify({
             parent: { database_id: 'e9fbd0e180224c5db25465b77437a8c5' },
             properties: {
-              'Name': { title: [{ text: { content: name || email } }] },
+              'Name': { title: [{ text: { content: name || email.split('@')[0] } }] },
               'Email': { email: email },
               'Status': { select: { name: 'To Send' } },
               'Subscribed': { date: { start: today } },
