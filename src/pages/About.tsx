@@ -21,9 +21,7 @@ const About = () => {
           <>
             <p>J'étais perdu et j'avais peur.</p>
 
-            <p>
-              Je <A href="https://en.wikipedia.org/wiki/Shadow_(psychology)">construisais des châteaux de sable sur une plage venteuse</A> — je jouais une vie que je n'avais pas choisie, demandant <A href="https://en.wikipedia.org/wiki/Letters_to_a_Young_Poet">ce que le monde voulait de moi</A> au lieu de ce que je voulais de moi-même. Je buvais. Je fuyais. J'attendais des conditions parfaites qui ne viendraient jamais.
-            </p>
+            <p>Je buvais. Je fuyais. J'attendais des conditions parfaites qui ne viendraient jamais.</p>
 
             <p>
               Puis un poème m'a dit que je devais <A href="https://poets.org/poem/archaic-torso-apollo">changer ma vie</A>.
@@ -65,9 +63,7 @@ const About = () => {
           <>
             <p>I was lost and afraid.</p>
 
-            <p>
-              I was <A href="https://en.wikipedia.org/wiki/Shadow_(psychology)">building sand castles on a windy beach</A> — performing a life I didn't choose, asking <A href="https://en.wikipedia.org/wiki/Letters_to_a_Young_Poet">what the world wanted of me</A> instead of what I wanted of myself. I drank. I ran. I waited for perfect conditions that would never come.
-            </p>
+            <p>I drank. I ran. I waited for perfect conditions that would never come.</p>
 
             <p>
               Then a poem told me I had to <A href="https://poets.org/poem/archaic-torso-apollo">change my life</A>.
