@@ -14,6 +14,36 @@ export type Database = {
   }
   public: {
     Tables: {
+      bug_reports: {
+        Row: {
+          browser_info: string | null
+          created_at: string
+          description: string | null
+          game_state: string | null
+          id: string
+          recent_errors: string | null
+          status: string
+        }
+        Insert: {
+          browser_info?: string | null
+          created_at?: string
+          description?: string | null
+          game_state?: string | null
+          id?: string
+          recent_errors?: string | null
+          status?: string
+        }
+        Update: {
+          browser_info?: string | null
+          created_at?: string
+          description?: string | null
+          game_state?: string | null
+          id?: string
+          recent_errors?: string | null
+          status?: string
+        }
+        Relationships: []
+      }
       subscribers: {
         Row: {
           email: string
