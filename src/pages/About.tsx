@@ -1,32 +1,11 @@
 import { useLanguage } from "@/contexts/LanguageContext";
-import { Link } from "react-router-dom";
-import { useState } from "react";
 import SubscribeBox from "@/components/SubscribeBox";
-import oursMeme from "@/assets/ours-meme.jpg";
-import apartmentPhoto from "@/assets/apartment-photo.jpg";
 
-const ImagePopover = ({ children, src, alt }: { children: React.ReactNode; src: string; alt: string }) => {
-  const [show, setShow] = useState(false);
-
-  return (
-    <span className="relative inline">
-      <button
-        onClick={() => setShow((s) => !s)}
-        className="italic underline decoration-dotted underline-offset-2 cursor-pointer hover:text-accent transition-colors"
-      >
-        {children}
-      </button>
-      {show && (
-        <>
-          <div className="fixed inset-0 z-40" onClick={() => setShow(false)} />
-          <span className="absolute z-50 bottom-full left-1/2 -translate-x-1/2 mb-2 w-56 rounded-md overflow-hidden shadow-lg border border-border/40 bg-card">
-            <img src={src} alt={alt} className="w-full" />
-          </span>
-        </>
-      )}
-    </span>
-  );
-};
+const A = ({ href, children }: { href: string; children: React.ReactNode }) => (
+  <a href={href} target="_blank" rel="noopener noreferrer" className="underline text-accent hover:text-foreground transition-colors">
+    {children}
+  </a>
+);
 
 const About = () => {
   const { lang } = useLanguage();
@@ -38,99 +17,95 @@ const About = () => {
       </h1>
 
       <div className="font-body text-base text-foreground leading-[1.85] space-y-5">
-        <p>
-          {lang === "fr"
-            ? "J'ai 31 ans, j'écris depuis mon "
-            : "I'm 31, writing from my "}
-          <ImagePopover src={apartmentPhoto} alt="My apartment">
-            {lang === "fr" ? "appartement décoré de façon créative" : "creative decorated apartment"}
-          </ImagePopover>
-          {lang === "fr"
-            ? ". Je gère la boutique en bas qui fait ~500K€ par an. Je suis propriétaire de 48% de l'immeuble dans lequel je dors. Je vis avec l'amour de ma vie, et "
-            : ". I run the shop downstairs that does ~€500K a year. I own 48% of the building I'm sleeping in. I live with the love of my life, and "}
-          <ImagePopover src={oursMeme} alt="Our">
-            {lang === "fr" ? "notre" : "our"}
-          </ImagePopover>
-          {lang === "fr" ? " chien Poncho." : " dog Poncho."}
-        </p>
-        <p>
-          {lang === "fr"
-            ? "Sur le papier, ça a l'air bien. Ce que le papier ne montre pas, c'est les 7 années que j'ai passées à me battre pour arriver ici."
-            : "On paper, it looks nice. What paper doesn't show is the 7 years I spent fighting to get here."}
-        </p>
-        <p>
-          {lang === "fr" ? (
-            <>
-              J'avais des addictions. J'étais un athlète de l'engourdissement. J'avais toutes les excuses du monde et zéro discipline. Puis j'ai découvert Carl Jung, et d'autres mecs et{" "}
-              <a href="https://en.wikipedia.org/wiki/Bren%C3%A9_Brown" target="_blank" rel="noopener noreferrer" className="underline text-accent hover:text-foreground transition-colors">
-                meufs
-              </a>
-              {" "}cool en soirée, et l'idée que si tu n'examines pas ta vie, tu ne vis pas — tu réagis.
-            </>
-          ) : (
-            <>
-              I had addictions. I was a numbing athlete. I had every excuse in the world and zero discipline. Then I found Carl Jung, and other cool at party dudes and{" "}
-              <a href="https://en.wikipedia.org/wiki/Bren%C3%A9_Brown" target="_blank" rel="noopener noreferrer" className="underline text-accent hover:text-foreground transition-colors">
-                dudettes
-              </a>
-              , and the idea that if you don't examine your life, you're not living — you're reacting.
-            </>
-          )}
-        </p>
-        <p>
-          {lang === "fr" ? (
-            <>
-              J'ai commencé à écrire tous les jours. Je suis allé en profondeur. J'ai beaucoup lu aussi. J'ai commencé à comprendre mon histoire. J'ai commencé à prendre la responsabilité de ce qui jaillissait dans le monde à travers moi. Ça a tout changé.
-            </>
-          ) : (
-            <>
-              I started writing every day. I went deep. I read a lot too. I started to understand my story. I started taking responsibility for what spewed into the world through me. It changed everything.
-            </>
-          )}
-        </p>
-        <blockquote className="my-6 pl-4 border-l-2 border-accent font-heading text-base text-muted-foreground italic leading-relaxed">
-          "Until you make the unconscious conscious, it will direct your life and you will call it fate." — Carl Jung
-        </blockquote>
-      </div>
-
-      <blockquote className="my-10 pl-4 border-l-2 border-accent font-heading text-lg text-foreground italic leading-relaxed">
         {lang === "fr" ? (
           <>
-            Je ne suis pas un gourou. Je n'essaie pas de te convaincre de suivre mes cours en ligne. Mais j'ai vécu une expérience qui a changé ma vie et tu peux au moins m'écouter si tu sens que ça te parle. Je ne m'en suis pas sorti seul. Je m'en suis sorti avec du soutien, et le seul soutien que j'ai trouvé, c'était dans des livres que j'ai payés. Je ne propose rien de payant pour l'instant, et si je le fais, ce sera pas cher et à fort impact.{" "}
-            <Link to="/money" className="underline text-accent hover:text-foreground transition-colors">
-              Rien sur ce site ne sera jamais payant
-            </Link>
-            .
+            <p>J'étais perdu et j'avais peur.</p>
+
+            <p>
+              Je <A href="https://en.wikipedia.org/wiki/Shadow_(psychology)">construisais des châteaux de sable sur une plage venteuse</A> — je jouais une vie que je n'avais pas choisie, demandant <A href="https://en.wikipedia.org/wiki/Letters_to_a_Young_Poet">ce que le monde voulait de moi</A> au lieu de ce que je voulais de moi-même. Je buvais. Je fuyais. J'attendais des conditions parfaites qui ne viendraient jamais.
+            </p>
+
+            <p>
+              Puis un poème m'a dit que je devais <A href="https://poets.org/poem/archaic-torso-apollo">changer ma vie</A>.
+            </p>
+
+            <p>Alors je l'ai fait.</p>
+
+            <p>
+              Je suis rentré d'un voyage au ski et j'ai tout brûlé. Mes trophées d'étudiant. Mes trophées de beuverie. Mes vieilles histoires. <A href="https://www.poetry-chaikhana.com/Poets/M/Masahide/Barnsburntdo/index.html">Ma grange a brûlé. Maintenant je pouvais voir la lune.</A>
+            </p>
+
+            <p>
+              J'ai quitté mon job. J'ai dit <A href="https://sive.rs/hellyeah">hell yeah</A> à ce qui comptait et non à tout le reste. J'ai appris à <A href="https://en.wikiquote.org/wiki/Marcus_Aurelius">ne pas réagir</A>. À <A href="https://rilkepoetry.com/letters-to-a-young-poet/letter-eight/">être patient avec ce qui n'est pas résolu</A>. À <A href="https://en.wikipedia.org/wiki/Letters_to_a_Young_Poet">vivre les questions</A>.
+            </p>
+
+            <p>
+              J'ai découvert <A href="https://en.wikipedia.org/wiki/The_unexamined_life_is_not_worth_living">la vie examinée</A>. J'ai lu <A href="https://en.wikipedia.org/wiki/Shadow_(psychology)">Jung</A>. J'ai lu <A href="https://en.wikipedia.org/wiki/Siddhartha_(novel)">Hesse</A> et <A href="https://rilkepoetry.com/letters-to-a-young-poet/letter-eight/">Rilke</A> et <A href="https://fr.wikipedia.org/wiki/Alexandre_Jollien">Jollien</A> et <A href="https://en.wikipedia.org/wiki/Matthieu_Ricard">Ricard</A>. J'ai appris que <A href="https://www.ted.com/talks/brene_brown_the_power_of_vulnerability">la vulnérabilité n'est pas une faiblesse</A>. Que <A href="https://en.wikipedia.org/wiki/Siddhartha_(novel)">la sagesse ne s'enseigne pas</A> — elle se vit. Que le sens de la vie est peut-être simplement <A href="https://www.goodreads.com/quotes/745-perhaps-all-the-dragons-in-our-lives-are-princesses-who">la bonté</A>.
+            </p>
+
+            <p>
+              Puis je suis descendu dans mon sous-sol et j'ai eu une conversation avec mon <A href="https://www.goodreads.com/quotes/745-perhaps-all-the-dragons-in-our-lives-are-princesses-who">dragon</A>.
+            </p>
+
+            <p>Ce n'était pas un monstre. C'était l'enfant en moi. Il attendait.</p>
+
+            <p>Je suis devenu plus libre que jamais.</p>
+
+            <p>
+              Maintenant je construis des choses — pas par <A href="https://www.goodreads.com/quotes/6693619-do-not-talk-about-giftedness-inborn-talents-one-can-name">talent</A>, mais avec le sérieux de l'artisan qui fait bien les petites choses. J'écris. Je code. Je découpe du papier et je colle des collages. Je <A href="https://www.goodreads.com/quotes/263898-would-you-like-me-to-give-you-a-formula-for">double mon taux d'échec</A>. J'<A href="https://www.goodreads.com/quotes/6-anyone-who-lives-within-their-means-suffers-from-a-lack">imagine au-delà de mes moyens</A>.
+            </p>
+
+            <p>
+              <A href="https://julien.care">I care.</A>
+            </p>
+
+            <p className="font-heading font-bold">Ma vie en cinq lettres.</p>
           </>
         ) : (
           <>
-            I'm not a guru. I'm not trying to convince you to go through my online courses. But I got a life changing experience and you can at least hear me out if you feel like this is talking to you. I got through it not on my own. I got through it with support, and the only support I found was in books that I paid for. I'm not proposing anything paying at the moment, and if I will, it will be cheap and high impact.{" "}
-            <Link to="/money" className="underline text-accent hover:text-foreground transition-colors">
-              Nothing on this website will ever be paying
-            </Link>
-            .
+            <p>I was lost and afraid.</p>
+
+            <p>
+              I was <A href="https://en.wikipedia.org/wiki/Shadow_(psychology)">building sand castles on a windy beach</A> — performing a life I didn't choose, asking <A href="https://en.wikipedia.org/wiki/Letters_to_a_Young_Poet">what the world wanted of me</A> instead of what I wanted of myself. I drank. I ran. I waited for perfect conditions that would never come.
+            </p>
+
+            <p>
+              Then a poem told me I had to <A href="https://poets.org/poem/archaic-torso-apollo">change my life</A>.
+            </p>
+
+            <p>So I did.</p>
+
+            <p>
+              I came home from a skiing trip and burned everything. My student trophies. My drinking trophies. My old stories. <A href="https://www.poetry-chaikhana.com/Poets/M/Masahide/Barnsburntdo/index.html">My barn burned down. Now I could see the moon.</A>
+            </p>
+
+            <p>
+              I quit my job. I said <A href="https://sive.rs/hellyeah">hell yeah</A> to what mattered and no to everything else. I learned to <A href="https://en.wikiquote.org/wiki/Marcus_Aurelius">not react</A>. To <A href="https://rilkepoetry.com/letters-to-a-young-poet/letter-eight/">be patient with the unsolved</A>. To <A href="https://en.wikipedia.org/wiki/Letters_to_a_Young_Poet">live the questions</A>.
+            </p>
+
+            <p>
+              I discovered <A href="https://en.wikipedia.org/wiki/The_unexamined_life_is_not_worth_living">the examined life</A>. I read <A href="https://en.wikipedia.org/wiki/Shadow_(psychology)">Jung</A>. I read <A href="https://en.wikipedia.org/wiki/Siddhartha_(novel)">Hesse</A> and <A href="https://rilkepoetry.com/letters-to-a-young-poet/letter-eight/">Rilke</A> and <A href="https://fr.wikipedia.org/wiki/Alexandre_Jollien">Jollien</A> and <A href="https://en.wikipedia.org/wiki/Matthieu_Ricard">Ricard</A>. I learned that <A href="https://www.ted.com/talks/brene_brown_the_power_of_vulnerability">vulnerability is not weakness</A>. That <A href="https://en.wikipedia.org/wiki/Siddhartha_(novel)">wisdom can't be taught</A> — only lived. That the meaning of life might just be <A href="https://www.goodreads.com/quotes/745-perhaps-all-the-dragons-in-our-lives-are-princesses-who">kindness</A>.
+            </p>
+
+            <p>
+              Then I went down to my basement and had a conversation with my <A href="https://www.goodreads.com/quotes/745-perhaps-all-the-dragons-in-our-lives-are-princesses-who">dragon</A>.
+            </p>
+
+            <p>It wasn't a monster. It was the kid inside me. It had been waiting.</p>
+
+            <p>I got freer than I've ever been.</p>
+
+            <p>
+              Now I build things — not from <A href="https://www.goodreads.com/quotes/6693619-do-not-talk-about-giftedness-inborn-talents-one-can-name">talent</A>, but from the seriousness of the workman who makes the small things well. I write. I code. I cut paper and glue collages. I <A href="https://www.goodreads.com/quotes/263898-would-you-like-me-to-give-you-a-formula-for">double my rate of failure</A>. I <A href="https://www.goodreads.com/quotes/6-anyone-who-lives-within-their-means-suffers-from-a-lack">imagine beyond my means</A>.
+            </p>
+
+            <p>
+              <A href="https://julien.care">I care.</A>
+            </p>
+
+            <p className="font-heading font-bold">My life in five letters.</p>
           </>
         )}
-      </blockquote>
-
-      <div className="font-body text-base text-foreground leading-[1.85] space-y-5">
-        <p>
-          {lang === "fr" ? (
-            <>
-              Chaque semaine, j'écris sur tout ça. La vie examinée. La discipline. Construire des choses, résoudre des problèmes. Les histoires vraies. Pas de conseils à la con. Juste la vérité. La prochaine étape est une vraie communauté vivante, bottom up, horizontale, auto-fondée.{" "}
-              <span className="italic text-muted-foreground">
-                (Si cette dernière partie n'a pas de sens pour vous, ne vous inquiétez pas, elle n'en a pas non plus pour moi — <em>pas encore</em>.)
-              </span>
-            </>
-          ) : (
-            <>
-              Every week, I write about all of this. The examined life. Discipline. Building things, solving problems. The real stories. No bullshit advice. Just the truth. The next phase is an actual alive community, bottom up, horizontal, self founded.{" "}
-              <span className="italic text-muted-foreground">
-                (If that last part doesn't make sense to you, don't worry, it doesn't make sense to me neither <em>yet</em>.)
-              </span>
-            </>
-          )}
-        </p>
       </div>
 
       <SubscribeBox />
