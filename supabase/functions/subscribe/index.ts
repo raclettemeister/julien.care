@@ -108,6 +108,17 @@ serve(async (req) => {
       console.error('Welcome email failed (non-blocking):', emailError);
     }
 
+    // Notify ntfy.sh
+    try {
+      await fetch('https://ntfy.sh/mylifeos-projects', {
+        method: 'POST',
+        body: `New subscriber: ${email}`,
+      });
+      console.log('ntfy.sh notified');
+    } catch (ntfyErr) {
+      console.error('ntfy.sh failed (non-blocking):', ntfyErr);
+    }
+
     console.log('Successfully subscribed:', email)
     return new Response(
       JSON.stringify({ status: 'ok', message: 'subscribed' }),
