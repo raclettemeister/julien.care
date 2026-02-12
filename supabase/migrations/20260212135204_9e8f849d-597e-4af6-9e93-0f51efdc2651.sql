@@ -1,0 +1,1 @@
+ALTER TABLE public.subscribers ADD COLUMN name text;
