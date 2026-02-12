@@ -14,8 +14,8 @@ serve(async (req) => {
   }
 
   try {
-    const { email } = await req.json()
-    console.log('Subscribe request received for:', email)
+    const { email, name } = await req.json()
+    console.log('Subscribe request received for:', email, 'name:', name)
 
     if (!email || !email.includes('@') || !email.includes('.')) {
       console.log('Invalid email:', email)
@@ -31,7 +31,7 @@ serve(async (req) => {
 
     const { error: dbError } = await supabase
       .from('subscribers')
-      .upsert({ email }, { onConflict: 'email' })
+      .upsert({ email, ...(name ? { name } : {}) }, { onConflict: 'email' })
 
     if (dbError) {
       console.log('Database error:', dbError.message)
@@ -112,7 +112,7 @@ serve(async (req) => {
     try {
       await fetch('https://ntfy.sh/mylifeos-projects', {
         method: 'POST',
-        body: `New subscriber: ${email}`,
+        body: name ? `New subscriber: ${name} (${email})` : `New subscriber: ${email}`,
       });
       console.log('ntfy.sh notified');
     } catch (ntfyErr) {
@@ -134,7 +134,7 @@ serve(async (req) => {
           body: JSON.stringify({
             parent: { database_id: 'e9fbd0e180224c5db25465b77437a8c5' },
             properties: {
-              'Name': { title: [{ text: { content: email } }] },
+              'Name': { title: [{ text: { content: name || email } }] },
               'Email': { email: email },
               'Status': { select: { name: 'To Send' } },
               'Subscribed': { date: { start: today } },

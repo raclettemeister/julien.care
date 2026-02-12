@@ -5,6 +5,7 @@ import { supabase } from "@/integrations/supabase/client";
 const SubscribeBox = () => {
   const { lang } = useLanguage();
   const [email, setEmail] = useState("");
+  const [name, setName] = useState("");
   const [state, setState] = useState<"idle" | "loading" | "subscribed" | "already" | "error">("idle");
 
   const handleSubmit = async () => {
@@ -12,7 +13,7 @@ const SubscribeBox = () => {
     setState("loading");
     try {
       const { data, error } = await supabase.functions.invoke("subscribe", {
-        body: { email: email.trim() },
+        body: { email: email.trim(), ...(name.trim() ? { name: name.trim() } : {}) },
       });
       if (error) throw error;
       // data may be a string or object depending on SDK version
@@ -72,6 +73,13 @@ const SubscribeBox = () => {
           : "Expect easy-to-read emails about stuff I'm passionate about at the moment: creative ideas, things I'm building, and what I'm figuring out."}
       </p>
       <div className="flex gap-2">
+        <input
+          type="text"
+          placeholder={lang === "fr" ? "Ton prénom (optionnel)" : "First name (optional)"}
+          value={name}
+          onChange={(e) => setName(e.target.value)}
+          className="font-body w-[140px] px-3 py-2 border border-border text-sm outline-none bg-background focus:border-foreground transition-colors"
+        />
         <input
           type="email"
           placeholder={lang === "fr" ? "ton@email.com" : "your@email.com"}
