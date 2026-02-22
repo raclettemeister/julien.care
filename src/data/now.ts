@@ -1,7 +1,7 @@
 // src/data/now.ts
 // This file is auto-updated by Now Page Bot every Sunday night.
 // Manual edits are welcome — the bot will overwrite on next run.
-// Last bot run: 2026-02-21
+// Last bot run: 2026-02-22
 
 export interface NowSection {
   titleEn: string;
@@ -24,8 +24,8 @@ export interface NowPageData {
 }
 
 export const nowData: NowPageData = {
-  updatedDateEn: "Updated February 21st, 2026, from Brussels.",
-  updatedDateFr: "Dernière mise à jour : 21 février 2026, depuis Bruxelles.",
+  updatedDateEn: "Updated February 22nd, 2026, from Brussels.",
+  updatedDateFr: "Dernière mise à jour : 22 février 2026, depuis Bruxelles.",
   source: "manual",
   sections: [
       {
