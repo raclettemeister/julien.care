@@ -1,4 +1,5 @@
 import essayThumbnail1 from "@/assets/essays/thumbnail-essay-1.jpg";
+import essayThumbnail2 from "@/assets/essays/thumbnail-essay-2.jpg";
 
 export const essays = [
   {
@@ -15,6 +16,21 @@ export const essays = [
     tags: ["Creativity", "Analog"] as const,
     tagsFr: ["Créativité", "Analogique"] as const,
     slug: "/essays/vision-board-creative-thinking-through-collage",
+  },
+  {
+    id: 1,
+    date: "Feb 2026",
+    dateFr: "fév. 2026",
+    titleEn: "The Mixtape Rebellion",
+    titleFr: "La Rébellion du Mixtape",
+    excerptEn: "I discovered the song I loved was made by nobody. Twenty AI-generated albums in one month. So I bought a cassette deck.",
+    excerptFr: "J'ai découvert que la chanson que j'aimais avait été faite par personne. Vingt albums générés par IA en un mois. Alors j'ai acheté un lecteur de cassettes.",
+    subtitleEn: "How I quit Spotify and rediscovered music through cassettes",
+    subtitleFr: "Comment j'ai quitté Spotify et redécouvert la musique grâce aux cassettes",
+    thumbnail: essayThumbnail2,
+    tags: ["Analog", "Creativity"] as const,
+    tagsFr: ["Analogique", "Créativité"] as const,
+    slug: "/essays/the-mixtape-rebellion",
   },
 ];
 

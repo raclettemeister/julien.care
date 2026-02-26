@@ -157,7 +157,7 @@ serve(async (req) => {
     )
 
   } catch (err) {
-    console.log('Unexpected error:', err.message)
+    console.log('Unexpected error:', (err as Error).message)
     return new Response(
       JSON.stringify({ status: 'error', message: 'server_error' }),
       { headers: { ...corsHeaders, 'Content-Type': 'application/json' }, status: 500 }

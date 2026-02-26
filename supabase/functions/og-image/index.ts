@@ -8,6 +8,12 @@ const ESSAYS = [
     description: "Vision board collage, a creativity journey. I have ONE large image of a handmade vision board. The essay walks you through it piece by piece — and at the end, the puzzle assembles.",
     image: "https://vmhwyzwuwfshlqgdunkd.supabase.co/storage/v1/object/public/images//thunbnail-essai-1.jpg",
   },
+  {
+    slug: "the-mixtape-rebellion",
+    title: "The Mixtape Rebellion",
+    description: "I discovered the song I loved was made by nobody. Twenty AI-generated albums in one month. So I bought a cassette deck and rediscovered music.",
+    image: "https://vmhwyzwuwfshlqgdunkd.supabase.co/storage/v1/object/public/images//julienOG.jpg",
+  },
 ];
 
 const DEFAULT_OG = {
