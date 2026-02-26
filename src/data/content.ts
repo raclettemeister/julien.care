@@ -3,21 +3,6 @@ import essayThumbnail2 from "@/assets/essays/thumbnail-essay-2.jpg";
 
 export const essays = [
   {
-    id: 0,
-    date: "Feb 2026",
-    dateFr: "fév. 2026",
-    titleEn: "Who do you think you are?",
-    titleFr: "Pour qui tu te prends ?",
-    excerptEn: "I have ONE large image of a handmade vision board. The essay walks you through it piece by piece — and at the end, the puzzle assembles.",
-    excerptFr: "J'ai UNE grande image d'un vision board fait main. L'essai vous guide morceau par morceau — et à la fin, le puzzle s'assemble.",
-    subtitleEn: "Vision board collage, a creativity journey",
-    subtitleFr: "Collage vision board, un voyage créatif",
-    thumbnail: essayThumbnail1,
-    tags: ["Creativity", "Analog"] as const,
-    tagsFr: ["Créativité", "Analogique"] as const,
-    slug: "/essays/vision-board-creative-thinking-through-collage",
-  },
-  {
     id: 1,
     date: "Feb 2026",
     dateFr: "fév. 2026",
@@ -31,6 +16,21 @@ export const essays = [
     tags: ["Analog", "Creativity"] as const,
     tagsFr: ["Analogique", "Créativité"] as const,
     slug: "/essays/the-mixtape-rebellion",
+  },
+  {
+    id: 0,
+    date: "Feb 2026",
+    dateFr: "fév. 2026",
+    titleEn: "Who do you think you are?",
+    titleFr: "Pour qui tu te prends ?",
+    excerptEn: "I have ONE large image of a handmade vision board. The essay walks you through it piece by piece — and at the end, the puzzle assembles.",
+    excerptFr: "J'ai UNE grande image d'un vision board fait main. L'essai vous guide morceau par morceau — et à la fin, le puzzle s'assemble.",
+    subtitleEn: "Vision board collage, a creativity journey",
+    subtitleFr: "Collage vision board, un voyage créatif",
+    thumbnail: essayThumbnail1,
+    tags: ["Creativity", "Analog"] as const,
+    tagsFr: ["Créativité", "Analogique"] as const,
+    slug: "/essays/vision-board-creative-thinking-through-collage",
   },
 ];
 
