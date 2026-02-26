@@ -43,7 +43,7 @@ serve(async (req) => {
       const RESEND_API_KEY = Deno.env.get("RESEND_API_KEY");
       if (RESEND_API_KEY) {
         // Parse game state for clean display
-        let gameInfo = { day: "?", timeOfDay: "?", bank: "?", monthlySales: "?", stress: "?", concept: "?", gameOver: false };
+        let gameInfo: { day: string; timeOfDay: string; bank: number | string; monthlySales: number | string; stress: number | string; concept: string; gameOver: boolean } = { day: "?", timeOfDay: "?", bank: "?", monthlySales: "?", stress: "?", concept: "?", gameOver: false };
         try {
           if (game_state) {
             const gs = JSON.parse(game_state);
@@ -168,7 +168,7 @@ serve(async (req) => {
 
   } catch (err) {
     return new Response(
-      JSON.stringify({ error: err.message }),
+      JSON.stringify({ error: (err as Error).message }),
       { headers: { ...corsHeaders, "Content-Type": "application/json" }, status: 500 }
     );
   }
