@@ -125,7 +125,7 @@ const Essays = () => {
                 <img
                   src={essay.thumbnail}
                   alt={lang === "fr" ? essay.titleFr : essay.titleEn}
-                  className="w-full h-40 object-cover object-center"
+                  className="w-full h-40 object-cover object-bottom"
                   loading="lazy"
                 />
               </div>
