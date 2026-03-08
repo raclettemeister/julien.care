@@ -1,7 +1,7 @@
 // src/data/now.ts
 // This file is auto-updated by Now Page Bot every Sunday night.
 // Manual edits are welcome — the bot will overwrite on next run.
-// Last bot run: 2026-03-01
+// Last bot run: 2026-03-08
 
 export interface NowSection {
   titleEn: string;
@@ -24,74 +24,90 @@ export interface NowPageData {
 }
 
 export const nowData: NowPageData = {
-  updatedDateEn: "Updated March 1st, 2026, from Brussels.",
-  updatedDateFr: "Dernière mise à jour : 1er mars 2026, depuis Bruxelles.",
-  source: "manual",
+  updatedDateEn: "Updated March 8th, 2026, from Brussels.",
+  updatedDateFr: "Dernière mise à jour : 8 mars 2026, depuis Bruxelles.",
+  source: "auto-generated",
   sections: [
       {
-          "titleEn": "# What I'm Doing Now",
-          "titleFr": "# What I'm Doing Now",
-          "paragraphsEn": [
-              "*Last updated: 2026-02-26*",
-              "This page feeds my [julien.care/now](https://julien.care/now) page. I update it weekly. If I forget, the Now Page Bot generates one from my activity log.",
-              "Inspired by [Derek Sivers' /now page movement](https://nownownow.com/about).",
-              "---"
-          ],
-          "paragraphsFr": [
-              "*Last updated: 2026-02-26*",
-              "This page feeds my [julien.care/now](https://julien.care/now) page. I update it weekly. If I forget, the Now Page Bot generates one from my activity log.",
-              "Inspired by [Derek Sivers' /now page movement](https://nownownow.com/about).",
-              "---"
-          ]
-      },
-      {
-          "titleEn": "This Week",
-          "titleFr": "This Week",
-          "paragraphsEn": [
-              "Post-launch settling. julien.care went live on February 23 — the blog, the Chez Julien Simulator game, and The Dishwasher Generation on Substack. The stealth phase is over. Now I'm refining systems, doing business research, and trying to get my disciplines back in order."
-          ],
-          "paragraphsFr": [
-              "Post-launch settling. julien.care went live on February 23 — the blog, the Chez Julien Simulator game, and The Dishwasher Generation on Substack. The stealth phase is over. Now I'm refining systems, doing business research, and trying to get my disciplines back in order."
-          ]
-      },
-      {
           "titleEn": "Building",
-          "titleFr": "Building",
+          "titleFr": "En construction",
           "paragraphsEn": [
-              "- **julien.care** — my friend blog. Launched Feb 23. Built with Lovable, deployed on Vercel.\n- **Chez Julien Simulator** — a video game about running my specialty food shop. Finished and shipped.\n- **The Dishwasher Generation** — monetized Substack. European, anti-hustle-culture, AI-forward.\n- **The Cockpit** — my dev discipline system. Checklists, AI enforcement rules, and a multi-pass co-pilot skill to make sure I think before I build.\n- **Mixtapes** — personal music collection. Old-school curation of meaningful albums. 6 entries and growing.\n- **Sweden Odyssey** — video game about a two-week trip to Sweden with ~20 friends. Demo finished and playable. My first real \"learning to code\" project."
+              "I'm running a personal five-day hackathon this week (March 9–13) to validate the David Toolkit — my first real open-source product. It's inventory management software built for small independent shops like mine. The public repo is live at github.com/Grassroot-hoppers/david-toolkit with contributor docs, a working demo, and real GitHub issues. The demo UI is in French, the code stays English.",
+              "This isn't about building features. It's about proving the wedge works against real shop use.",
+              "Also deep in business intelligence research — built a full prospecting suite for selling the retail operation. Got real buyer interest. Moving into outreach phase."
           ],
           "paragraphsFr": [
-              "- **julien.care** — my friend blog. Launched Feb 23. Built with Lovable, deployed on Vercel.\n- **Chez Julien Simulator** — a video game about running my specialty food shop. Finished and shipped.\n- **The Dishwasher Generation** — monetized Substack. European, anti-hustle-culture, AI-forward.\n- **The Cockpit** — my dev discipline system. Checklists, AI enforcement rules, and a multi-pass co-pilot skill to make sure I think before I build.\n- **Mixtapes** — personal music collection. Old-school curation of meaningful albums. 6 entries and growing.\n- **Sweden Odyssey** — video game about a two-week trip to Sweden with ~20 friends. Demo finished and playable. My first real \"learning to code\" project."
+              "Je fais un hackathon personnel de cinq jours cette semaine (9–13 mars) pour valider le David Toolkit — mon premier vrai produit open-source. C'est un logiciel de gestion de stock pour petits commerces indépendants comme le mien. Le repo public est en ligne sur github.com/Grassroot-hoppers/david-toolkit avec docs contributeurs, démo fonctionnelle, et vrais issues GitHub. La démo est en français, le code reste anglais.",
+              "Pas question d'ajouter des features. Il s'agit de prouver que le concept marche en vrai.",
+              "Aussi en pleine recherche business intelligence — j'ai construit une suite complète de prospection pour vendre l'activité retail. J'ai de l'intérêt réel d'acheteurs. Phase de démarchage en cours."
+          ],
+          "link": {
+              "url": "https://grassroothopper.com",
+              "labelEn": "See the movement",
+              "labelFr": "Voir le mouvement",
+              "emoji": "🌱"
+          }
+      },
+      {
+          "titleEn": "Games & Creative",
+          "titleFr": "Jeux & créatif",
+          "paragraphsEn": [
+              "Started my childhood dream project: a WW2 101st Airborne RPG. Full LLM role-playing game where you play a captain. Text-driven, AI-powered narrative. Setup plan is written, ready to build.",
+              "Also making mixtapes on real cassettes. Bought a Pioneer deck, learning to curate like Austin Kleon. Six tapes done so far — jazz, Woodstock, Queen live, Buena Vista, country vibes.",
+              "Chez Julien Simulator and Sweden Odyssey are both shipped and playable."
+          ],
+          "paragraphsFr": [
+              "J'ai commencé le projet de mes rêves d'enfance : un RPG WW2 101st Airborne. Jeu de rôle complet alimenté par LLM où tu joues un capitaine. Narratif textuel, propulsé par IA. Le plan de setup est écrit, prêt à construire.",
+              "Je fais aussi des mixtapes sur vraies cassettes. J'ai acheté une platine Pioneer, j'apprends à faire de la curation comme Austin Kleon. Six cassettes faites jusqu'ici — jazz, Woodstock, Queen live, Buena Vista, ambiances country.",
+              "Chez Julien Simulator et Sweden Odyssey sont tous les deux finis et jouables."
           ]
       },
       {
-          "titleEn": "Running",
-          "titleFr": "Running",
+          "titleEn": "Writing",
+          "titleFr": "Écriture",
           "paragraphsEn": [
-              "- **Chez Julien** — my specialty food shop in Brussels.\n- **PRISM** — daily AI briefing, runs at 4 AM every night. 45+ RSS feeds, synthesized by Claude.\n- **NightCrawler** — overnight vault health bot. Runs at 3 AM, scans MylifeOS for stale files and inconsistencies."
+              "The blog launched February 23. Three pieces live: Vision Board, AI Vampire, PRISM. The positioning is \"builder, not authority\" — I show what I'm making, not what you should do.",
+              "The Dishwasher Generation runs on Substack. European-centric, anti-hustle-culture, AI-forward. The blog and Substack sync automatically. Same voice, different audiences.",
+              "Built a five-skill publishing pipeline: brainstorm → extract → draft → review → publish. The cockpit for getting ideas to live."
           ],
           "paragraphsFr": [
-              "- **Chez Julien** — my specialty food shop in Brussels.\n- **PRISM** — daily AI briefing, runs at 4 AM every night. 45+ RSS feeds, synthesized by Claude.\n- **NightCrawler** — overnight vault health bot. Runs at 3 AM, scans MylifeOS for stale files and inconsistencies."
+              "Le blog a lancé le 23 février. Trois articles en ligne : Vision Board, AI Vampire, PRISM. Le positionnement est \"builder, pas autorité\" — je montre ce que je construis, pas ce que tu devrais faire.",
+              "The Dishwasher Generation tourne sur Substack. Centré Europe, anti-culture-du-hustle, orienté IA. Le blog et Substack se synchronisent automatiquement. Même voix, publics différents.",
+              "J'ai construit un pipeline de publication en cinq compétences : brainstorm → extract → draft → review → publish. Le cockpit pour passer d'idée à publié."
+          ],
+          "link": {
+              "url": "https://dishwashergeneration.substack.com",
+              "labelEn": "Read the Substack",
+              "labelFr": "Lire le Substack",
+              "emoji": "📮"
+          }
+      },
+      {
+          "titleEn": "Infrastructure",
+          "titleFr": "Infrastructure",
+          "paragraphsEn": [
+              "PRISM runs every night at 4 AM — automated intelligence briefing from 45+ RSS feeds. NightCrawler runs at 3 AM and keeps the vault healthy. Both deployed via GitHub Actions. Both working.",
+              "The Cockpit is my dev discipline system. Cursor + Superpowers + custom skills + rules. Architecture is solid but I'm still learning to ask for multiple passes instead of letting it write huge docs in one go.",
+              "Mac migration system built — design doc, scripts, automation for moving Mac Mini setup to MacBook Pro. Multiple code review passes done. Went from concept to working system in one day."
+          ],
+          "paragraphsFr": [
+              "PRISM tourne toutes les nuits à 4h — briefing intelligence automatisé depuis 45+ flux RSS. NightCrawler tourne à 3h et maintient le vault en santé. Les deux déployés via GitHub Actions. Les deux fonctionnent.",
+              "The Cockpit est mon système de discipline dev. Cursor + Superpowers + compétences custom + règles. L'architecture est solide mais j'apprends encore à demander plusieurs passes au lieu de le laisser écrire des docs énormes d'un coup.",
+              "Système de migration Mac construit — doc de design, scripts, automation pour transférer le setup Mac Mini vers MacBook Pro. Plusieurs passes de revue de code faites. Passé de concept à système fonctionnel en un jour."
           ]
       },
       {
-          "titleEn": "Learning",
-          "titleFr": "Learning",
+          "titleEn": "Not Doing",
+          "titleFr": "Pas en train de faire",
           "paragraphsEn": [
-              "Learning to code through real projects instead of tutorials. Also learning management — running a team, building SOPs, delegating. And learning how to use AI as a real tool, not a toy: architecture before code, iteration before shipping, discipline before velocity."
+              "Disciplines are still mostly unchecked. Meditation, stretching, dancing, guitar — the tools are there, the practice isn't. The 50/50 rule (half life, half investment) is still way off. Building dominates. I'm obsessed, and that's not balanced.",
+              "Staffing Calendar exists but isn't being used. Tool works, discipline doesn't.",
+              "Renpy game creation postponed. Good time to think about the right cockpit for game dev. Will circle back."
           ],
           "paragraphsFr": [
-              "Learning to code through real projects instead of tutorials. Also learning management — running a team, building SOPs, delegating. And learning how to use AI as a real tool, not a toy: architecture before code, iteration before shipping, discipline before velocity."
-          ]
-      },
-      {
-          "titleEn": "Hobbies",
-          "titleFr": "Hobbies",
-          "paragraphsEn": [
-              "- Mixtapes — bought an old Pioneer cassette deck, making old-school mixes (Austin Kleon style)\n- Lindy hop and guitar (less than I want, working on it)\n- Training for a 10K run, May 1"
-          ],
-          "paragraphsFr": [
-              "- Mixtapes — bought an old Pioneer cassette deck, making old-school mixes (Austin Kleon style)\n- Lindy hop and guitar (less than I want, working on it)\n- Training for a 10K run, May 1"
+              "Les disciplines sont encore largement non cochées. Méditation, étirements, danse, guitare — les outils sont là, la pratique non. La règle 50/50 (moitié vie, moitié investissement) est encore loin du compte. Le building domine. Je suis obsédé, et ce n'est pas équilibré.",
+              "Le Calendrier Staffing existe mais n'est pas utilisé. L'outil marche, la discipline non.",
+              "Création de jeux Renpy reportée. Bon moment pour réfléchir au bon cockpit pour le game dev. Je reviendrai."
           ]
       }
   ],
