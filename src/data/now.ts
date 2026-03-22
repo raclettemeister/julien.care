@@ -1,7 +1,7 @@
 // src/data/now.ts
 // This file is auto-updated by Now Page Bot every Sunday night.
 // Manual edits are welcome — the bot will overwrite on next run.
-// Last bot run: 2026-03-15
+// Last bot run: 2026-03-22
 
 export interface NowSection {
   titleEn: string;
@@ -24,80 +24,98 @@ export interface NowPageData {
 }
 
 export const nowData: NowPageData = {
-  updatedDateEn: "Updated March 15th, 2026, from Brussels.",
-  updatedDateFr: "Dernière mise à jour : 15 mars 2026, depuis Bruxelles.",
+  updatedDateEn: "Updated March 22nd, 2026, from Brussels.",
+  updatedDateFr: "Dernière mise à jour : 22 mars 2026, depuis Bruxelles.",
   source: "auto-generated",
   sections: [
       {
-          "titleEn": "Building in Public",
-          "titleFr": "Je construis en public",
+          "titleEn": "Building",
+          "titleFr": "En construction",
           "paragraphsEn": [
-              "Grassroot Hoppers just went live. The website is up at grassroothopper.com, the David Toolkit has a real public repo with working demo code, and I'm running a five-day sprint (March 9–13) to validate it against actual shop use. This is my startup thesis: open-source, cooperatively owned software for small businesses. The demo is in French, the repo stays English. It's real now.",
-              "The sprint week has been quiet — no commits since launch day. That's intentional. I'm observing, validating, not widening scope."
+              "I'm in quiet mode right now. No new launches, no active development — just letting systems settle after the big March push.",
+              "**Grassroot Hoppers** went fully public March 6: movement website live at grassroothopper.com, David Toolkit in its own AGPL repo with a working demo, contributor docs, and GitHub issues seeded. The March 9–13 sprint validated it against real shop use. Now it's just running. No commits since March 6. That's intentional.",
+              "The **WW2 101st Airborne RPG** is the dream project — childhood obsession meets adult capability. Full LLM role-playing game where you command a platoon. Setup docs are done, ready to start when the next building wave hits.",
+              "**Chez Julien Simulator** shipped and live. **Sweden Odyssey** demo works. **The Cockpit** (my dev discipline system) is working-ish — Cursor still wants to write huge docs instead of chunking, but I'm learning to ask for multiple passes.",
+              "Blog and Substack are synced and publishing. PRISM runs every morning at 4 AM. NightCrawler keeps the vault healthy at 3 AM. Infrastructure is solid."
           ],
           "paragraphsFr": [
-              "Grassroot Hoppers vient de sortir en public. Le site est en ligne sur grassroothopper.com, David Toolkit a un vrai repo public avec du code qui marche, et je fais un sprint de cinq jours (9–13 mars) pour le valider avec une vraie utilisation boutique. C'est ma thèse de startup : des logiciels open source, en propriété coopérative, pour les petites entreprises. La démo est en français, le repo reste en anglais. C'est réel maintenant.",
-              "La semaine de sprint a été calme — pas de commits depuis le jour du lancement. C'est intentionnel. J'observe, je valide, je n'élargis pas le scope."
+              "Je suis en mode calme en ce moment. Pas de nouveaux lancements, pas de développement actif — je laisse les systèmes se stabiliser après la grosse poussée de mars.",
+              "**Grassroot Hoppers** est devenu complètement public le 6 mars : site du mouvement en ligne sur grassroothopper.com, David Toolkit dans son propre repo AGPL avec une démo fonctionnelle, docs contributeurs, et issues GitHub amorcées. Le sprint du 9–13 mars l'a validé contre l'usage réel du magasin. Maintenant ça tourne. Aucun commit depuis le 6 mars. C'est intentionnel.",
+              "Le **WW2 101st Airborne RPG** est le projet rêvé — obsession d'enfance rencontre capacité d'adulte. Jeu de rôle complet propulsé par LLM où tu commandes un peloton. Les docs de setup sont faits, prêt à démarrer quand la prochaine vague de construction arrive.",
+              "**Chez Julien Simulator** livré et en ligne. **Sweden Odyssey** démo fonctionne. **The Cockpit** (mon système de discipline dev) fonctionne-ish — Cursor veut encore écrire d'énormes docs au lieu de découper, mais j'apprends à demander plusieurs passes.",
+              "Blog et Substack sont synchronisés et publient. PRISM tourne chaque matin à 4h. NightCrawler maintient le vault en santé à 3h. L'infrastructure est solide.",
+              "---"
           ],
           "link": {
-              "url": "https://grassroothopper.com",
-              "labelEn": "See the Movement",
-              "labelFr": "Voir le mouvement",
-              "emoji": "🌱"
+              "url": "https://julien.care",
+              "labelEn": "Read the blog",
+              "labelFr": "Lire le blog",
+              "emoji": "📝"
           }
       },
       {
-          "titleEn": "Games Are the Dream",
-          "titleFr": "Les jeux sont le rêve",
+          "titleEn": "Running",
+          "titleFr": "En gestion",
           "paragraphsEn": [
-              "The WW2 101st Airborne RPG is the project I've wanted to make my entire life. Full LLM role-playing game where you play a captain leading a platoon through World War II. Setup plan is done, ready to start building. This is childhood dream meets adult capability.",
-              "Chez Julien Simulator is live and playable. Sweden Odyssey demo is finished. I'm becoming a game maker and that feels right."
+              "**Chez Julien** — the specialty food shop in Brussels. Still needs me operationally. Working on changing that through business intelligence research and prospect outreach. Got real buyer interest. Built a full Sale Intelligence suite in February: valuation modeling, buyer profiles, prospect list. Moving from research to serious conversations.",
+              "**The Dishwasher Generation** — monetized Substack. European, anti-hustle-culture, AI-forward. Four posts live. Synced with julien.care blog content. The positioning is \"builder, not authority\" — and that feels right."
           ],
           "paragraphsFr": [
-              "Le RPG 101st Airborne WW2 est le projet que j'ai voulu faire toute ma vie. Un jeu de rôle complet piloté par LLM où tu joues un capitaine qui dirige un peloton pendant la Seconde Guerre mondiale. Le plan de setup est fini, prêt à commencer la construction. C'est le rêve d'enfance qui rencontre la capacité d'adulte.",
-              "Chez Julien Simulator est en ligne et jouable. La démo de Sweden Odyssey est terminée. Je deviens game maker et ça fait du sens."
-          ]
-      },
-      {
-          "titleEn": "Infrastructure Running Itself",
-          "titleFr": "L'infrastructure tourne toute seule",
-          "paragraphsEn": [
-              "PRISM runs at 4 AM every night — 45+ RSS feeds synthesized into a morning briefing. NightCrawler runs at 3 AM — scans the vault for stale files and keeps the system coherent. The blog publishing pipeline works: idea → draft → review → live on both julien.care and The Dishwasher Generation Substack.",
-              "The Mac migration system went from concept to working code in one day. Scripts, docs, error handling — it's a real system now."
-          ],
-          "paragraphsFr": [
-              "PRISM tourne à 4h du matin chaque nuit — 45+ flux RSS synthétisés en briefing matinal. NightCrawler tourne à 3h — scanne le vault pour les fichiers obsolètes et garde le système cohérent. Le pipeline de publication du blog fonctionne : idée → brouillon → relecture → en ligne sur julien.care et The Dishwasher Generation Substack.",
-              "Le système de migration Mac est passé de concept à code fonctionnel en une journée. Scripts, docs, gestion d'erreurs — c'est un vrai système maintenant."
-          ]
-      },
-      {
-          "titleEn": "Writing & Sharing",
-          "titleFr": "Écrire & partager",
-          "paragraphsEn": [
-              "The Dishwasher Generation Substack is live with three posts shipped. The blog launched February 23 with Vision Board, AI Vampire, and PRISM. The positioning is \"builder, not authority\" and it feels right. People follow along because the things I build are interesting, not because I'm an expert.",
-              "The blog-Substack sync works. The publishing pipeline scales. Now it's about proving I can keep showing up."
-          ],
-          "paragraphsFr": [
-              "Le Substack The Dishwasher Generation est en ligne avec trois posts publiés. Le blog a été lancé le 23 février avec Vision Board, AI Vampire et PRISM. Le positionnement est \"builder, pas autorité\" et ça fait du sens. Les gens suivent parce que les choses que je construis sont intéressantes, pas parce que je suis un expert.",
-              "La synchro blog-Substack fonctionne. Le pipeline de publication scale. Maintenant il s'agit de prouver que je peux continuer à me montrer."
+              "**Chez Julien** — le magasin d'alimentation spécialisée à Bruxelles. A encore besoin de moi opérationnellement. Je travaille à changer ça via recherche d'intelligence commerciale et démarchage de prospects. J'ai de l'intérêt réel d'acheteurs. J'ai construit une suite complète de Sale Intelligence en février : modélisation de valorisation, profils d'acheteurs, liste de prospects. Je passe de la recherche aux conversations sérieuses.",
+              "**The Dishwasher Generation** — Substack monétisé. Européen, anti-culture-du-hustle, orienté IA. Quatre articles en ligne. Synchronisé avec le contenu du blog julien.care. Le positionnement est \"builder, pas autorité\" — et ça sonne juste.",
+              "---"
           ],
           "link": {
               "url": "https://dishwashergeneration.substack.com",
-              "labelEn": "Read the Substack",
-              "labelFr": "Lire le Substack",
-              "emoji": "📰"
+              "labelEn": "Subscribe",
+              "labelFr": "S'abonner",
+              "emoji": "📬"
           }
       },
       {
-          "titleEn": "Not Doing (And That's the Point)",
-          "titleFr": "Ce que je ne fais pas (et c'est voulu)",
+          "titleEn": "Learning",
+          "titleFr": "En apprentissage",
           "paragraphsEn": [
-              "Life disciplines are still mostly unchecked. Meditation, stretching, dancing, guitar — they're on the list, not in the habit. The 50/50 rule (half life, half investment) is nowhere close. Building dominates. I know this.",
-              "March 7–8 were rest days. No work, no commits. The sprint week has been quiet since then. I'm learning that rest is part of the system, not a failure of it."
+              "Learning to code through real projects. Not tutorials — actual games. Chez Julien Simulator taught me how AI builds things. Sweden Odyssey is teaching me to write code myself. The WW2 RPG will be the synthesis.",
+              "Also learning management. Running a team, building SOPs, delegating. The shop sale research is teaching me business valuation and prospecting. And I'm learning the discipline of multi-pass AI work — ask for architecture first, then chunks, then review. Not everything in one shot."
           ],
           "paragraphsFr": [
-              "Les disciplines de vie sont encore majoritairement pas cochées. Méditation, étirements, danse, guitare — c'est sur la liste, pas dans l'habitude. La règle 50/50 (moitié vie, moitié investissement) est loin d'être proche. La construction domine. Je le sais.",
-              "Les 7–8 mars étaient des jours de repos. Pas de travail, pas de commits. La semaine de sprint a été calme depuis. J'apprends que le repos fait partie du système, ce n'est pas un échec."
+              "J'apprends à coder via de vrais projets. Pas des tutoriels — de vrais jeux. Chez Julien Simulator m'a appris comment l'IA construit des choses. Sweden Odyssey m'apprend à écrire du code moi-même. Le RPG WW2 sera la synthèse.",
+              "J'apprends aussi le management. Gérer une équipe, construire des SOPs, déléguer. La recherche de vente du magasin m'apprend la valorisation d'entreprise et le démarchage. Et j'apprends la discipline du travail IA multi-passes — demander d'abord l'architecture, puis les morceaux, puis réviser. Pas tout d'un coup.",
+              "---"
+          ]
+      },
+      {
+          "titleEn": "Hobbies",
+          "titleFr": "Loisirs",
+          "paragraphsEn": [
+              "**Mixtapes** — bought an old Pioneer cassette deck, making analog mixes Austin Kleon style. Six entries so far: jazz, Woodstock, Queen live, Buena Vista, calm country, cowboy country. Old-school curation of meaningful albums.",
+              "**Lindy hop and guitar** — less than I want, working on it. The pattern is clear: creative projects get energy, life disciplines get neglected. Dance is the keystone habit for community presence. Guitar is the country singer-songwriter journey (Tyler Childers, Zach Bryan voice). Both need more consistency.",
+              "Training for a 10K run, May 1."
+          ],
+          "paragraphsFr": [
+              "**Mixtapes** — j'ai acheté une vieille platette cassette Pioneer, je fais des mix analogiques style Austin Kleon. Six entrées jusqu'ici : jazz, Woodstock, Queen live, Buena Vista, calm country, cowboy country. Curation old-school d'albums qui comptent.",
+              "**Lindy hop et guitare** — moins que je voudrais, je travaille dessus. Le pattern est clair : les projets créatifs reçoivent de l'énergie, les disciplines de vie sont négligées. La danse est l'habitude clé pour la présence communautaire. La guitare est le parcours country singer-songwriter (voix Tyler Childers, Zach Bryan). Les deux ont besoin de plus de consistance.",
+              "Je m'entraîne pour un 10K, 1er mai.",
+              "---"
+          ]
+      },
+      {
+          "titleEn": "Not Doing",
+          "titleFr": "Pas en train de faire",
+          "paragraphsEn": [
+              "**Renpy game dev** — postponed. Good time to think about the right cockpit for visual novel creation. Will circle back.",
+              "**Staffing Calendar System** — built (Notion + Cloudflare + HTML dashboard) but not being used consistently. Tool exists, discipline doesn't.",
+              "**PRISM v2.0** — spec is complete, but v1.0 works well enough. Not priority.",
+              "**Letta agents** (Brain, Coach, Queue) — built, documented, parked. Not in active use. Interesting learning project, but NightCrawler does what I need right now.",
+              "Daily disciplines (meditation, stretching, dancing, guitar) are still mostly unchecked. The 50/50 rule (half life, half investment) is not close. Building dominates. I know this. Working on it."
+          ],
+          "paragraphsFr": [
+              "**Développement de jeux Renpy** — reporté. Bon moment pour réfléchir au bon cockpit pour la création de visual novels. Je reviendrai dessus.",
+              "**Système de calendrier de staffing** — construit (Notion + Cloudflare + tableau de bord HTML) mais pas utilisé de manière consistante. L'outil existe, pas la discipline.",
+              "**PRISM v2.0** — les specs sont complètes, mais v1.0 fonctionne assez bien. Pas prioritaire.",
+              "**Agents Letta** (Brain, Coach, Queue) — construits, documentés, mis de côté. Pas en usage actif. Projet d'apprentissage intéressant, mais NightCrawler fait ce dont j'ai besoin maintenant.",
+              "Les disciplines quotidiennes (méditation, étirements, danse, guitare) sont encore majoritairement non cochées. La règle 50/50 (moitié vie, moitié investissement) n'est pas proche. La construction domine. Je le sais. Je travaille dessus."
           ]
       }
   ],
