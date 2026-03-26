@@ -27,9 +27,18 @@ const Projects = () => {
             <span className={`font-body text-xs font-semibold px-2 py-0.5 rounded-sm ${
               p.status === "Live"
                 ? "text-olive bg-secondary"
+                : p.status === "In progress"
+                ? "text-terracotta bg-accent-light"
+                : p.status === "On hold"
+                ? "text-muted-foreground bg-muted"
+                : p.status === "Not started"
+                ? "text-muted-foreground bg-muted"
                 : "text-terracotta bg-accent-light"
             }`}>
-              {p.status === "Live" ? (lang === "fr" ? "Disponible" : "Live") : p.status}
+              {p.status === "Live" ? (lang === "fr" ? "Disponible" : "Live")
+                : p.status === "On hold" ? (lang === "fr" ? "En pause" : "On hold")
+                : p.status === "Not started" ? (lang === "fr" ? "Pas commencé" : "Not started")
+                : p.status}
             </span>
           </div>
           <h2 className="text-lg font-bold text-foreground mb-1">
