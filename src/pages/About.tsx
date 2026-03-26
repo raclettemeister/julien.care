@@ -49,7 +49,7 @@ const About = () => {
 
             <p>Ce n'était pas un monstre. C'était l'enfant en moi. Il attendait.</p>
 
-            <p>Je suis devenu plus libre que jamais. Libre de <A href="https://en.wikiquote.org/wiki/Friedrich_Nietzsche#Thus_Spoke_Zarathustra_(1883%E2%80%931885)">rejoindre la danse</A> et de laisser mon passé chaotique devenir le catalyseur.</p>
+            <p>Je suis devenu plus libre que jamais. Libre de <A href="https://www.goodreads.com/quotes/7915225-i-say-unto-you-one-must-still-have-chaos-in">rejoindre la danse</A> et de laisser mon passé chaotique devenir le catalyseur.</p>
 
             <p>
               Maintenant je construis des choses — pas par <A href="https://www.goodreads.com/quotes/6693619-do-not-talk-about-giftedness-inborn-talents-one-can-name">talent</A>, mais avec le sérieux de l'artisan qui fait bien les petites choses. J'écris. Je code. Je découpe du papier et je colle des collages. Je <A href="https://www.goodreads.com/quotes/263898-would-you-like-me-to-give-you-a-formula-for">double mon taux d'échec</A>. J'<A href="https://www.goodreads.com/quotes/6-anyone-who-lives-within-their-means-suffers-from-a-lack">imagine au-delà de mes moyens</A>.
@@ -93,7 +93,7 @@ const About = () => {
 
             <p>It wasn't a monster. It was the kid inside me. It had been waiting.</p>
 
-            <p>I got freer than I've ever been. Free to <A href="https://en.wikiquote.org/wiki/Friedrich_Nietzsche#Thus_Spoke_Zarathustra_(1883%E2%80%931885)">join the dance</A> and let my chaotic past become the catalyst.</p>
+            <p>I got freer than I've ever been. Free to <A href="https://www.goodreads.com/quotes/7915225-i-say-unto-you-one-must-still-have-chaos-in">join the dance</A> and let my chaotic past become the catalyst.</p>
 
             <p>
               Now I build things — not from <A href="https://www.goodreads.com/quotes/6693619-do-not-talk-about-giftedness-inborn-talents-one-can-name">talent</A>, but from the seriousness of the workman who makes the small things well. I write. I code. I cut paper and glue collages. I <A href="https://www.goodreads.com/quotes/263898-would-you-like-me-to-give-you-a-formula-for">double my rate of failure</A>. I <A href="https://www.goodreads.com/quotes/6-anyone-who-lives-within-their-means-suffers-from-a-lack">imagine beyond my means</A>.
