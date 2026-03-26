@@ -39,9 +39,15 @@ const Projects = () => {
             {lang === "fr" ? p.descFr : p.descEn}
           </p>
           {p.status === "Live" && p.link && (
-            <Link to={p.link} className="inline-block font-body text-sm text-accent font-semibold mt-2 hover:underline no-underline">
-              {lang === "fr" ? "Jouer maintenant →" : "Play now →"}
-            </Link>
+            p.link.startsWith("http") ? (
+              <a href={p.link} target="_blank" rel="noopener noreferrer" className="inline-block font-body text-sm text-accent font-semibold mt-2 hover:underline no-underline">
+                {lang === "fr" ? "Essayer →" : "Try it →"}
+              </a>
+            ) : (
+              <Link to={p.link} className="inline-block font-body text-sm text-accent font-semibold mt-2 hover:underline no-underline">
+                {lang === "fr" ? "Jouer maintenant →" : "Play now →"}
+              </Link>
+            )
           )}
         </div>
       ))}
