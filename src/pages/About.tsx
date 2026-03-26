@@ -36,7 +36,7 @@ const About = () => {
             </p>
 
             <p>
-              J'ai quitté mon job. J'ai dit <A href="https://sive.rs/hellyeah">hell yeah</A> à ce qui comptait et non à tout le reste. J'ai appris à <A href="https://en.wikiquote.org/wiki/Marcus_Aurelius">ne pas réagir</A>. À <A href="https://rilkepoetry.com/letters-to-a-young-poet/letter-eight/">être patient avec ce qui n'est pas résolu</A>. À <A href="https://en.wikipedia.org/wiki/Letters_to_a_Young_Poet">vivre les questions</A>.
+              J'ai quitté mon job. J'ai dit <A href="https://sive.rs/hellyeah">hell yeah</A> à ce qui comptait et non à tout le reste. J'ai appris à <A href="https://en.wikiquote.org/wiki/Marcus_Aurelius">ne pas réagir</A>. À <A href="https://rilkepoetry.com/letters-to-a-young-poet/letter-eight/">être patient avec ce qui n'est pas résolu et à vivre les questions</A>.
             </p>
 
             <p>
@@ -80,7 +80,7 @@ const About = () => {
             </p>
 
             <p>
-              I quit my job. I said <A href="https://sive.rs/hellyeah">hell yeah</A> to what mattered and no to everything else. I learned to <A href="https://en.wikiquote.org/wiki/Marcus_Aurelius">not react</A>. To <A href="https://rilkepoetry.com/letters-to-a-young-poet/letter-eight/">be patient with the unsolved</A>. To <A href="https://en.wikipedia.org/wiki/Letters_to_a_Young_Poet">live the questions</A>.
+              I quit my job. I said <A href="https://sive.rs/hellyeah">hell yeah</A> to what mattered and no to everything else. I learned to <A href="https://en.wikiquote.org/wiki/Marcus_Aurelius">not react</A>. To <A href="https://rilkepoetry.com/letters-to-a-young-poet/letter-eight/">be patient with the unsolved and to live the questions</A>.
             </p>
 
             <p>
