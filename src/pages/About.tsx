@@ -52,7 +52,7 @@ const About = () => {
             <p>Je suis devenu plus libre que jamais. Libre de <A href="https://www.goodreads.com/quotes/7915225-i-say-unto-you-one-must-still-have-chaos-in">rejoindre la danse</A> et de laisser mon passé chaotique devenir le catalyseur.</p>
 
             <p>
-              Maintenant je construis des choses — pas par <A href="https://www.goodreads.com/quotes/6693619-do-not-talk-about-giftedness-inborn-talents-one-can-name">talent</A>, mais avec le sérieux de l'artisan qui fait bien les petites choses. J'écris. Je code. Je découpe du papier et je colle des collages. Je <A href="https://www.goodreads.com/quotes/263898-would-you-like-me-to-give-you-a-formula-for">double mon taux d'échec</A>. J'<A href="https://www.goodreads.com/quotes/6-anyone-who-lives-within-their-means-suffers-from-a-lack">imagine au-delà de mes moyens</A>.
+              Maintenant je construis des choses — pas par <A href="https://www.goodreads.com/quotes/6693619-do-not-talk-about-giftedness-inborn-talents-one-can-name">talent</A>, mais par désir de laisser le monde dans un meilleur état que je ne l'ai trouvé. Pour cela, je <A href="https://www.goodreads.com/quotes/263898-would-you-like-me-to-give-you-a-formula-for">double mon taux d'échec</A>. J'<A href="https://www.goodreads.com/quotes/6-anyone-who-lives-within-their-means-suffers-from-a-lack">imagine au-delà de mes moyens</A>. Je <A href="https://www.whatshouldireadnext.com/quotes/john-burroughs-leap-and-the-net-will">saute</A>. Je <A href="https://www.goodreads.com/quotes/817665-don-t-wait-until-you-know-who-you-are-to-get">n'attends pas pour commencer</A>.
             </p>
 
             <p>
@@ -96,7 +96,7 @@ const About = () => {
             <p>I got freer than I've ever been. Free to <A href="https://www.goodreads.com/quotes/7915225-i-say-unto-you-one-must-still-have-chaos-in">join the dance</A> and let my chaotic past become the catalyst.</p>
 
             <p>
-              Now I build things — not from <A href="https://www.goodreads.com/quotes/6693619-do-not-talk-about-giftedness-inborn-talents-one-can-name">talent</A>, but from the seriousness of the workman who makes the small things well. I write. I code. I cut paper and glue collages. I <A href="https://www.goodreads.com/quotes/263898-would-you-like-me-to-give-you-a-formula-for">double my rate of failure</A>. I <A href="https://www.goodreads.com/quotes/6-anyone-who-lives-within-their-means-suffers-from-a-lack">imagine beyond my means</A>.
+              Now I build things — not from <A href="https://www.goodreads.com/quotes/6693619-do-not-talk-about-giftedness-inborn-talents-one-can-name">talent</A>, but from a desire to leave the world in a better shape than I found it. To do so, I <A href="https://www.goodreads.com/quotes/263898-would-you-like-me-to-give-you-a-formula-for">double my rate of failure</A>. I <A href="https://www.goodreads.com/quotes/6-anyone-who-lives-within-their-means-suffers-from-a-lack">imagine beyond my means</A>. I <A href="https://www.whatshouldireadnext.com/quotes/john-burroughs-leap-and-the-net-will">leap</A>. I <A href="https://www.goodreads.com/quotes/817665-don-t-wait-until-you-know-who-you-are-to-get">don't wait to get started</A>.
             </p>
 
             <p>
