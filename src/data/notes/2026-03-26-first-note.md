@@ -9,6 +9,6 @@ I used Perplexity Computer with an insane 35,000 credits in 3 hours (thanks to a
 
 Key insight: use open-source heavy lifting, wrap it under niche usefulness — that's the formula. But don't kid yourself — start from scratch and be ready for a lot more work than you think.
 
-By "vibe-researched" I mean using a ton of credits to gather ALL publicly available science on the subject (substantial). But I truly understand and am passionate about the topic — that's what made the difference.
+By "vibe-researched" I mean using a ton of credits to gather ALL publicly available science onto datasets and coded formulas. But I truly understand and am passionate about the topic — that's what made the difference.
 
 Lots of rocket fuel used, but successful launch to space = a good day. 🚀
