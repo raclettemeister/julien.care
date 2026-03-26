@@ -68,6 +68,7 @@ export const projects = [
     descFr: "Des workflows automatisés pour les trucs chiants de la boutique — tri des emails, planning du staff, procédures. En pause : la tech n'est pas encore tout à fait prête, et je dois soit progresser en développement soit trouver un co-fondateur technique.",
     status: "On hold" as const,
     emoji: "⚙️",
+    readMoreLink: "https://www.grassroothopper.com/hackathon/day-4.html",
   },
   {
     titleEn: "Personalized Meditation App",
