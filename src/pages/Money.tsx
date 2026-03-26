@@ -22,12 +22,10 @@ const Money = () => {
             <p>Si c'est gratuit, c'est toi le produit, pas vrai ?</p>
 
             <p>
-              Ce site est <A href="https://github.com">open source ici</A>, sans tracking. La newsletter est gratuite, sans plans de monétisation. Pas de cours digital à 197€ en préparation. Pas de tactiques FOMO pour te vendre des trucs.
+              Ce site est un pur hobby, il n'utilise ni analytics, ni cookies, ni scripts de tracking. Le code source est ouvert pour que tu puisses vérifier par toi-même ici : <A href="https://github.com/raclettemeister/julien.care">GitHub</A>. La newsletter est gratuite, sans plans de monétisation. Pas de cours digital à 197€ en préparation. Pas de tactiques FOMO pour te vendre des trucs.
             </p>
 
             <p>(Pas de pubs. Pas de bannières. Pas de pop-ups. Pas de « contenu sponsorisé » non plus, mais ça va de soi.)</p>
-
-            <p>Pas de big tech non plus. Ce site ne te traque pas. Pas de cookies. Pas d'analytics. J'ai construit le code, j'héberge moi-même, aucune entreprise ne possède ne serait-ce qu'une fraction de ce site.</p>
 
             <h2 className="font-heading text-xl font-bold text-foreground pt-4">
               Alors pourquoi avoir un blog ?
@@ -58,12 +56,10 @@ const Money = () => {
             <p>If it's free, you're the product, right?</p>
 
             <p>
-              This website is <A href="https://github.com">open source here</A>, no tracking. The newsletter is free without monetization plans. No 197€ digital course incoming. No FOMO tactics to sell you stuff.
+              This website is pure hobby, it doesn't use analytics, cookies, or tracking scripts. The source code is open for you to verify here: <A href="https://github.com/raclettemeister/julien.care">GitHub</A>. The newsletter is free without monetization plans. No 197€ digital course incoming. No FOMO tactics to sell you stuff.
             </p>
 
             <p>(No ads. No banners. No pop-ups. No "sponsored content" either, but that's obvious.)</p>
-
-            <p>No big tech either. This site doesn't track you. No cookies. No analytics. I built the code, I host it myself, no company owns even a fraction of this website.</p>
 
             <h2 className="font-heading text-xl font-bold text-foreground pt-4">
               So why having a blog?
