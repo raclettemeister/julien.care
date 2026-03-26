@@ -1,8 +1,10 @@
 ---
-title: On slowness
+title: Vibe coding won't replace depth
 date: 2026-03-25
 ---
 
-I keep noticing that the things I enjoy most are the ones that take time. Brewing coffee by hand. Writing with a pen. Cutting magazines for collage.
+Someone "vibe coded" a [full game on Steam](https://pchojecki.medium.com/ai-helped-me-solo-dev-a-game-on-steam-f84a2425be10). Impressive headline. But look closer: Forbes 30 Under 30, PhD in mathematics, years deep in AI. Five weeks of focused work — not a weekend hobby.
 
-Speed is overrated. Friction is where the magic happens.
+The real pattern behind extraordinary output isn't access to tools. It's the person wielding them. High orderliness, high industriousness, high openness — that combination is what turns potential into finished things.
+
+No AI will ever replace your own depth and dedication. The tools are accelerants, not substitutes.
