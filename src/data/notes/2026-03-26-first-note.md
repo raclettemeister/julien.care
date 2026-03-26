@@ -1,5 +1,5 @@
 ---
-title: I vibe coded a personality test — and it works
+title: I built my open-source personality test (Big Five) in 3 hours — and it works
 date: 2026-03-26
 ---
 
