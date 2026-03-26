@@ -1,0 +1,1 @@
+DROP POLICY "allow_anonymous_update_description" ON public.bug_reports;
