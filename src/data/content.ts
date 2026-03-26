@@ -36,6 +36,15 @@ export const essays = [
 
 export const projects = [
   {
+    titleEn: "Examine Your Life",
+    titleFr: "Examine Ta Vie",
+    descEn: "I had a life-changing experience with online courses about living an examined life. They're obsolete and too costly — I think I can make a more succinct, more modern version. Probably my first paid software. I'm only going to ask for a few bucks, and I'm pretty sure it will work really well for people.",
+    descFr: "J'ai vécu une expérience transformatrice avec des cours en ligne sur la vie examinée. Ils sont obsolètes et trop chers — je pense pouvoir en faire une version plus concise et moderne. Probablement mon premier logiciel payant. Je ne demanderai que quelques euros, et je suis convaincu que ça marchera vraiment bien pour les gens.",
+    status: "Live" as const,
+    emoji: "🔍",
+    link: "https://grassroot-hoppers.github.io/Unstuck/",
+  },
+  {
     titleEn: "Chez Julien Simulator",
     titleFr: "Simulateur Chez Julien",
     descEn: "A video game about running my real shop. Built in 2 weeks with AI. Zero lines of code written by me.",
@@ -43,22 +52,6 @@ export const projects = [
     status: "Live" as const,
     emoji: "🎮",
     link: "/game",
-  },
-  {
-    titleEn: "Personalized Meditation App",
-    titleFr: "Appli de Méditation Personnalisée",
-    descEn: "A meditation app with my own voice, built for me and my girlfriend. Trying to publish it on the App Store with the minimal amount of work possible.",
-    descFr: "Une appli de méditation avec ma propre voix, faite pour moi et ma copine. J'essaie de la publier sur l'App Store avec le minimum d'effort possible.",
-    status: "Coming soon" as const,
-    emoji: "🧘",
-  },
-  {
-    titleEn: "Shop Automation Workflows",
-    titleFr: "Workflows d'Automatisation Boutique",
-    descEn: "Cool automated workflows for the boring stuff at my shop — email triage, staff planning, SOPs, etc.",
-    descFr: "Des workflows automatisés pour les trucs chiants de la boutique — tri des emails, planning du staff, procédures, etc.",
-    status: "In progress" as const,
-    emoji: "⚙️",
   },
   {
     titleEn: "Analog Music Collection",
@@ -69,13 +62,20 @@ export const projects = [
     emoji: "🎵",
   },
   {
-    titleEn: "Examine Your Life",
-    titleFr: "Examine Ta Vie",
-    descEn: "I had a life-changing experience with online courses about living an examined life. They're obsolete and too costly — I think I can make a more succinct, more modern version. Probably my first paid software. I'm only going to ask for a few bucks, and I'm pretty sure it will work really well for people.",
-    descFr: "J'ai vécu une expérience transformatrice avec des cours en ligne sur la vie examinée. Ils sont obsolètes et trop chers — je pense pouvoir en faire une version plus concise et moderne. Probablement mon premier logiciel payant. Je ne demanderai que quelques euros, et je suis convaincu que ça marchera vraiment bien pour les gens.",
-    status: "Live" as const,
-    emoji: "🔍",
-    link: "https://grassroot-hoppers.github.io/Unstuck/",
+    titleEn: "Shop Automation Workflows",
+    titleFr: "Workflows d'Automatisation Boutique",
+    descEn: "Automated workflows for the boring stuff at my shop — email triage, staff planning, SOPs. On hold: the tech isn't quite there yet, and I need to either level up my software engineering or find a technical co-founder.",
+    descFr: "Des workflows automatisés pour les trucs chiants de la boutique — tri des emails, planning du staff, procédures. En pause : la tech n'est pas encore tout à fait prête, et je dois soit progresser en développement soit trouver un co-fondateur technique.",
+    status: "On hold" as const,
+    emoji: "⚙️",
+  },
+  {
+    titleEn: "Personalized Meditation App",
+    titleFr: "Appli de Méditation Personnalisée",
+    descEn: "A meditation app with my own voice, built for me and my girlfriend. Haven't started yet — it's on the list.",
+    descFr: "Une appli de méditation avec ma propre voix, faite pour moi et ma copine. Pas encore commencé — c'est sur la liste.",
+    status: "Not started" as const,
+    emoji: "🧘",
   },
   {
     titleEn: "Jazz Ear Training for Dancers",
