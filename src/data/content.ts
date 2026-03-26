@@ -73,8 +73,9 @@ export const projects = [
     titleFr: "Examine Ta Vie",
     descEn: "I had a life-changing experience with online courses about living an examined life. They're obsolete and too costly — I think I can make a more succinct, more modern version. Probably my first paid software. I'm only going to ask for a few bucks, and I'm pretty sure it will work really well for people.",
     descFr: "J'ai vécu une expérience transformatrice avec des cours en ligne sur la vie examinée. Ils sont obsolètes et trop chers — je pense pouvoir en faire une version plus concise et moderne. Probablement mon premier logiciel payant. Je ne demanderai que quelques euros, et je suis convaincu que ça marchera vraiment bien pour les gens.",
-    status: "Coming 2027" as const,
+    status: "Live" as const,
     emoji: "🔍",
+    link: "https://grassroot-hoppers.github.io/Unstuck/",
   },
   {
     titleEn: "Jazz Ear Training for Dancers",
