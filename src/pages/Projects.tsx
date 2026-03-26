@@ -58,6 +58,11 @@ const Projects = () => {
               </Link>
             )
           )}
+          {"readMoreLink" in p && p.readMoreLink && (
+            <a href={p.readMoreLink} target="_blank" rel="noopener noreferrer" className="inline-block font-body text-sm text-accent font-semibold mt-2 hover:underline no-underline">
+              {lang === "fr" ? "Explication complète →" : "Full explanation →"}
+            </a>
+          )}
         </div>
       ))}
 
