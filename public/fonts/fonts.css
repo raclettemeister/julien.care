@@ -1,0 +1,98 @@
+/* Self-hosted fonts — no requests to Google */
+
+/* Caveat — handwritten accents */
+@font-face {
+  font-family: 'Caveat';
+  font-style: normal;
+  font-weight: 400;
+  font-display: swap;
+  src: url(/fonts/caveat-latin.woff2) format('woff2');
+}
+@font-face {
+  font-family: 'Caveat';
+  font-style: normal;
+  font-weight: 600;
+  font-display: swap;
+  src: url(/fonts/caveat-latin.woff2) format('woff2');
+}
+@font-face {
+  font-family: 'Caveat';
+  font-style: normal;
+  font-weight: 700;
+  font-display: swap;
+  src: url(/fonts/caveat-latin.woff2) format('woff2');
+}
+
+/* DM Sans — clean body */
+@font-face {
+  font-family: 'DM Sans';
+  font-style: normal;
+  font-weight: 400;
+  font-display: swap;
+  src: url(/fonts/dmsans-latin.woff2) format('woff2');
+}
+@font-face {
+  font-family: 'DM Sans';
+  font-style: normal;
+  font-weight: 500;
+  font-display: swap;
+  src: url(/fonts/dmsans-latin.woff2) format('woff2');
+}
+@font-face {
+  font-family: 'DM Sans';
+  font-style: normal;
+  font-weight: 600;
+  font-display: swap;
+  src: url(/fonts/dmsans-latin.woff2) format('woff2');
+}
+@font-face {
+  font-family: 'DM Sans';
+  font-style: normal;
+  font-weight: 700;
+  font-display: swap;
+  src: url(/fonts/dmsans-latin.woff2) format('woff2');
+}
+@font-face {
+  font-family: 'DM Sans';
+  font-style: italic;
+  font-weight: 400;
+  font-display: swap;
+  src: url(/fonts/dmsans-italic-latin.woff2) format('woff2');
+}
+
+/* Lora — editorial serif */
+@font-face {
+  font-family: 'Lora';
+  font-style: normal;
+  font-weight: 400;
+  font-display: swap;
+  src: url(/fonts/lora-latin.woff2) format('woff2');
+}
+@font-face {
+  font-family: 'Lora';
+  font-style: normal;
+  font-weight: 600;
+  font-display: swap;
+  src: url(/fonts/lora-latin.woff2) format('woff2');
+}
+@font-face {
+  font-family: 'Lora';
+  font-style: normal;
+  font-weight: 700;
+  font-display: swap;
+  src: url(/fonts/lora-latin.woff2) format('woff2');
+}
+@font-face {
+  font-family: 'Lora';
+  font-style: italic;
+  font-weight: 400;
+  font-display: swap;
+  src: url(/fonts/lora-italic-latin.woff2) format('woff2');
+}
+@font-face {
+  font-family: 'Lora';
+  font-style: italic;
+  font-weight: 600;
+  font-display: swap;
+  src: url(/fonts/lora-italic-latin.woff2) format('woff2');
+}
