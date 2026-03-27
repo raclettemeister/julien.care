@@ -47,7 +47,7 @@ const IntroSequence = ({ children }: { children: React.ReactNode }) => {
         setDots(d);
         if (d >= 3) {
           clearInterval(dotsInterval.current);
-          setTimeout(() => setRebootText(true), 3000);
+          setTimeout(() => setRebootText(true), 1200);
         }
       }, INTRO_TIMING.dotAnimationInterval);
     }, INTRO_TIMING.rebootDelay);
@@ -56,8 +56,9 @@ const IntroSequence = ({ children }: { children: React.ReactNode }) => {
       () => setPhase("done"),
       INTRO_TIMING.unfoldDelay + INTRO_TIMING.unfoldDuration + 100
     );
+    const t6 = setTimeout(() => setPhase("done"), INTRO_TIMING.hardStopDelay);
 
-    timers.current = [t1, t2, t3, t4, t5];
+    timers.current = [t1, t2, t3, t4, t5, t6];
 
     return () => {
       timers.current.forEach(clearTimeout);
