@@ -3,13 +3,14 @@ import { useState, useEffect, useRef } from "react";
 // ─── All timing values in one place ───
 const INTRO_TIMING = {
   connectingDelay: 0,
-  connectingDuration: 1500,
-  pauseDuration: 1000,
-  errorDelay: 2500,
-  rebootDelay: 4000,
-  dotAnimationInterval: 300,
-  unfoldDelay: 10900,
-  unfoldDuration: 1800,
+  connectingDuration: 700,
+  pauseDuration: 400,
+  errorDelay: 1300,
+  rebootDelay: 1800,
+  dotAnimationInterval: 220,
+  unfoldDelay: 3400,
+  unfoldDuration: 900,
+  hardStopDelay: 6000,
 };
 
 const IntroSequence = ({ children }: { children: React.ReactNode }) => {
@@ -46,7 +47,7 @@ const IntroSequence = ({ children }: { children: React.ReactNode }) => {
         setDots(d);
         if (d >= 3) {
           clearInterval(dotsInterval.current);
-          setTimeout(() => setRebootText(true), 3000);
+          setTimeout(() => setRebootText(true), 1200);
         }
       }, INTRO_TIMING.dotAnimationInterval);
     }, INTRO_TIMING.rebootDelay);
@@ -55,8 +56,9 @@ const IntroSequence = ({ children }: { children: React.ReactNode }) => {
       () => setPhase("done"),
       INTRO_TIMING.unfoldDelay + INTRO_TIMING.unfoldDuration + 100
     );
+    const t6 = setTimeout(() => setPhase("done"), INTRO_TIMING.hardStopDelay);
 
-    timers.current = [t1, t2, t3, t4, t5];
+    timers.current = [t1, t2, t3, t4, t5, t6];
 
     return () => {
       timers.current.forEach(clearTimeout);
