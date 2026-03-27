@@ -3,13 +3,14 @@ import { useState, useEffect, useRef } from "react";
 // ─── All timing values in one place ───
 const INTRO_TIMING = {
   connectingDelay: 0,
-  connectingDuration: 1500,
-  pauseDuration: 1000,
-  errorDelay: 2500,
-  rebootDelay: 4000,
-  dotAnimationInterval: 300,
-  unfoldDelay: 10900,
-  unfoldDuration: 1800,
+  connectingDuration: 700,
+  pauseDuration: 400,
+  errorDelay: 1300,
+  rebootDelay: 1800,
+  dotAnimationInterval: 220,
+  unfoldDelay: 3400,
+  unfoldDuration: 900,
+  hardStopDelay: 6000,
 };
 
 const IntroSequence = ({ children }: { children: React.ReactNode }) => {
